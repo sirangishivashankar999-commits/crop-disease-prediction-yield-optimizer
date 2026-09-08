@@ -34,3 +34,4 @@ Thumbs.db
 .vscode/
 .idea/
 *.tmp
+push_to_github.bat
