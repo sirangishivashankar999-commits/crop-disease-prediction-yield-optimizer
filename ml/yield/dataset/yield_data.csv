@@ -1,0 +1,1501 @@
+crop,location,soil_type,growing_season,ph,temperature,rainfall,humidity,irrigation,fertilizer,previous_yield,area,n_content,p_content,k_content,yield
+Soybean,Central Valley,Loamy,Summer,5.62,18.0,1424.0,67.3,572.4,57.3,2.36,13.0,53.1,31.3,80.2,2.03
+Tomato,Midwest,Alluvial,Autumn,6.55,21.6,1610.5,77.9,227.7,147.2,19.75,21.6,78.9,30.1,96.3,19.77
+Rice,Central Valley,Silt Loam,Kharif,6.23,21.3,413.0,63.0,199.9,262.1,3.67,18.6,51.0,35.5,82.9,3.54
+Cotton,Southeast,Black Soil,Rabi,5.34,20.6,769.6,44.0,286.2,73.2,2.23,35.5,78.9,59.5,56.5,1.88
+Corn,Southeast,Clay,Summer,7.25,17.4,1270.7,66.7,295.8,156.3,4.28,35.4,77.8,79.8,88.8,4.33
+Wheat,Pacific Northwest,Sandy Loam,Kharif,5.3,22.3,738.2,50.5,854.3,251.6,2.98,12.2,84.1,60.9,59.6,2.89
+Soybean,Great Plains,Clay,Summer,7.43,26.8,1433.2,61.4,566.8,133.3,2.28,7.8,179.6,24.7,69.4,1.91
+Cotton,Central Valley,Loamy,Rabi,7.58,24.4,442.1,59.1,896.9,171.7,1.33,31.7,176.0,75.3,21.1,1.58
+Soybean,Central Valley,Alluvial,Autumn,7.51,22.8,775.6,47.9,102.6,216.1,1.87,37.8,140.8,83.0,96.2,2.12
+Tomato,Central Valley,Alluvial,Summer,6.72,20.0,892.2,48.1,862.8,262.2,15.55,42.2,168.6,56.9,68.9,16.2
+Rice,Southeast,Sandy Loam,Rabi,7.83,34.9,474.2,64.3,155.4,224.9,4.64,3.8,147.2,24.0,67.5,3.7
+Tomato,Midwest,Sandy Loam,Autumn,6.47,20.2,1132.0,76.5,260.9,121.7,18.18,43.7,179.3,60.5,63.8,16.22
+Tomato,Great Plains,Loamy,Rabi,6.21,27.8,683.7,51.0,156.8,195.2,16.53,12.0,72.1,78.4,106.0,18.27
+Rice,Delta Region,Clay,Summer,5.84,18.6,1706.5,68.6,478.1,230.5,3.14,33.8,153.0,28.3,29.7,3.26
+Potato,Southeast,Silt Loam,Spring,7.39,29.5,1777.0,44.9,422.1,128.0,13.19,23.9,160.6,32.4,39.0,12.42
+Potato,Midwest,Silt Loam,Rabi,5.95,34.5,992.5,83.1,540.3,61.6,13.19,14.6,179.9,73.5,116.9,14.02
+Cotton,Midwest,Clay,Spring,5.84,24.0,435.0,58.9,888.2,111.0,1.8,24.8,149.8,46.9,62.3,1.67
+Soybean,Delta Region,Alluvial,Spring,6.09,35.4,1189.8,67.1,698.4,63.1,2.47,8.6,121.8,50.2,105.3,2.1
+Wheat,Central Valley,Black Soil,Kharif,5.41,17.4,1599.6,60.2,853.3,181.0,3.3,42.7,121.0,17.8,28.2,2.78
+Soybean,Delta Region,Black Soil,Autumn,5.98,29.4,805.6,53.3,204.7,198.5,1.76,16.5,104.0,80.0,113.6,2.09
+Rice,Great Plains,Black Soil,Autumn,5.42,20.3,734.5,86.7,804.7,252.2,4.22,49.8,91.7,26.0,103.4,3.8
+Soybean,Southeast,Black Soil,Autumn,7.65,22.0,1311.9,86.9,207.4,76.5,2.16,1.4,55.0,53.7,47.2,2.08
+Tomato,Midwest,Alluvial,Summer,7.1,21.3,1058.4,85.3,776.9,71.2,14.01,11.0,99.3,34.4,20.4,15.17
+Cotton,Midwest,Alluvial,Summer,6.53,30.1,1163.3,45.6,856.0,208.9,1.68,8.9,60.9,17.5,56.9,1.83
+Tomato,Midwest,Silt Loam,Rabi,6.29,34.7,1759.7,42.0,386.2,206.9,18.93,3.0,133.4,39.8,76.0,16.09
+Cotton,Great Plains,Black Soil,Rabi,5.91,19.3,1509.8,48.9,429.8,91.3,1.89,46.4,169.4,69.8,61.2,1.65
+Soybean,Pacific Northwest,Clay,Summer,7.3,23.7,406.2,63.5,259.7,261.2,1.98,8.8,89.0,72.4,107.1,2.08
+Wheat,Central Valley,Alluvial,Rabi,6.04,17.4,1471.3,57.6,507.5,206.3,3.69,20.5,158.1,38.2,22.8,3.45
+Corn,Midwest,Black Soil,Summer,6.99,22.9,1490.3,61.8,887.4,76.6,4.02,2.9,165.9,28.3,24.4,4.1
+Potato,Central Valley,Black Soil,Autumn,8.02,30.7,635.7,61.6,859.1,261.8,15.22,34.7,127.2,61.4,32.5,14.21
+Corn,Delta Region,Sandy Loam,Spring,7.29,27.1,628.2,73.2,403.3,222.1,4.27,17.0,64.4,54.8,60.6,4.36
+Cotton,Central Valley,Sandy Loam,Summer,7.56,28.1,817.3,62.1,640.5,167.6,1.5,11.3,151.1,82.2,93.6,1.53
+Soybean,Central Valley,Sandy Loam,Autumn,7.06,17.9,1730.4,51.7,348.3,235.5,2.47,33.5,60.6,18.2,118.4,2.25
+Tomato,Central Valley,Silt Loam,Spring,6.93,30.4,906.8,60.0,218.1,208.2,17.81,44.4,165.0,75.2,108.5,19.27
+Cotton,Great Plains,Clay,Rabi,7.29,25.3,1158.2,85.9,197.1,80.7,1.9,40.4,105.1,52.2,75.9,1.73
+Corn,Great Plains,Black Soil,Autumn,7.92,24.9,580.8,83.1,460.1,222.9,4.85,21.9,157.6,34.4,97.8,4.86
+Potato,Pacific Northwest,Clay,Summer,7.34,20.7,837.0,84.7,164.5,84.7,14.42,22.6,93.6,25.7,41.4,14.85
+Potato,Great Plains,Sandy Loam,Autumn,5.39,32.7,914.7,78.5,856.8,54.5,8.8,23.8,163.3,55.3,67.7,11.01
+Corn,Southeast,Silt Loam,Spring,7.4,32.0,1651.8,64.4,318.3,161.7,4.66,27.4,94.4,61.8,99.8,4.35
+Soybean,Midwest,Silt Loam,Rabi,6.8,34.1,1208.2,73.1,167.2,148.6,2.23,49.1,161.4,27.7,46.0,2.0
+Corn,Midwest,Silt Loam,Summer,7.84,21.6,1729.2,61.1,767.9,158.2,4.45,17.5,144.9,18.6,115.2,4.14
+Wheat,Pacific Northwest,Loamy,Kharif,8.05,20.0,379.6,47.6,201.0,204.0,3.91,38.0,119.0,30.3,89.9,3.21
+Cotton,Southeast,Clay,Autumn,7.44,18.3,1538.0,88.2,186.5,55.9,1.58,30.8,83.7,62.4,115.8,1.52
+Potato,Pacific Northwest,Clay,Kharif,7.69,20.9,1360.9,55.1,647.4,235.3,16.49,30.0,151.5,54.6,24.1,14.43
+Tomato,Great Plains,Alluvial,Summer,7.14,16.3,959.1,64.5,446.8,133.3,16.57,4.4,164.8,47.2,35.3,17.37
+Wheat,Pacific Northwest,Black Soil,Summer,7.96,31.5,1024.1,81.3,574.0,124.1,3.25,31.2,74.4,80.4,47.9,3.06
+Potato,Midwest,Silt Loam,Autumn,6.34,16.6,1583.9,49.1,269.7,233.5,12.97,30.9,87.6,76.6,90.1,14.29
+Corn,Delta Region,Loamy,Autumn,5.46,30.4,1058.4,77.9,652.5,198.6,4.33,47.5,108.7,70.5,29.3,4.2
+Wheat,Great Plains,Alluvial,Rabi,6.94,25.5,1119.8,61.3,696.7,126.1,3.34,16.0,138.4,34.0,45.1,3.19
+Rice,Pacific Northwest,Clay,Summer,6.81,31.2,618.5,50.8,487.4,216.7,3.8,6.9,176.7,51.7,48.3,3.82
+Rice,Midwest,Sandy Loam,Rabi,6.11,30.2,533.5,42.3,143.6,117.2,2.99,18.7,172.2,59.7,95.3,3.21
+Rice,Central Valley,Black Soil,Summer,6.52,19.7,424.5,87.1,482.2,239.1,3.6,24.0,96.1,20.2,82.9,3.61
+Rice,Midwest,Clay,Autumn,5.46,21.0,1159.2,60.8,576.9,192.2,3.71,47.5,148.6,41.6,110.9,3.55
+Corn,Delta Region,Silt Loam,Summer,5.38,35.2,493.9,78.1,600.4,110.9,5.9,28.9,51.4,31.8,75.2,4.82
+Wheat,Central Valley,Silt Loam,Spring,6.61,16.7,767.8,54.1,787.7,66.4,3.32,34.8,72.7,33.5,99.1,3.26
+Tomato,Pacific Northwest,Clay,Spring,5.87,19.0,735.2,47.1,147.7,232.3,12.82,6.6,123.3,72.7,112.1,15.05
+Potato,Central Valley,Silt Loam,Summer,8.03,26.0,1066.0,44.0,131.9,149.4,14.63,35.3,85.1,32.5,29.1,14.67
+Soybean,Delta Region,Black Soil,Kharif,7.22,21.4,408.3,77.8,476.4,199.8,2.14,50.0,168.3,27.7,78.5,2.15
+Soybean,Great Plains,Loamy,Spring,6.2,29.4,1593.7,56.5,654.9,116.3,2.19,18.1,172.3,71.9,75.0,2.03
+Potato,Central Valley,Sandy Loam,Summer,8.11,24.1,1096.2,89.4,626.1,174.8,16.99,16.8,97.9,28.1,56.2,14.9
+Cotton,Great Plains,Alluvial,Spring,5.81,27.0,1695.1,61.9,658.6,77.9,2.01,38.2,176.2,57.6,43.9,1.71
+Wheat,Southeast,Black Soil,Kharif,5.48,35.8,1673.7,63.1,194.0,241.4,3.87,28.1,109.8,65.2,70.9,3.09
+Corn,Great Plains,Silt Loam,Spring,6.85,23.7,1686.7,65.4,803.5,248.7,5.0,12.9,78.7,70.3,61.5,5.1
+Cotton,Delta Region,Sandy Loam,Kharif,6.1,27.7,1798.4,64.5,218.9,173.9,1.53,14.9,88.3,53.6,74.3,1.55
+Potato,Southeast,Clay,Rabi,5.9,31.5,413.3,77.2,664.2,236.6,14.72,29.0,94.1,61.5,102.1,13.43
+Wheat,Great Plains,Loamy,Rabi,6.97,33.4,1617.6,62.0,520.8,155.1,2.46,25.6,141.1,43.7,85.5,2.69
+Wheat,Central Valley,Silt Loam,Summer,7.28,29.0,1585.1,82.6,787.5,137.4,2.69,17.6,84.3,65.3,95.9,2.77
+Cotton,Delta Region,Loamy,Autumn,7.09,34.4,1796.3,77.3,447.2,72.6,1.55,4.4,128.7,76.1,64.4,1.67
+Soybean,Southeast,Loamy,Kharif,5.37,23.2,974.5,52.2,429.6,206.8,1.94,16.9,65.2,27.3,80.9,2.04
+Potato,Delta Region,Alluvial,Rabi,6.95,20.6,1275.0,63.0,633.5,256.7,16.27,25.4,105.1,35.1,74.7,14.39
+Rice,Great Plains,Sandy Loam,Autumn,8.09,29.8,1012.4,55.1,899.5,246.3,3.93,15.7,54.9,41.7,55.9,3.67
+Corn,Pacific Northwest,Sandy Loam,Kharif,7.17,21.5,1170.6,74.3,695.7,61.3,3.49,48.9,124.9,49.8,110.4,3.83
+Corn,Midwest,Black Soil,Summer,5.77,21.0,1445.6,78.4,644.7,81.5,4.78,11.7,53.6,58.9,23.9,4.38
+Cotton,Great Plains,Loamy,Autumn,5.59,34.2,823.7,60.8,260.6,230.9,1.47,18.9,162.7,40.6,70.2,1.51
+Corn,Midwest,Sandy Loam,Spring,6.09,33.4,1516.1,63.4,160.2,223.5,4.96,48.4,71.6,62.3,87.4,4.59
+Potato,Delta Region,Sandy Loam,Kharif,5.24,26.7,1009.4,73.6,637.9,184.4,15.04,39.7,155.1,80.8,30.8,13.44
+Wheat,Great Plains,Loamy,Autumn,6.88,34.3,671.0,43.2,759.1,259.2,2.87,44.3,82.3,43.6,34.0,3.06
+Rice,Southeast,Silt Loam,Kharif,7.86,18.7,1007.8,73.5,694.5,267.6,3.97,5.8,98.7,67.0,35.5,3.54
+Potato,Pacific Northwest,Loamy,Spring,8.02,21.6,1350.9,50.9,455.8,104.3,18.56,31.2,90.8,83.7,56.7,15.75
+Soybean,Southeast,Loamy,Spring,8.1,35.0,1545.1,44.6,269.7,197.1,1.81,14.5,176.0,18.5,53.4,1.95
+Wheat,Delta Region,Clay,Kharif,6.86,27.7,1528.9,51.6,719.5,231.4,2.73,41.7,123.4,34.4,118.4,2.85
+Wheat,Delta Region,Sandy Loam,Rabi,7.8,18.6,869.5,79.4,571.1,53.6,3.76,6.4,77.2,23.9,62.1,3.07
+Rice,Pacific Northwest,Loamy,Spring,6.29,27.9,1005.4,51.1,592.1,217.3,4.35,23.0,167.2,61.1,50.2,4.28
+Soybean,Central Valley,Loamy,Spring,6.48,18.2,1383.0,62.2,819.4,124.1,2.47,42.5,60.8,23.8,82.4,2.36
+Tomato,Delta Region,Alluvial,Summer,6.99,21.9,1083.0,61.5,734.5,76.3,17.34,19.7,131.7,76.4,75.1,16.59
+Cotton,Midwest,Silt Loam,Spring,6.44,32.5,928.2,76.5,350.0,121.9,1.56,44.5,75.7,81.8,88.7,1.61
+Potato,Central Valley,Loamy,Kharif,5.49,30.8,1527.1,67.8,569.2,179.2,14.33,5.6,86.2,23.6,55.4,13.24
+Soybean,Great Plains,Alluvial,Kharif,7.0,23.0,1188.0,50.6,625.4,101.6,2.29,48.5,55.2,74.2,56.8,2.35
+Cotton,Southeast,Black Soil,Rabi,7.74,35.5,1536.7,70.7,614.2,56.0,1.8,40.6,170.1,73.1,46.7,1.7
+Wheat,Southeast,Alluvial,Summer,6.25,19.6,557.7,72.9,155.7,220.4,3.07,46.2,176.1,21.4,73.0,3.53
+Potato,Great Plains,Silt Loam,Summer,6.13,22.5,1715.0,69.8,806.7,85.8,15.86,8.7,145.6,18.5,28.2,13.84
+Potato,Pacific Northwest,Silt Loam,Spring,6.44,20.3,1092.9,57.3,188.7,206.0,12.17,30.7,123.0,51.9,50.8,14.46
+Wheat,Great Plains,Black Soil,Kharif,6.1,20.2,549.0,52.8,362.5,51.8,3.09,1.4,144.6,27.3,58.0,3.2
+Soybean,Midwest,Black Soil,Autumn,7.62,17.4,1599.6,42.1,115.0,261.9,2.36,41.8,160.7,55.3,77.3,2.17
+Soybean,Pacific Northwest,Silt Loam,Summer,5.26,22.5,1511.9,70.9,765.6,261.5,1.92,6.6,52.3,74.1,44.3,1.8
+Tomato,Great Plains,Black Soil,Kharif,6.13,22.8,832.9,48.4,508.4,76.2,16.79,20.4,111.4,78.4,54.9,18.08
+Soybean,Pacific Northwest,Clay,Rabi,5.97,19.5,571.7,78.0,160.3,268.8,2.27,6.0,127.9,47.5,76.4,1.98
+Tomato,Great Plains,Alluvial,Autumn,8.16,22.5,1757.9,55.8,451.8,157.9,18.47,32.5,128.4,70.7,79.1,16.93
+Corn,Delta Region,Loamy,Summer,5.31,23.4,766.3,72.2,881.9,70.8,3.99,23.6,123.2,41.9,78.0,4.17
+Cotton,Pacific Northwest,Loamy,Spring,6.91,19.8,1227.3,65.1,866.2,153.6,1.82,45.5,153.5,73.6,118.2,1.63
+Rice,Delta Region,Alluvial,Rabi,7.32,35.8,1109.9,70.5,391.1,261.1,4.0,2.9,94.2,69.2,87.9,3.9
+Rice,Pacific Northwest,Alluvial,Summer,5.48,29.6,762.0,76.2,625.3,258.5,4.42,4.2,162.3,38.3,78.3,4.2
+Wheat,Southeast,Sandy Loam,Spring,7.33,17.7,1160.4,72.2,362.8,79.4,2.54,7.3,138.4,81.3,119.7,2.67
+Tomato,Central Valley,Alluvial,Spring,5.25,22.2,1729.2,57.1,712.9,94.2,19.39,25.9,180.0,25.8,49.6,17.43
+Cotton,Central Valley,Black Soil,Autumn,7.85,16.8,838.3,78.3,204.8,136.6,1.94,41.9,62.7,73.2,97.1,2.01
+Cotton,Midwest,Alluvial,Spring,6.29,30.4,1755.9,70.5,701.9,230.3,1.95,3.1,72.8,31.7,116.6,1.93
+Cotton,Great Plains,Clay,Summer,6.91,24.8,1465.7,78.9,502.3,146.3,2.06,34.2,62.7,29.0,80.5,1.87
+Cotton,Southeast,Loamy,Spring,6.86,18.1,1576.5,82.6,328.1,225.5,1.71,43.8,78.2,78.4,34.7,1.74
+Potato,Central Valley,Clay,Spring,7.99,24.3,924.9,58.7,408.9,68.8,12.82,44.3,71.4,37.3,29.9,12.55
+Soybean,Pacific Northwest,Sandy Loam,Rabi,6.06,32.6,1359.3,46.9,664.4,153.2,2.04,7.7,40.7,20.5,45.6,1.94
+Cotton,Midwest,Black Soil,Autumn,5.53,21.8,786.7,42.4,435.9,232.6,2.42,26.9,104.0,22.8,110.5,1.83
+Tomato,Delta Region,Loamy,Autumn,7.36,21.8,352.3,57.6,556.5,93.1,19.85,29.2,133.6,51.6,56.1,16.81
+Tomato,Delta Region,Black Soil,Autumn,6.37,25.4,1271.7,89.1,302.9,53.7,16.73,28.2,150.4,39.1,93.3,18.22
+Soybean,Central Valley,Black Soil,Summer,6.26,22.8,1282.1,81.5,647.7,275.6,2.22,7.5,107.0,27.8,33.5,2.09
+Soybean,Great Plains,Loamy,Summer,7.57,33.7,807.6,55.5,418.6,237.5,1.96,10.9,106.3,17.6,84.7,2.09
+Corn,Southeast,Loamy,Summer,7.6,24.7,930.0,62.0,865.2,128.0,4.1,14.4,66.2,63.4,56.7,4.4
+Cotton,Delta Region,Sandy Loam,Kharif,5.44,28.0,1542.4,67.3,357.0,68.4,1.81,36.6,132.5,36.5,80.3,1.63
+Potato,Midwest,Alluvial,Spring,5.33,33.4,861.2,89.9,319.6,275.4,19.16,18.2,172.7,20.3,83.8,15.81
+Corn,Delta Region,Alluvial,Rabi,5.63,28.2,1482.9,41.7,153.8,229.1,3.2,47.7,91.3,41.8,76.7,4.11
+Tomato,Midwest,Alluvial,Spring,6.32,31.3,1182.2,66.5,418.4,199.4,16.21,47.5,74.9,22.9,93.6,18.74
+Potato,Delta Region,Silt Loam,Autumn,7.52,30.1,661.1,70.6,655.2,279.7,12.78,6.8,68.0,24.5,27.4,13.01
+Wheat,Pacific Northwest,Silt Loam,Kharif,8.1,35.7,1318.4,75.5,540.0,116.8,3.44,40.7,82.0,26.0,91.0,3.09
+Soybean,Pacific Northwest,Clay,Summer,5.56,20.0,551.4,79.5,121.0,177.4,1.8,25.9,91.6,71.3,75.2,1.81
+Tomato,Central Valley,Loamy,Summer,7.35,25.6,945.7,60.5,559.9,78.8,16.72,20.5,84.4,20.2,66.6,16.88
+Tomato,Southeast,Clay,Autumn,5.75,35.3,977.3,85.5,144.3,78.6,22.77,32.3,61.4,26.5,52.3,18.8
+Soybean,Midwest,Sandy Loam,Autumn,7.74,21.0,1270.8,67.5,200.1,119.6,1.78,44.9,114.7,50.2,36.9,1.92
+Tomato,Midwest,Clay,Autumn,7.02,32.9,1167.2,81.3,122.7,60.5,23.73,36.3,129.8,55.4,85.1,19.84
+Cotton,Delta Region,Silt Loam,Autumn,6.69,28.5,770.0,87.8,486.4,235.1,1.39,32.3,135.9,35.8,27.3,1.69
+Rice,Midwest,Silt Loam,Spring,5.81,28.1,803.2,75.9,687.4,248.0,4.52,24.7,176.6,24.2,57.1,4.03
+Tomato,Central Valley,Sandy Loam,Rabi,6.0,21.0,490.4,54.5,407.3,191.5,19.2,23.9,74.8,75.6,36.0,18.1
+Corn,Delta Region,Alluvial,Summer,5.68,35.9,1026.9,84.0,497.9,70.7,3.96,10.3,95.1,47.0,44.1,4.06
+Tomato,Southeast,Loamy,Kharif,6.99,32.9,1325.2,54.3,106.5,74.7,9.25,14.8,58.8,33.5,56.6,13.19
+Potato,Southeast,Loamy,Spring,6.89,23.3,768.5,59.3,460.3,176.5,13.95,3.5,155.5,58.6,81.1,14.22
+Wheat,Central Valley,Silt Loam,Summer,6.22,34.8,1444.7,50.0,507.3,165.0,3.98,39.9,46.3,24.6,53.3,3.09
+Potato,Delta Region,Silt Loam,Rabi,6.75,22.6,1238.9,48.1,892.5,220.0,13.54,30.7,81.9,38.5,102.8,14.02
+Tomato,Great Plains,Alluvial,Autumn,7.65,23.4,1327.0,89.0,567.0,233.3,21.89,15.7,141.5,63.2,22.7,18.56
+Potato,Southeast,Alluvial,Autumn,7.36,27.7,597.2,71.5,595.8,243.5,17.03,29.3,60.7,62.7,23.2,14.99
+Soybean,Central Valley,Clay,Kharif,6.46,24.3,645.6,65.1,589.2,158.5,1.88,22.6,158.8,65.9,90.6,2.13
+Tomato,Midwest,Black Soil,Summer,6.64,23.5,1737.2,63.0,526.5,175.6,18.54,49.9,134.6,75.7,88.1,17.57
+Cotton,Pacific Northwest,Sandy Loam,Autumn,8.07,21.6,782.8,87.1,885.8,227.4,1.82,24.7,138.7,63.3,68.9,1.61
+Potato,Southeast,Black Soil,Summer,6.92,26.9,1648.9,59.7,376.1,227.8,14.75,15.1,60.5,17.9,115.5,14.02
+Rice,Southeast,Silt Loam,Summer,5.84,32.6,743.1,68.1,317.3,75.1,4.7,37.6,143.7,31.7,25.1,3.75
+Tomato,Midwest,Alluvial,Rabi,6.44,30.3,495.8,78.5,104.1,176.6,23.76,3.6,170.1,43.5,113.5,18.94
+Potato,Great Plains,Alluvial,Rabi,6.06,21.7,435.8,78.4,621.8,103.4,14.17,38.0,143.4,74.5,23.7,14.87
+Wheat,Great Plains,Clay,Kharif,6.39,25.9,1708.1,88.1,840.8,251.7,3.33,49.9,41.3,54.8,30.7,2.92
+Corn,Southeast,Silt Loam,Autumn,7.87,18.7,1081.1,53.6,747.1,126.1,4.46,26.7,142.4,60.4,91.9,4.12
+Rice,Pacific Northwest,Sandy Loam,Summer,7.47,19.5,1591.4,84.9,761.6,168.5,3.46,28.8,52.1,61.8,38.5,3.41
+Wheat,Great Plains,Sandy Loam,Rabi,6.35,24.9,737.1,56.5,566.0,181.8,3.37,1.3,76.6,40.2,43.6,3.18
+Soybean,Central Valley,Silt Loam,Summer,7.26,34.5,1637.3,78.5,652.2,196.9,2.5,8.8,171.7,40.7,42.1,2.19
+Wheat,Great Plains,Clay,Spring,7.02,24.3,1146.4,63.5,530.0,202.7,3.59,37.6,70.6,32.3,95.5,3.45
+Cotton,Central Valley,Black Soil,Spring,6.29,34.3,512.7,81.4,822.3,96.5,1.58,26.9,115.1,26.5,105.4,1.62
+Potato,Central Valley,Alluvial,Rabi,6.67,34.0,995.9,42.8,205.6,145.5,16.13,36.1,118.9,54.1,87.3,15.22
+Corn,Pacific Northwest,Loamy,Spring,5.21,20.4,455.9,61.2,660.3,174.5,4.59,13.5,48.4,77.6,118.6,4.32
+Potato,Central Valley,Sandy Loam,Spring,5.61,28.8,1407.5,88.2,399.6,255.0,17.28,9.8,102.8,79.2,57.7,14.13
+Rice,Pacific Northwest,Alluvial,Autumn,7.78,18.4,1789.6,59.7,201.9,275.1,4.11,7.5,156.9,67.9,117.8,3.58
+Potato,Pacific Northwest,Alluvial,Autumn,6.34,20.6,1017.9,47.8,250.8,251.3,14.03,21.8,147.2,17.3,86.0,15.73
+Tomato,Central Valley,Clay,Rabi,6.98,24.9,1324.4,83.6,295.8,60.2,20.23,4.3,101.5,52.8,95.4,18.95
+Cotton,Central Valley,Clay,Autumn,5.9,34.3,1185.4,68.9,718.0,238.2,2.15,49.7,73.2,76.3,118.6,1.79
+Tomato,Midwest,Silt Loam,Summer,6.87,27.8,1416.1,48.8,643.0,177.8,19.84,14.5,46.6,39.1,84.3,18.14
+Potato,Delta Region,Sandy Loam,Spring,6.1,19.7,1130.0,52.0,280.3,247.2,15.21,21.0,60.2,47.4,25.8,14.67
+Potato,Great Plains,Black Soil,Autumn,5.93,20.1,1287.7,86.1,777.7,71.3,14.71,7.6,141.4,28.3,46.8,14.06
+Soybean,Delta Region,Black Soil,Kharif,5.76,31.2,1400.2,67.9,483.5,250.0,1.93,43.8,86.6,82.0,21.5,2.3
+Wheat,Pacific Northwest,Loamy,Spring,7.29,30.1,925.1,52.0,357.3,115.1,2.72,45.8,105.3,60.4,50.8,2.7
+Corn,Delta Region,Silt Loam,Spring,8.14,25.4,1567.6,85.7,396.6,145.2,5.4,5.8,118.8,30.5,34.6,4.64
+Corn,Delta Region,Black Soil,Autumn,6.09,19.9,683.5,68.5,296.6,176.6,5.03,36.3,172.1,38.6,96.3,4.79
+Potato,Pacific Northwest,Alluvial,Spring,7.4,23.0,552.9,67.3,247.2,254.6,14.47,23.6,178.6,82.0,72.4,14.29
+Cotton,Central Valley,Alluvial,Kharif,6.44,32.9,685.6,75.4,107.3,166.3,1.82,38.5,92.2,58.2,86.7,1.71
+Tomato,Great Plains,Alluvial,Spring,6.8,24.2,374.3,76.1,528.6,115.9,20.63,1.8,110.3,63.9,63.1,19.52
+Wheat,Central Valley,Loamy,Autumn,5.78,26.5,1532.1,53.4,417.5,135.8,2.8,8.3,96.8,54.6,119.0,2.72
+Wheat,Southeast,Alluvial,Kharif,7.77,31.2,485.6,59.0,542.2,62.9,3.4,33.0,41.3,27.0,70.0,2.93
+Potato,Pacific Northwest,Sandy Loam,Autumn,8.12,33.9,1682.8,51.5,821.0,209.2,12.71,48.9,119.3,34.0,112.4,11.96
+Soybean,Southeast,Black Soil,Autumn,5.74,33.0,372.7,50.4,215.4,238.8,2.28,33.2,154.9,80.0,49.9,2.04
+Tomato,Midwest,Black Soil,Spring,6.82,23.7,1422.6,79.5,651.4,68.0,16.73,34.2,144.4,39.2,29.8,16.87
+Wheat,Central Valley,Sandy Loam,Autumn,8.06,23.9,1471.7,41.5,318.7,278.3,2.5,38.7,108.7,39.9,114.1,2.55
+Potato,Midwest,Alluvial,Autumn,5.46,28.4,1507.2,75.7,165.6,85.5,12.94,33.4,139.6,59.4,94.0,12.59
+Corn,Southeast,Loamy,Kharif,6.12,23.2,741.2,46.6,249.9,153.2,4.81,1.3,117.7,43.6,22.6,5.1
+Corn,Delta Region,Loamy,Autumn,6.17,23.7,773.2,59.4,167.8,257.3,5.19,30.3,166.7,83.5,77.2,5.03
+Wheat,Pacific Northwest,Silt Loam,Rabi,6.1,25.9,441.7,61.7,436.9,161.4,3.19,7.8,50.8,32.6,44.7,2.94
+Soybean,Great Plains,Black Soil,Autumn,5.52,22.1,1725.8,56.6,596.2,234.9,2.19,10.6,86.1,38.4,101.5,2.05
+Cotton,Pacific Northwest,Black Soil,Rabi,7.01,29.9,1044.6,48.9,418.6,123.4,1.89,15.7,142.9,59.3,116.8,1.81
+Cotton,Midwest,Sandy Loam,Spring,7.56,23.3,1701.5,50.0,897.8,91.4,1.94,14.7,147.5,16.9,92.7,1.8
+Soybean,Midwest,Silt Loam,Summer,5.41,33.0,1502.8,73.6,211.3,119.7,2.16,41.7,75.4,25.8,62.3,2.07
+Potato,Central Valley,Silt Loam,Autumn,6.4,26.1,1684.6,74.6,534.9,231.9,16.0,24.5,90.3,77.7,73.7,13.93
+Soybean,Central Valley,Loamy,Rabi,6.27,28.9,414.2,89.2,642.0,141.9,2.27,33.2,145.4,82.6,63.0,2.31
+Rice,Central Valley,Sandy Loam,Rabi,6.76,27.6,1184.1,62.3,412.9,227.6,3.86,26.0,122.4,50.0,54.5,3.75
+Rice,Great Plains,Loamy,Summer,8.09,18.3,1714.0,47.1,349.5,154.7,3.81,21.4,69.0,48.8,67.6,3.47
+Potato,Pacific Northwest,Alluvial,Spring,6.1,32.2,516.9,82.5,618.4,205.7,17.66,16.6,63.0,83.9,44.4,15.93
+Wheat,Delta Region,Clay,Summer,8.08,20.6,937.3,49.2,612.4,149.4,4.23,28.4,44.1,58.0,39.7,3.3
+Tomato,Great Plains,Silt Loam,Kharif,5.82,31.0,1522.7,43.1,181.4,250.6,20.36,35.5,66.2,37.8,65.8,19.31
+Corn,Pacific Northwest,Silt Loam,Autumn,6.14,23.8,919.2,45.7,381.6,155.3,6.11,48.3,64.2,62.2,100.1,5.14
+Tomato,Delta Region,Loamy,Rabi,5.92,18.3,891.3,47.1,410.8,187.2,15.73,16.3,120.5,44.6,68.7,16.31
+Tomato,Pacific Northwest,Alluvial,Rabi,6.67,18.8,806.1,62.6,142.9,132.6,12.27,28.2,41.3,24.6,101.5,15.23
+Tomato,Delta Region,Alluvial,Spring,6.68,30.2,993.6,48.4,552.3,233.1,15.95,21.0,70.9,17.3,42.5,18.37
+Corn,Midwest,Silt Loam,Autumn,7.5,27.0,514.2,45.7,720.1,239.4,4.84,37.4,91.4,72.6,24.2,5.06
+Soybean,Great Plains,Black Soil,Rabi,5.51,32.6,1439.5,54.9,899.5,153.4,2.51,49.5,88.8,72.2,63.9,2.07
+Rice,Midwest,Clay,Autumn,7.78,28.2,970.8,70.8,727.9,237.1,3.29,34.8,152.8,54.9,73.2,3.53
+Tomato,Delta Region,Clay,Summer,6.08,27.5,1731.0,65.7,820.1,237.5,14.44,49.0,59.0,67.5,61.2,17.09
+Rice,Southeast,Alluvial,Rabi,5.6,18.9,817.0,52.4,774.8,140.3,4.47,35.4,59.9,59.3,82.8,3.82
+Potato,Great Plains,Loamy,Kharif,7.45,29.9,1622.1,62.7,490.4,183.8,10.77,20.7,161.6,74.3,29.3,12.58
+Potato,Pacific Northwest,Alluvial,Summer,7.59,24.0,1753.8,81.2,495.8,124.3,14.25,42.7,79.7,53.3,33.1,14.3
+Cotton,Great Plains,Sandy Loam,Kharif,7.08,32.7,373.6,86.5,226.4,155.0,1.37,3.3,178.9,44.9,119.6,1.44
+Wheat,Pacific Northwest,Sandy Loam,Rabi,7.83,17.9,872.6,44.1,631.6,199.2,3.2,43.8,47.3,58.8,92.6,3.05
+Cotton,Midwest,Silt Loam,Kharif,5.2,25.5,542.4,51.3,644.0,52.1,1.68,35.5,137.4,72.2,118.8,1.67
+Potato,Pacific Northwest,Clay,Spring,6.35,30.6,498.5,55.7,804.8,81.5,12.18,4.5,148.3,67.7,33.3,12.52
+Soybean,Midwest,Loamy,Autumn,7.03,19.3,859.2,50.7,698.6,261.6,2.24,28.6,126.3,46.0,41.7,2.26
+Rice,Midwest,Loamy,Autumn,6.25,24.6,1497.1,52.4,615.7,107.1,4.21,36.8,124.1,65.5,48.5,3.69
+Soybean,Central Valley,Alluvial,Summer,7.02,19.8,918.0,72.3,727.0,232.6,1.69,11.1,73.5,42.0,44.1,2.1
+Soybean,Delta Region,Loamy,Autumn,5.24,23.2,808.9,59.3,771.2,146.8,2.31,44.5,116.5,27.1,67.1,2.11
+Cotton,Central Valley,Loamy,Autumn,5.99,16.8,437.7,79.5,505.3,194.6,2.22,4.3,110.1,44.1,90.2,1.95
+Rice,Pacific Northwest,Black Soil,Autumn,6.03,22.2,1091.4,50.2,746.4,173.4,4.47,31.2,94.7,59.4,103.5,4.15
+Soybean,Pacific Northwest,Loamy,Summer,7.39,32.9,434.0,44.3,447.6,154.3,2.88,35.2,125.2,36.7,94.2,2.56
+Soybean,Midwest,Loamy,Kharif,7.3,19.3,1731.9,66.2,726.4,215.8,2.12,35.7,63.4,23.9,98.1,2.12
+Corn,Pacific Northwest,Loamy,Kharif,6.49,26.5,731.3,88.8,602.0,164.1,5.05,17.4,111.5,18.9,105.9,5.27
+Wheat,Southeast,Clay,Summer,7.88,29.5,517.2,77.0,102.1,247.5,2.74,38.9,41.7,18.2,56.4,2.74
+Wheat,Midwest,Loamy,Autumn,7.34,29.1,675.5,52.4,832.7,123.6,3.71,40.4,155.6,55.0,31.9,3.02
+Soybean,Central Valley,Clay,Rabi,8.14,35.1,449.9,63.3,325.8,244.3,1.81,40.4,85.8,53.7,20.8,1.63
+Wheat,Southeast,Black Soil,Summer,5.93,23.4,1759.2,89.9,720.7,218.5,3.07,37.2,116.5,70.7,35.1,3.14
+Potato,Central Valley,Clay,Autumn,7.72,33.5,1728.9,40.1,625.8,245.3,17.77,18.0,141.8,22.3,73.0,14.22
+Wheat,Great Plains,Silt Loam,Kharif,5.63,21.6,413.7,51.6,776.4,145.0,3.98,48.7,165.4,47.1,94.8,3.29
+Tomato,Central Valley,Black Soil,Rabi,6.38,27.8,440.3,73.1,204.6,117.1,13.4,32.2,159.1,79.8,59.3,15.85
+Cotton,Pacific Northwest,Sandy Loam,Summer,5.9,34.9,547.4,78.5,187.2,74.3,1.9,23.2,102.9,37.0,32.1,1.66
+Corn,Midwest,Silt Loam,Summer,7.76,17.8,1521.0,55.2,663.8,188.8,3.17,23.7,70.1,75.0,34.8,3.58
+Soybean,Midwest,Sandy Loam,Spring,7.23,21.2,1786.5,41.6,423.5,154.0,1.77,26.2,144.7,32.5,66.2,1.88
+Cotton,Midwest,Loamy,Kharif,7.54,20.4,637.3,60.0,649.0,265.6,1.9,4.0,51.8,56.0,111.7,1.72
+Rice,Central Valley,Loamy,Rabi,6.53,18.6,1662.4,81.5,365.2,59.8,3.51,45.2,104.5,26.8,77.4,3.26
+Cotton,Pacific Northwest,Silt Loam,Spring,7.25,19.5,661.3,49.4,323.9,253.2,1.78,2.4,44.9,58.3,44.6,1.82
+Corn,Great Plains,Silt Loam,Autumn,5.46,23.7,957.9,72.1,737.8,107.3,3.92,24.5,179.2,53.1,22.0,4.27
+Potato,Pacific Northwest,Sandy Loam,Spring,6.65,34.3,1078.5,59.4,243.9,123.3,13.35,27.7,70.7,77.7,97.9,12.75
+Rice,Great Plains,Black Soil,Summer,8.2,35.5,495.2,72.8,313.2,237.7,3.74,38.6,168.4,18.9,119.6,3.32
+Wheat,Delta Region,Silt Loam,Summer,8.17,19.5,693.0,55.9,690.5,132.5,2.93,46.8,122.8,64.2,55.2,2.75
+Tomato,Delta Region,Clay,Autumn,7.71,32.2,1757.1,67.1,240.4,58.7,23.3,47.5,47.9,57.1,22.0,17.89
+Potato,Central Valley,Sandy Loam,Autumn,5.59,30.3,1682.2,82.2,358.9,55.0,12.98,10.9,122.1,79.2,97.4,12.06
+Cotton,Delta Region,Sandy Loam,Kharif,8.03,23.9,496.5,55.1,209.2,86.2,1.77,19.3,172.8,70.4,116.1,1.59
+Soybean,Southeast,Clay,Autumn,7.99,31.7,673.7,69.4,240.3,120.6,2.4,35.0,136.4,23.9,92.9,2.2
+Soybean,Delta Region,Silt Loam,Autumn,7.01,34.4,1752.9,51.0,552.4,265.4,2.02,2.6,59.7,67.2,43.8,1.95
+Corn,Midwest,Alluvial,Kharif,7.21,30.6,836.8,40.6,267.7,209.4,4.41,41.3,89.1,70.1,92.0,4.24
+Rice,Great Plains,Silt Loam,Spring,7.85,25.9,899.1,67.3,181.1,160.3,2.94,48.5,161.0,60.6,88.7,3.55
+Wheat,Great Plains,Loamy,Kharif,6.16,35.0,457.6,48.5,400.4,218.4,3.99,15.5,116.6,77.9,29.3,3.42
+Tomato,Delta Region,Silt Loam,Kharif,7.16,28.1,979.6,42.7,364.9,274.1,19.56,22.1,97.3,53.8,112.6,19.36
+Tomato,Southeast,Alluvial,Summer,5.49,23.9,1147.0,64.5,143.6,50.9,26.31,15.6,52.3,72.7,82.5,21.34
+Potato,Midwest,Loamy,Kharif,7.11,35.5,1036.7,45.8,727.9,158.3,14.22,11.1,165.3,33.6,84.2,13.38
+Potato,Midwest,Sandy Loam,Spring,6.54,21.3,1024.3,51.3,314.8,64.2,11.01,19.1,145.3,61.7,28.6,12.87
+Corn,Delta Region,Silt Loam,Autumn,5.38,23.7,1107.7,88.3,649.7,265.4,4.08,12.1,120.2,31.5,49.9,4.05
+Potato,Pacific Northwest,Loamy,Autumn,6.75,27.4,1775.0,47.4,859.4,153.3,13.09,29.0,172.9,26.7,41.2,12.41
+Wheat,Midwest,Loamy,Spring,7.25,20.0,1542.7,47.4,576.0,123.5,4.01,4.8,141.8,71.5,28.7,3.52
+Tomato,Great Plains,Black Soil,Summer,6.76,34.3,367.9,75.0,570.1,229.8,17.98,43.0,55.8,25.5,76.7,19.05
+Tomato,Central Valley,Loamy,Autumn,7.56,33.3,1626.2,83.9,311.3,200.6,18.21,39.2,120.1,48.1,37.2,16.11
+Potato,Midwest,Black Soil,Autumn,6.41,23.9,1624.5,74.5,139.4,159.3,17.81,34.4,77.6,41.1,53.8,16.65
+Cotton,Southeast,Sandy Loam,Summer,7.77,29.7,1760.1,51.4,340.4,221.1,1.52,42.3,148.4,37.5,92.9,1.52
+Tomato,Pacific Northwest,Loamy,Rabi,7.94,24.1,1052.5,65.8,399.1,62.9,15.64,22.6,150.8,19.6,91.0,15.12
+Potato,Midwest,Black Soil,Autumn,5.78,32.7,1563.6,52.5,465.2,261.1,16.51,2.4,138.6,34.2,102.4,15.2
+Tomato,Great Plains,Alluvial,Kharif,5.93,25.8,996.8,88.0,479.7,176.8,14.22,34.4,88.2,73.6,45.9,17.28
+Cotton,Pacific Northwest,Loamy,Summer,5.35,33.1,1480.8,50.7,277.1,101.8,1.62,2.3,68.9,60.6,71.3,1.57
+Cotton,Pacific Northwest,Loamy,Spring,7.14,28.0,362.3,52.6,744.1,120.3,1.64,45.7,175.4,60.0,62.4,1.71
+Potato,Southeast,Silt Loam,Summer,6.11,26.4,1254.2,69.2,105.9,279.9,14.61,11.7,175.3,73.8,76.1,13.64
+Tomato,Delta Region,Sandy Loam,Summer,6.65,22.7,750.9,56.3,321.5,200.9,18.73,34.5,173.3,60.6,38.8,18.45
+Tomato,Midwest,Loamy,Autumn,6.16,18.8,386.9,64.9,336.5,258.6,17.35,20.8,96.6,66.6,78.3,16.55
+Tomato,Midwest,Sandy Loam,Rabi,7.11,25.5,1714.0,57.9,340.2,89.1,16.44,34.6,132.1,54.1,49.4,16.61
+Potato,Midwest,Alluvial,Summer,6.88,34.3,1723.0,85.0,623.5,101.1,15.59,36.5,71.3,76.0,62.0,13.25
+Corn,Southeast,Sandy Loam,Autumn,7.75,25.4,1606.3,69.2,855.4,66.4,4.67,15.4,164.5,50.0,106.7,4.28
+Potato,Delta Region,Sandy Loam,Spring,7.76,18.7,640.4,60.5,555.5,258.5,10.87,3.6,104.1,37.1,91.6,12.77
+Cotton,Central Valley,Silt Loam,Summer,5.73,28.7,356.8,53.7,709.0,88.8,1.62,31.9,147.0,49.3,96.4,1.73
+Rice,Midwest,Black Soil,Spring,6.41,35.3,905.8,41.9,259.5,135.8,3.36,32.0,42.0,37.6,103.3,3.29
+Wheat,Central Valley,Alluvial,Kharif,5.95,29.9,849.3,46.4,406.8,185.4,2.42,31.7,63.4,72.7,49.8,2.78
+Corn,Great Plains,Alluvial,Autumn,6.21,33.8,1793.4,57.1,821.1,132.6,4.78,30.2,66.4,81.4,111.8,4.22
+Potato,Central Valley,Clay,Rabi,5.59,30.7,1205.1,48.4,393.3,199.6,15.89,36.6,45.2,76.4,45.6,12.97
+Tomato,Delta Region,Loamy,Autumn,7.19,29.1,378.6,74.5,433.4,137.5,17.82,49.7,116.6,48.2,35.3,17.43
+Soybean,Pacific Northwest,Alluvial,Kharif,7.18,29.2,741.5,70.3,209.7,241.1,1.98,15.8,54.7,65.3,31.8,2.19
+Rice,Central Valley,Silt Loam,Rabi,7.53,32.6,1761.0,57.9,427.8,86.9,3.31,30.8,116.7,78.7,88.8,3.17
+Potato,Southeast,Clay,Kharif,5.47,18.2,1182.5,64.7,859.6,229.3,16.69,1.6,50.5,65.7,110.5,13.95
+Soybean,Midwest,Silt Loam,Summer,5.35,32.3,1617.5,82.6,388.2,205.7,2.48,13.9,99.6,23.1,105.1,2.0
+Rice,Central Valley,Clay,Rabi,7.88,35.1,739.0,76.7,398.1,128.8,4.1,17.1,55.9,43.0,65.7,3.8
+Cotton,Great Plains,Alluvial,Spring,7.15,31.9,513.9,74.8,146.9,266.8,1.13,40.2,62.3,44.1,79.1,1.47
+Cotton,Delta Region,Alluvial,Spring,6.34,23.2,391.8,74.2,770.8,273.9,1.96,9.9,58.3,79.4,31.3,1.95
+Potato,Great Plains,Loamy,Kharif,6.14,30.1,1333.0,78.4,561.3,180.0,15.31,13.8,176.9,61.9,53.8,14.1
+Tomato,Pacific Northwest,Alluvial,Autumn,7.19,21.0,851.3,73.8,407.9,243.0,18.23,5.7,118.2,84.1,25.5,17.77
+Soybean,Midwest,Black Soil,Spring,7.81,17.5,1062.9,52.0,876.1,61.6,2.59,42.7,71.2,60.0,60.3,2.12
+Wheat,Central Valley,Silt Loam,Spring,6.54,33.1,998.2,45.9,497.9,200.3,3.36,40.3,54.4,43.9,75.7,3.15
+Rice,Central Valley,Black Soil,Autumn,7.87,27.2,1299.2,62.8,372.7,239.8,3.52,32.2,154.3,74.1,53.2,3.54
+Cotton,Delta Region,Black Soil,Spring,6.29,25.1,491.3,72.9,101.8,131.7,1.91,36.1,128.7,71.0,74.8,1.78
+Corn,Pacific Northwest,Loamy,Kharif,6.68,32.4,1426.6,60.5,303.4,95.1,4.8,44.9,56.9,74.7,41.6,5.0
+Cotton,Midwest,Alluvial,Summer,6.44,34.5,1564.3,69.4,717.7,153.6,2.04,6.3,132.2,81.9,33.5,1.78
+Potato,Central Valley,Black Soil,Kharif,6.5,27.7,1690.3,79.1,828.1,209.1,17.11,28.1,64.3,72.1,30.4,14.41
+Soybean,Delta Region,Black Soil,Summer,6.35,35.6,1678.1,78.1,318.9,271.6,1.53,25.7,175.9,46.7,33.3,1.74
+Potato,Delta Region,Alluvial,Autumn,7.3,33.2,1382.2,86.8,606.1,96.2,10.43,15.6,127.4,35.3,54.5,11.33
+Soybean,Midwest,Alluvial,Rabi,7.28,22.4,517.3,57.6,484.3,181.2,2.21,25.7,133.4,44.2,94.8,2.4
+Cotton,Delta Region,Sandy Loam,Spring,6.77,16.5,560.7,73.5,259.9,222.5,1.89,40.6,62.5,35.1,45.1,1.76
+Cotton,Central Valley,Alluvial,Summer,6.82,23.2,1006.3,70.8,640.4,179.2,2.02,11.0,71.4,60.3,58.9,1.81
+Tomato,Pacific Northwest,Sandy Loam,Kharif,6.36,35.1,1764.9,55.6,541.7,53.0,18.64,46.4,75.2,58.4,98.1,16.94
+Cotton,Great Plains,Clay,Summer,6.84,28.1,1475.4,88.2,335.3,90.8,1.4,38.0,135.6,28.1,37.4,1.7
+Tomato,Central Valley,Silt Loam,Kharif,6.87,18.6,1196.8,52.8,364.5,213.2,18.91,22.0,61.7,25.8,52.3,17.91
+Rice,Pacific Northwest,Black Soil,Summer,6.92,23.2,1486.8,55.9,276.0,92.3,4.16,25.0,49.5,50.4,61.6,4.33
+Tomato,Great Plains,Loamy,Summer,5.84,22.6,873.2,50.9,702.1,172.0,18.49,11.8,179.5,72.7,118.1,18.68
+Rice,Central Valley,Alluvial,Summer,7.91,28.3,1250.6,87.9,646.0,123.8,3.54,22.8,168.2,81.1,58.6,3.44
+Tomato,Pacific Northwest,Sandy Loam,Kharif,7.67,23.5,1514.1,62.3,135.1,256.6,20.24,45.7,67.0,51.0,114.8,17.65
+Wheat,Delta Region,Black Soil,Kharif,5.83,28.6,659.1,74.3,768.5,97.3,3.23,31.7,156.0,76.5,94.1,2.95
+Potato,Pacific Northwest,Loamy,Rabi,7.35,16.8,456.2,48.9,301.5,66.2,15.54,2.2,155.0,78.8,60.8,14.55
+Potato,Pacific Northwest,Silt Loam,Spring,6.37,18.4,358.6,76.0,150.6,221.6,16.76,16.5,46.4,74.4,55.8,14.94
+Tomato,Central Valley,Sandy Loam,Summer,6.04,34.5,903.0,81.1,124.7,86.0,17.27,30.7,70.8,67.3,99.7,15.76
+Cotton,Delta Region,Sandy Loam,Rabi,7.86,35.3,1607.4,72.4,865.9,52.6,1.68,15.6,162.5,24.9,24.2,1.53
+Tomato,Delta Region,Silt Loam,Autumn,5.46,20.2,1425.1,76.3,269.4,258.3,20.04,27.8,159.2,25.0,38.4,17.24
+Tomato,Southeast,Clay,Kharif,7.6,33.0,1584.5,86.6,895.5,156.1,20.35,9.9,117.0,35.3,26.7,18.05
+Rice,Midwest,Alluvial,Autumn,6.19,18.6,1300.4,45.0,595.6,257.0,4.04,24.9,84.5,46.5,81.6,4.18
+Corn,Pacific Northwest,Black Soil,Rabi,6.29,22.3,971.0,40.2,296.9,101.0,4.07,28.7,143.6,45.5,104.0,4.23
+Wheat,Pacific Northwest,Alluvial,Summer,6.59,23.2,792.9,67.6,240.6,189.5,2.35,44.0,157.9,75.1,34.0,3.23
+Tomato,Midwest,Sandy Loam,Kharif,7.88,33.0,1265.9,80.6,563.1,226.9,19.77,36.6,69.8,17.6,46.1,17.17
+Tomato,Great Plains,Alluvial,Rabi,5.87,31.4,1413.2,54.5,471.8,167.4,18.76,18.9,95.5,50.2,86.3,17.78
+Cotton,Delta Region,Alluvial,Rabi,5.62,19.2,1171.2,68.3,797.8,83.6,2.46,38.1,142.5,80.7,24.0,1.9
+Cotton,Great Plains,Clay,Kharif,5.9,29.4,1100.9,79.6,410.5,261.1,1.83,14.0,163.4,17.8,84.9,1.86
+Rice,Pacific Northwest,Black Soil,Summer,5.99,26.9,602.1,72.7,392.2,200.3,4.07,41.9,157.0,51.2,57.6,4.02
+Wheat,Delta Region,Silt Loam,Summer,6.24,31.9,1636.4,40.3,805.6,151.2,2.82,41.0,72.2,51.0,48.1,2.86
+Wheat,Midwest,Clay,Summer,7.65,29.2,951.2,56.5,190.7,205.3,4.1,30.5,107.1,56.4,84.7,3.48
+Potato,Central Valley,Clay,Kharif,6.98,18.7,1093.3,84.5,217.5,88.3,17.97,7.3,169.1,51.2,60.5,15.33
+Tomato,Pacific Northwest,Loamy,Summer,5.85,28.1,1033.5,64.1,275.5,144.5,15.33,47.4,60.0,55.8,96.7,17.06
+Tomato,Pacific Northwest,Black Soil,Summer,7.26,34.4,1215.0,43.4,402.6,80.4,18.15,9.2,42.3,51.6,110.9,17.95
+Soybean,Great Plains,Clay,Autumn,6.63,28.3,406.6,79.2,502.7,77.0,1.64,5.7,107.5,24.1,80.3,2.09
+Cotton,Central Valley,Alluvial,Spring,6.31,16.9,1118.2,51.5,741.8,231.6,1.76,26.6,93.4,56.2,94.1,1.76
+Cotton,Pacific Northwest,Black Soil,Kharif,5.96,31.3,1669.6,44.2,578.6,175.1,1.53,21.8,76.1,15.4,94.4,1.51
+Rice,Delta Region,Black Soil,Kharif,6.33,20.1,1516.2,60.4,185.3,148.0,4.27,26.5,122.0,33.3,73.6,3.94
+Tomato,Southeast,Black Soil,Summer,6.39,20.1,1150.6,67.9,243.0,178.6,14.52,49.6,107.7,84.2,77.8,15.53
+Cotton,Pacific Northwest,Silt Loam,Rabi,7.18,31.0,997.6,75.0,229.4,99.3,1.71,42.9,96.1,38.7,75.1,1.88
+Soybean,Pacific Northwest,Alluvial,Kharif,8.09,16.1,482.1,47.3,840.7,150.1,2.11,8.9,49.0,30.5,28.0,1.87
+Rice,Pacific Northwest,Silt Loam,Spring,6.76,30.2,1216.3,87.3,756.2,197.3,3.66,31.1,101.5,29.1,85.7,3.65
+Cotton,Delta Region,Sandy Loam,Rabi,7.0,26.3,685.9,48.5,128.8,105.0,1.07,2.6,40.0,26.0,119.7,1.47
+Cotton,Great Plains,Sandy Loam,Spring,5.8,16.3,1370.3,86.0,539.7,217.0,1.74,20.9,118.3,55.8,54.7,1.65
+Cotton,Southeast,Clay,Autumn,6.56,24.1,356.7,48.8,505.0,178.5,2.3,48.2,110.4,38.8,31.7,2.11
+Tomato,Southeast,Black Soil,Autumn,6.53,23.5,1051.3,52.2,371.7,228.4,17.27,13.3,135.4,77.8,106.2,17.83
+Potato,Central Valley,Sandy Loam,Kharif,7.57,20.4,1366.7,80.0,429.9,131.2,20.1,19.8,115.0,64.1,46.3,16.14
+Corn,Central Valley,Silt Loam,Summer,7.99,25.5,862.6,84.7,315.3,267.8,4.61,4.7,135.6,78.7,69.9,4.46
+Wheat,Midwest,Alluvial,Rabi,5.82,20.1,712.1,70.9,224.8,74.5,3.3,43.8,168.8,62.3,86.3,3.18
+Tomato,Central Valley,Black Soil,Kharif,6.31,22.3,1652.3,84.0,559.6,113.2,16.45,42.6,65.6,68.5,71.1,16.41
+Potato,Midwest,Black Soil,Rabi,7.6,25.6,1134.1,65.1,415.0,207.9,14.43,3.7,64.5,83.4,89.8,13.32
+Potato,Southeast,Alluvial,Kharif,5.83,27.6,821.9,70.6,307.8,176.2,12.95,1.6,73.2,48.0,81.3,13.31
+Corn,Midwest,Silt Loam,Spring,7.3,23.4,1588.8,54.0,243.9,80.2,4.42,11.3,120.6,31.0,30.0,4.73
+Corn,Midwest,Black Soil,Spring,5.79,32.0,1420.9,63.6,107.8,146.9,2.77,43.0,58.8,77.5,83.1,4.07
+Tomato,Pacific Northwest,Sandy Loam,Spring,6.89,27.4,927.7,74.5,148.0,237.2,21.36,15.7,106.7,59.1,65.0,17.96
+Corn,Southeast,Sandy Loam,Summer,8.0,21.2,378.8,46.1,793.9,271.5,4.36,28.5,67.9,55.3,84.9,4.03
+Wheat,Southeast,Sandy Loam,Summer,6.66,30.7,1640.0,59.1,329.2,195.3,2.52,34.0,60.3,26.7,100.8,2.55
+Corn,Great Plains,Alluvial,Autumn,7.75,17.4,584.9,51.4,353.5,117.0,3.83,29.0,77.4,60.1,47.1,4.34
+Potato,Southeast,Alluvial,Autumn,6.55,19.3,1588.6,46.3,287.7,107.9,16.54,26.5,144.1,67.5,41.1,16.56
+Potato,Central Valley,Loamy,Kharif,6.62,17.1,1467.9,66.2,896.8,73.9,16.07,46.9,126.5,20.9,113.2,14.06
+Potato,Southeast,Clay,Rabi,6.53,18.5,1113.8,48.5,128.1,132.1,13.36,37.1,168.1,75.5,66.7,14.42
+Cotton,Delta Region,Sandy Loam,Autumn,8.11,30.0,606.7,69.9,604.8,196.2,1.47,22.8,119.0,51.6,84.0,1.59
+Corn,Southeast,Silt Loam,Autumn,5.47,22.2,947.7,47.8,108.4,170.4,4.43,12.1,146.2,24.5,48.7,4.37
+Tomato,Central Valley,Alluvial,Spring,6.63,16.2,974.1,54.6,285.0,51.7,19.92,47.4,92.3,43.8,76.1,18.5
+Potato,Midwest,Clay,Spring,5.86,17.6,1256.7,65.8,740.0,191.0,13.71,41.6,137.1,34.0,84.8,14.0
+Tomato,Southeast,Silt Loam,Rabi,5.75,21.8,1273.5,70.9,317.7,193.2,15.08,42.8,66.3,16.4,25.0,16.58
+Tomato,Central Valley,Clay,Kharif,5.58,24.8,361.9,44.5,111.8,100.0,19.6,14.8,98.8,70.0,69.8,16.86
+Corn,Great Plains,Alluvial,Kharif,7.73,35.0,431.3,78.8,157.1,158.1,4.83,17.2,66.9,73.9,101.7,4.08
+Cotton,Central Valley,Loamy,Rabi,8.12,20.9,1792.1,50.0,688.3,71.6,2.05,19.9,133.2,29.6,58.9,1.67
+Corn,Southeast,Clay,Kharif,6.85,18.4,1047.8,54.9,388.3,62.0,4.24,37.5,133.3,83.1,43.6,4.37
+Potato,Southeast,Loamy,Rabi,6.95,23.9,702.5,88.4,564.9,208.9,12.97,39.9,136.4,25.8,97.1,13.76
+Wheat,Midwest,Silt Loam,Kharif,6.22,35.4,1451.4,43.0,384.4,85.4,2.45,34.6,115.1,22.5,68.8,2.81
+Corn,Delta Region,Alluvial,Summer,6.52,19.9,1349.4,57.9,207.8,256.7,3.72,40.5,107.9,45.6,49.5,4.62
+Soybean,Great Plains,Clay,Autumn,6.24,30.6,749.2,81.6,831.6,177.5,1.51,10.1,49.6,25.9,49.6,2.08
+Corn,Delta Region,Sandy Loam,Spring,7.11,23.6,619.0,40.9,785.5,228.5,4.75,1.0,73.4,65.5,85.8,4.62
+Tomato,Great Plains,Clay,Autumn,7.5,19.1,760.5,60.5,357.6,72.1,16.53,34.5,132.2,18.1,113.8,16.23
+Wheat,Central Valley,Clay,Kharif,5.5,27.4,1562.6,72.9,520.7,211.3,3.18,24.8,75.8,40.6,80.6,2.97
+Rice,Central Valley,Clay,Spring,7.7,25.4,1276.4,58.0,694.8,254.8,3.87,46.5,155.1,70.6,25.8,3.58
+Tomato,Southeast,Black Soil,Kharif,7.7,17.6,663.1,66.0,181.0,103.1,17.02,37.0,93.9,28.5,85.7,16.38
+Tomato,Pacific Northwest,Clay,Autumn,6.45,18.1,1276.0,57.9,467.0,203.0,18.83,37.7,163.6,26.7,38.0,16.62
+Potato,Delta Region,Sandy Loam,Rabi,7.0,34.7,1658.6,67.5,897.5,244.3,11.57,27.2,97.7,59.3,102.6,12.44
+Corn,Delta Region,Clay,Autumn,6.33,27.0,1429.6,58.0,461.9,270.8,4.72,27.7,40.0,17.4,48.4,4.7
+Rice,Delta Region,Clay,Summer,8.15,20.3,806.6,78.6,854.7,239.1,3.81,1.3,168.7,50.8,77.1,3.5
+Tomato,Midwest,Loamy,Kharif,5.67,21.3,1640.0,52.5,305.0,119.1,16.54,23.6,119.9,54.8,41.7,15.34
+Rice,Pacific Northwest,Sandy Loam,Spring,7.68,29.8,1185.5,85.4,576.2,119.1,3.91,9.5,142.3,55.3,27.8,3.49
+Rice,Southeast,Sandy Loam,Spring,7.8,33.4,678.7,72.6,581.8,52.6,4.03,21.4,148.8,41.8,50.5,3.23
+Rice,Southeast,Black Soil,Autumn,6.71,20.4,423.3,76.6,414.3,152.5,4.39,8.3,123.3,50.3,42.2,4.07
+Corn,Great Plains,Clay,Rabi,6.63,30.9,1144.8,53.1,418.8,149.9,4.78,17.5,137.7,68.3,68.1,4.9
+Wheat,Great Plains,Silt Loam,Autumn,7.05,30.7,707.1,43.6,721.4,124.4,4.0,10.6,169.4,21.3,87.2,3.51
+Potato,Southeast,Sandy Loam,Rabi,6.98,16.5,792.0,89.4,593.0,277.7,10.5,16.7,101.9,25.2,24.5,12.23
+Cotton,Midwest,Clay,Summer,7.39,17.7,1422.4,52.2,596.8,84.0,1.63,8.6,156.5,35.1,54.3,1.54
+Cotton,Central Valley,Sandy Loam,Spring,6.2,30.8,657.2,67.3,700.3,176.2,1.94,24.1,127.2,84.5,89.5,1.79
+Soybean,Central Valley,Silt Loam,Autumn,6.78,21.1,437.2,50.0,657.2,112.4,2.26,45.4,105.1,81.2,26.7,2.11
+Soybean,Southeast,Alluvial,Summer,5.26,33.3,1291.6,51.6,404.6,274.6,2.0,43.3,53.9,37.1,106.7,1.88
+Tomato,Central Valley,Clay,Rabi,6.57,34.5,381.2,52.4,523.5,126.7,15.51,25.5,95.1,26.0,54.7,15.39
+Corn,Southeast,Alluvial,Summer,8.13,26.0,1527.2,71.3,802.9,254.8,3.93,12.6,154.1,17.1,75.5,4.18
+Corn,Midwest,Clay,Summer,7.17,17.8,904.2,88.0,590.0,193.9,3.94,45.0,71.8,31.8,35.3,4.62
+Corn,Delta Region,Sandy Loam,Spring,5.82,18.8,1135.0,80.0,790.1,121.1,4.94,27.6,138.7,51.7,33.5,4.29
+Cotton,Midwest,Alluvial,Autumn,6.15,27.1,1725.5,45.9,354.1,252.3,1.57,45.9,141.8,68.6,108.0,1.74
+Potato,Great Plains,Sandy Loam,Spring,7.67,28.7,1420.6,47.6,250.3,80.3,13.25,37.5,43.7,84.0,81.7,12.57
+Tomato,Delta Region,Black Soil,Rabi,5.89,16.5,465.2,79.0,207.3,244.6,24.91,30.2,105.6,60.5,38.4,19.72
+Potato,Great Plains,Silt Loam,Rabi,5.88,24.2,1754.8,86.3,860.2,101.2,17.0,9.0,134.0,29.2,40.5,14.29
+Wheat,Great Plains,Black Soil,Spring,7.8,33.8,970.0,78.8,586.3,239.6,3.18,34.7,140.8,42.6,113.9,3.2
+Tomato,Delta Region,Black Soil,Autumn,7.31,16.8,508.5,62.8,802.2,251.9,16.31,32.4,74.4,52.7,118.4,18.2
+Rice,Delta Region,Silt Loam,Autumn,8.09,19.8,987.4,84.2,718.9,115.8,4.2,38.5,63.3,35.6,111.9,3.54
+Soybean,Delta Region,Clay,Spring,6.56,30.5,514.1,78.9,850.3,210.1,2.41,41.7,58.9,43.9,65.1,2.42
+Wheat,Great Plains,Black Soil,Rabi,5.47,22.5,1290.4,75.6,231.2,218.7,3.5,44.2,52.8,64.4,83.4,3.08
+Rice,Delta Region,Alluvial,Spring,8.13,28.2,581.9,67.5,135.1,89.3,3.39,36.6,86.9,76.0,106.3,3.29
+Wheat,Midwest,Clay,Kharif,6.13,31.4,997.1,71.3,194.0,80.3,3.16,21.6,68.4,58.6,45.3,3.03
+Potato,Great Plains,Silt Loam,Autumn,7.02,25.9,664.5,73.0,463.0,151.6,14.89,40.6,124.2,15.5,108.2,13.32
+Corn,Delta Region,Alluvial,Autumn,5.82,19.7,429.8,57.5,216.3,57.5,4.86,41.2,120.9,57.2,53.1,4.42
+Rice,Central Valley,Loamy,Spring,5.68,21.7,1308.3,75.0,557.8,179.3,4.12,49.7,175.3,67.5,56.0,3.96
+Rice,Central Valley,Sandy Loam,Summer,6.34,17.4,969.6,67.5,334.3,80.9,4.28,19.1,137.2,34.2,72.7,3.83
+Tomato,Midwest,Alluvial,Rabi,5.53,30.6,1262.0,89.4,486.9,208.4,17.81,31.0,170.7,84.0,48.7,16.7
+Tomato,Southeast,Sandy Loam,Autumn,7.07,34.5,1240.7,64.8,683.3,164.5,19.16,29.2,153.1,76.9,43.3,17.03
+Corn,Midwest,Loamy,Kharif,7.08,18.4,1579.7,80.0,899.2,145.2,4.79,2.2,86.7,54.2,83.8,4.16
+Rice,Pacific Northwest,Clay,Summer,5.4,22.0,1147.5,78.4,191.1,126.7,3.18,13.5,95.4,54.8,116.0,3.51
+Cotton,Midwest,Clay,Summer,7.97,25.6,1038.0,41.8,208.6,85.7,1.79,41.9,104.5,75.6,109.6,1.71
+Potato,Great Plains,Alluvial,Kharif,6.1,30.5,807.5,66.8,266.6,207.7,14.56,41.9,151.9,77.2,55.4,14.16
+Wheat,Southeast,Loamy,Summer,7.08,32.8,1177.9,59.5,576.2,248.9,3.65,49.2,145.2,64.4,51.4,3.25
+Rice,Southeast,Silt Loam,Kharif,5.91,25.0,1728.6,50.8,341.9,75.8,3.85,25.4,149.9,69.4,111.3,3.52
+Potato,Delta Region,Loamy,Spring,5.66,22.8,1051.0,83.7,348.3,125.3,13.55,45.3,147.7,21.9,118.2,13.87
+Tomato,Pacific Northwest,Clay,Rabi,6.58,30.3,1107.4,40.2,845.9,208.0,18.6,36.5,123.2,21.1,66.7,17.34
+Rice,Central Valley,Black Soil,Summer,7.48,28.8,654.3,50.0,329.3,172.4,4.52,2.1,148.2,62.0,47.3,3.95
+Wheat,Southeast,Loamy,Kharif,6.88,18.0,1136.7,67.5,316.8,267.0,3.11,48.0,152.6,55.2,37.1,3.29
+Corn,Delta Region,Sandy Loam,Autumn,5.59,25.4,1329.5,45.3,143.0,148.1,5.6,22.7,65.1,56.7,79.3,4.84
+Cotton,Pacific Northwest,Alluvial,Spring,6.14,32.3,1383.7,73.5,526.8,273.9,2.08,31.2,145.8,47.6,33.2,1.72
+Cotton,Pacific Northwest,Silt Loam,Kharif,7.25,30.2,1024.8,51.6,279.0,248.1,1.87,23.3,126.4,78.9,59.2,1.93
+Soybean,Pacific Northwest,Sandy Loam,Summer,5.29,25.5,859.6,63.1,236.6,226.6,2.23,23.2,124.6,23.9,30.3,2.19
+Cotton,Pacific Northwest,Loamy,Summer,5.41,22.0,1018.4,69.5,290.9,106.0,1.66,28.3,62.3,48.8,26.6,1.8
+Wheat,Pacific Northwest,Black Soil,Spring,6.51,31.7,1139.6,51.8,630.1,67.9,4.3,39.4,170.3,55.2,68.7,3.44
+Tomato,Delta Region,Silt Loam,Summer,7.67,19.5,1736.0,43.5,187.0,237.2,16.8,28.2,148.0,41.5,69.4,17.02
+Soybean,Central Valley,Loamy,Rabi,7.86,34.1,1272.4,40.0,217.4,84.3,2.72,41.0,114.4,42.3,77.8,2.2
+Wheat,Midwest,Alluvial,Summer,7.58,29.6,1681.8,86.8,674.2,260.5,3.0,15.7,178.6,55.8,81.1,2.81
+Tomato,Great Plains,Clay,Summer,7.9,35.4,351.2,68.0,883.0,75.2,14.37,4.1,79.5,17.2,63.2,14.08
+Tomato,Great Plains,Alluvial,Summer,6.42,24.7,656.3,48.7,211.3,177.7,15.29,35.9,158.1,40.2,61.7,17.23
+Corn,Pacific Northwest,Clay,Rabi,7.15,18.9,1633.1,72.9,880.0,81.2,4.58,1.6,59.2,71.4,106.0,4.18
+Cotton,Pacific Northwest,Black Soil,Spring,6.56,24.5,1539.1,59.2,280.6,147.7,2.22,31.5,41.0,49.9,93.1,1.97
+Soybean,Delta Region,Sandy Loam,Spring,6.93,16.7,404.9,64.2,394.9,183.5,2.52,46.4,174.6,20.6,93.0,2.17
+Tomato,Southeast,Silt Loam,Autumn,7.87,17.8,1035.1,77.1,868.3,68.0,17.87,4.8,128.7,70.9,51.2,16.32
+Rice,Southeast,Black Soil,Kharif,6.74,25.4,1414.0,61.1,868.5,233.6,3.16,24.0,80.5,17.5,112.3,3.57
+Soybean,Southeast,Alluvial,Autumn,7.09,27.6,1180.6,72.8,333.4,219.6,2.25,13.8,43.8,48.9,32.7,2.35
+Rice,Southeast,Sandy Loam,Rabi,6.03,21.1,1425.1,70.2,828.1,220.0,3.96,31.2,132.3,40.9,37.5,3.91
+Cotton,Pacific Northwest,Clay,Spring,6.78,16.7,1776.9,88.4,576.4,239.0,1.63,9.9,157.3,67.7,61.3,1.57
+Potato,Midwest,Alluvial,Spring,5.7,27.6,1570.7,42.7,311.5,238.5,13.14,36.6,47.4,47.5,67.6,12.99
+Potato,Pacific Northwest,Black Soil,Rabi,7.32,25.5,560.5,83.5,109.5,263.3,13.11,19.6,102.8,62.5,116.2,13.66
+Soybean,Central Valley,Loamy,Autumn,8.07,24.6,1681.2,82.9,368.0,111.4,2.67,32.2,53.8,60.8,59.1,2.15
+Cotton,Pacific Northwest,Alluvial,Rabi,6.97,19.9,839.2,74.5,243.9,176.0,1.58,37.0,134.2,73.2,21.2,1.73
+Rice,Delta Region,Loamy,Spring,7.38,21.0,399.4,71.0,145.5,186.7,3.49,18.2,165.2,30.2,79.9,3.53
+Rice,Pacific Northwest,Loamy,Kharif,5.59,29.1,1654.9,68.3,873.7,256.1,3.92,43.0,137.4,32.7,66.7,3.47
+Rice,Pacific Northwest,Silt Loam,Summer,7.28,29.4,1466.7,52.9,724.6,113.8,4.68,38.7,48.7,42.2,119.6,4.23
+Corn,Southeast,Clay,Spring,8.14,20.0,919.3,72.3,186.7,174.3,4.18,4.4,100.4,58.0,30.6,3.91
+Potato,Pacific Northwest,Sandy Loam,Kharif,5.41,30.6,1477.0,40.9,498.2,200.2,15.12,2.7,40.1,17.6,59.0,13.17
+Wheat,Pacific Northwest,Sandy Loam,Spring,6.75,34.8,1061.5,61.8,775.2,229.6,3.52,29.2,150.0,52.8,20.3,3.44
+Soybean,Great Plains,Loamy,Autumn,8.17,22.7,789.1,42.8,897.6,198.8,2.14,27.2,91.1,74.7,54.0,2.02
+Cotton,Great Plains,Sandy Loam,Rabi,5.32,23.7,627.0,74.8,817.2,195.0,1.43,9.7,90.3,20.9,83.3,1.5
+Soybean,Midwest,Clay,Kharif,7.36,27.9,1059.4,43.1,532.4,120.8,2.19,10.5,114.8,73.4,64.9,2.29
+Rice,Central Valley,Sandy Loam,Kharif,7.36,24.1,656.9,72.7,518.5,266.2,3.5,17.5,161.8,52.6,94.1,3.65
+Wheat,Central Valley,Loamy,Rabi,5.26,34.1,1246.6,52.1,619.0,53.3,3.19,25.0,128.6,78.3,102.1,3.03
+Rice,Great Plains,Black Soil,Rabi,5.39,32.3,515.6,69.7,592.5,64.5,5.24,41.9,68.4,38.6,103.6,3.98
+Soybean,Pacific Northwest,Silt Loam,Summer,7.25,26.9,816.3,88.2,270.6,60.5,2.04,6.9,64.3,19.4,47.4,2.18
+Cotton,Great Plains,Clay,Summer,6.52,34.5,409.0,45.0,777.9,190.9,1.98,28.1,148.9,16.1,68.7,1.96
+Rice,Central Valley,Clay,Kharif,6.98,21.7,1355.6,79.6,480.8,79.2,4.13,35.6,60.0,34.0,65.0,3.66
+Wheat,Midwest,Black Soil,Kharif,7.35,28.2,477.6,81.3,341.0,146.3,3.48,30.2,118.1,28.4,118.7,3.29
+Rice,Delta Region,Sandy Loam,Autumn,6.59,28.5,651.8,42.7,190.1,84.3,4.27,25.9,158.1,78.8,69.8,4.01
+Wheat,Pacific Northwest,Loamy,Kharif,6.06,24.7,834.7,80.3,706.7,60.0,3.71,32.6,143.7,79.7,37.6,3.54
+Cotton,Central Valley,Silt Loam,Autumn,7.89,30.4,1209.4,56.3,259.0,205.7,2.17,6.7,85.6,69.5,52.6,1.95
+Rice,Midwest,Alluvial,Spring,6.33,20.4,1032.9,64.2,812.4,83.3,3.7,43.6,169.9,46.8,58.7,3.68
+Wheat,Great Plains,Alluvial,Rabi,8.13,20.0,534.5,74.6,147.7,81.4,3.78,32.0,159.2,47.1,37.1,3.05
+Corn,Midwest,Sandy Loam,Autumn,7.58,35.1,1663.1,68.9,542.2,102.8,4.85,8.7,97.6,51.5,106.2,4.1
+Wheat,Delta Region,Silt Loam,Spring,7.39,30.7,707.6,56.4,563.6,255.1,3.21,14.7,122.8,25.4,77.4,3.22
+Rice,Great Plains,Loamy,Kharif,7.4,26.1,967.3,59.7,747.8,210.2,3.91,49.6,53.7,49.7,28.3,3.93
+Cotton,Central Valley,Alluvial,Spring,5.6,21.9,1289.1,44.5,483.8,120.1,1.43,47.5,138.5,75.1,94.7,1.61
+Rice,Great Plains,Silt Loam,Rabi,6.42,31.8,887.1,63.2,606.7,247.9,4.17,43.8,49.9,77.5,53.3,4.45
+Rice,Southeast,Silt Loam,Summer,7.04,27.5,650.4,74.2,596.4,127.2,3.62,35.2,170.5,51.0,111.0,3.81
+Corn,Central Valley,Loamy,Spring,7.06,23.3,604.1,67.9,153.6,213.1,4.77,18.9,68.7,83.7,43.9,5.01
+Rice,Pacific Northwest,Silt Loam,Autumn,7.31,31.1,1453.3,56.0,818.3,165.8,3.75,43.7,99.2,18.8,57.3,3.66
+Potato,Great Plains,Black Soil,Autumn,6.61,26.6,1546.8,85.0,461.6,134.7,15.82,41.6,134.3,63.5,117.8,14.13
+Rice,Midwest,Silt Loam,Kharif,7.89,21.8,1737.1,45.5,320.8,210.3,3.55,4.9,109.5,76.2,72.1,3.35
+Soybean,Central Valley,Sandy Loam,Spring,6.82,18.6,852.7,62.2,615.7,117.0,2.55,48.5,48.8,76.0,43.2,2.14
+Tomato,Pacific Northwest,Sandy Loam,Spring,7.17,31.7,1054.9,73.3,524.1,176.1,18.36,29.4,104.1,54.7,109.8,17.38
+Corn,Midwest,Sandy Loam,Rabi,8.11,31.4,418.6,57.7,464.7,88.3,5.42,24.7,169.4,64.8,48.5,4.25
+Wheat,Pacific Northwest,Alluvial,Rabi,5.55,35.9,1183.1,62.0,395.7,97.2,2.93,8.9,139.0,61.6,117.8,2.91
+Wheat,Southeast,Silt Loam,Autumn,6.8,18.4,386.1,86.6,714.8,268.0,3.95,48.8,169.9,25.9,117.0,3.64
+Tomato,Delta Region,Sandy Loam,Summer,6.07,34.9,1772.0,68.7,217.7,180.0,16.5,24.2,167.0,45.9,88.9,17.17
+Soybean,Great Plains,Loamy,Rabi,5.55,16.5,1245.4,51.0,385.9,125.1,1.72,34.2,125.1,28.7,72.6,1.7
+Cotton,Southeast,Clay,Kharif,7.75,29.5,1738.6,88.8,415.5,162.8,1.92,5.1,124.4,50.8,25.6,1.66
+Soybean,Southeast,Silt Loam,Rabi,6.48,23.7,367.7,57.2,346.5,152.5,1.86,36.1,118.5,30.1,108.8,2.13
+Soybean,Great Plains,Silt Loam,Summer,7.38,34.0,1406.5,60.7,768.4,187.5,2.28,9.0,60.1,36.2,118.8,2.01
+Tomato,Southeast,Loamy,Autumn,5.47,24.2,1675.9,60.7,544.7,213.4,14.54,38.0,145.7,24.6,38.6,16.34
+Potato,Southeast,Black Soil,Spring,7.68,32.7,790.7,68.0,470.8,56.2,15.91,3.1,40.3,33.4,115.6,13.7
+Cotton,Pacific Northwest,Silt Loam,Kharif,7.88,24.3,1063.2,74.4,295.8,77.5,2.3,33.0,78.8,84.6,26.7,1.83
+Soybean,Southeast,Black Soil,Spring,7.81,28.6,1040.3,74.7,195.7,167.9,1.7,28.7,120.5,74.2,36.3,1.89
+Rice,Midwest,Sandy Loam,Spring,5.61,19.3,745.4,61.0,829.7,131.9,3.77,44.0,80.6,52.1,113.6,3.53
+Tomato,Midwest,Alluvial,Rabi,7.0,19.3,817.8,55.8,776.0,234.0,17.35,38.5,78.0,63.9,56.3,17.94
+Tomato,Delta Region,Sandy Loam,Rabi,6.75,23.5,1053.1,57.0,828.6,73.6,14.62,1.6,61.6,30.5,38.8,17.28
+Tomato,Delta Region,Alluvial,Autumn,7.34,30.0,1513.7,60.9,832.8,76.8,17.78,42.5,58.4,16.2,54.8,17.71
+Soybean,Southeast,Clay,Spring,6.99,31.3,846.0,75.5,123.0,237.4,2.31,44.6,71.1,75.0,34.2,2.31
+Wheat,Southeast,Clay,Rabi,5.44,29.8,1486.8,43.9,719.8,224.2,3.47,7.4,46.0,22.5,99.3,3.0
+Tomato,Delta Region,Loamy,Spring,5.96,17.3,1318.0,77.7,725.9,261.6,19.74,6.8,68.8,78.1,38.5,18.64
+Corn,Central Valley,Loamy,Rabi,8.03,35.0,854.4,48.0,500.5,217.6,4.74,42.4,73.9,54.9,29.9,4.5
+Tomato,Central Valley,Black Soil,Rabi,8.09,19.4,1443.3,40.2,680.3,262.6,17.76,36.1,168.9,74.6,67.5,17.05
+Soybean,Delta Region,Clay,Spring,5.52,32.7,1772.9,61.2,511.4,143.7,1.98,34.0,146.6,37.0,66.6,2.03
+Tomato,Midwest,Silt Loam,Summer,6.87,16.8,825.8,45.8,326.9,188.1,17.89,35.5,83.7,83.3,64.4,16.72
+Tomato,Great Plains,Sandy Loam,Spring,5.41,32.8,1039.7,74.0,243.4,279.7,18.35,10.3,108.8,22.4,63.8,16.29
+Soybean,Pacific Northwest,Loamy,Kharif,6.4,27.8,497.5,86.3,882.3,64.9,2.48,8.0,176.5,38.7,79.5,2.28
+Potato,Central Valley,Clay,Spring,6.04,30.3,1193.8,53.6,731.6,198.1,13.53,36.5,96.0,48.3,80.3,11.66
+Potato,Great Plains,Black Soil,Summer,6.56,18.4,1059.5,51.5,853.9,56.8,13.52,8.2,143.3,73.1,69.8,12.07
+Rice,Midwest,Silt Loam,Autumn,5.66,28.4,489.7,43.8,701.3,226.5,2.9,34.3,151.0,29.1,86.2,3.55
+Potato,Delta Region,Sandy Loam,Autumn,7.78,26.9,1731.2,41.6,444.3,260.4,16.21,17.8,93.7,37.0,57.6,13.71
+Potato,Central Valley,Loamy,Rabi,7.78,22.1,1373.8,64.6,207.6,214.6,12.4,28.3,108.2,22.7,87.5,13.53
+Soybean,Delta Region,Alluvial,Autumn,6.63,33.1,1084.7,59.6,495.8,273.3,2.2,29.0,126.4,39.7,117.8,2.13
+Corn,Central Valley,Loamy,Autumn,7.71,23.0,1426.0,41.3,813.1,128.5,5.64,3.2,53.6,39.2,55.7,4.9
+Corn,Central Valley,Alluvial,Rabi,7.14,27.9,1670.1,43.3,343.9,127.6,4.45,13.1,42.8,37.8,66.1,4.39
+Cotton,Great Plains,Black Soil,Autumn,6.0,29.9,1202.6,89.3,402.2,139.8,1.86,45.2,120.2,71.6,30.0,1.7
+Soybean,Midwest,Sandy Loam,Spring,7.49,22.8,1241.5,58.2,448.8,164.3,2.12,25.6,158.6,70.1,104.0,2.03
+Tomato,Midwest,Sandy Loam,Summer,8.19,24.0,677.5,77.1,173.6,244.2,15.3,3.3,53.3,38.6,26.7,15.44
+Cotton,Delta Region,Silt Loam,Spring,7.59,29.0,787.7,80.2,446.3,174.2,2.29,11.3,68.0,43.2,82.5,2.02
+Potato,Pacific Northwest,Black Soil,Rabi,7.08,26.3,620.5,65.0,628.6,239.5,13.26,44.2,171.3,33.8,83.8,13.91
+Cotton,Delta Region,Silt Loam,Autumn,5.38,20.0,1020.6,52.0,697.1,226.1,2.18,36.6,158.2,43.7,106.0,1.92
+Rice,Pacific Northwest,Clay,Spring,6.06,19.2,1345.9,51.8,290.8,84.5,3.83,14.1,43.9,70.8,51.1,3.47
+Potato,Delta Region,Silt Loam,Spring,5.31,19.2,547.8,52.9,742.8,201.5,16.02,32.7,64.6,74.7,116.4,14.93
+Potato,Central Valley,Loamy,Kharif,6.09,17.3,1734.9,84.8,637.3,253.7,16.45,16.4,95.6,73.8,104.3,15.47
+Wheat,Central Valley,Black Soil,Autumn,6.77,32.6,1727.0,86.6,301.4,253.4,3.7,46.7,73.3,23.6,100.7,3.14
+Corn,Delta Region,Alluvial,Spring,7.43,34.7,666.1,45.3,271.3,113.1,5.51,40.5,97.2,75.4,25.6,4.8
+Tomato,Southeast,Alluvial,Kharif,6.47,29.7,1746.8,84.0,849.6,133.5,23.6,16.5,140.2,72.5,22.1,19.47
+Tomato,Central Valley,Alluvial,Kharif,7.57,20.8,1151.5,55.5,866.8,133.5,22.69,34.8,153.7,23.5,106.7,18.49
+Cotton,Great Plains,Silt Loam,Kharif,6.38,35.6,720.5,44.5,758.2,104.2,1.62,45.6,69.5,77.3,111.6,1.65
+Soybean,Southeast,Alluvial,Spring,6.02,17.6,1480.2,64.6,689.6,263.1,2.09,39.7,86.6,44.6,111.9,2.07
+Rice,Midwest,Alluvial,Summer,6.26,28.0,1529.5,76.9,462.6,56.3,4.1,25.8,47.3,59.9,83.0,3.65
+Cotton,Pacific Northwest,Clay,Kharif,7.08,22.3,469.2,47.9,513.1,273.0,1.79,20.6,156.3,68.4,104.7,1.96
+Soybean,Great Plains,Sandy Loam,Spring,7.41,21.2,1346.8,81.3,739.6,95.7,2.77,24.4,98.0,27.7,107.6,2.22
+Cotton,Delta Region,Clay,Kharif,7.97,28.9,1258.6,85.3,879.3,95.6,1.81,47.5,138.2,26.8,60.1,1.62
+Potato,Delta Region,Sandy Loam,Rabi,6.3,34.9,520.2,75.9,448.1,261.6,15.83,5.4,103.5,62.2,31.9,13.73
+Soybean,Midwest,Clay,Summer,6.68,18.6,1591.7,70.0,896.2,115.1,2.12,15.1,134.8,44.3,60.9,1.85
+Wheat,Central Valley,Sandy Loam,Summer,6.55,21.0,1195.2,72.4,168.6,157.8,3.39,12.5,162.0,83.2,59.8,3.37
+Wheat,Pacific Northwest,Silt Loam,Spring,5.97,17.9,435.2,56.6,287.9,258.9,2.97,37.1,179.5,80.8,116.7,3.28
+Tomato,Pacific Northwest,Alluvial,Kharif,6.71,23.6,1767.4,73.6,205.8,255.2,14.69,1.3,45.8,27.6,37.0,15.65
+Potato,Southeast,Silt Loam,Rabi,7.33,24.7,727.6,55.7,882.8,164.8,14.99,5.4,176.3,34.7,56.1,15.38
+Potato,Southeast,Sandy Loam,Autumn,7.98,26.3,981.9,48.2,689.5,163.0,18.16,41.6,173.0,53.9,112.3,14.18
+Soybean,Great Plains,Loamy,Rabi,5.89,16.7,727.3,75.3,449.1,278.9,2.56,8.3,169.8,17.9,55.7,2.31
+Soybean,Delta Region,Silt Loam,Spring,7.74,33.3,529.3,44.7,794.5,91.6,2.14,25.2,63.6,50.6,47.3,2.09
+Soybean,Delta Region,Clay,Autumn,5.21,31.3,611.8,86.0,296.9,164.6,2.42,49.9,53.2,38.0,48.4,2.02
+Soybean,Central Valley,Silt Loam,Summer,8.05,32.7,573.0,44.1,764.6,201.7,2.69,29.9,103.6,81.9,79.4,2.35
+Rice,Southeast,Loamy,Autumn,6.17,30.6,1414.8,87.9,555.3,98.6,3.44,47.6,46.8,60.1,52.3,3.59
+Rice,Pacific Northwest,Loamy,Autumn,6.34,24.0,608.1,88.3,792.4,70.5,4.08,47.6,159.3,26.4,97.9,4.0
+Corn,Pacific Northwest,Alluvial,Rabi,6.67,24.6,1519.2,55.5,648.0,80.2,4.22,6.9,133.2,73.2,71.3,4.19
+Potato,Great Plains,Silt Loam,Spring,7.0,17.8,962.7,58.4,249.1,195.1,14.44,14.2,53.0,50.9,117.3,15.58
+Soybean,Midwest,Alluvial,Rabi,6.78,28.9,471.8,63.4,163.3,234.4,2.38,46.6,82.1,83.9,88.4,2.27
+Corn,Midwest,Black Soil,Spring,5.34,17.5,415.4,45.4,439.9,71.7,5.13,15.5,132.5,54.8,45.3,3.91
+Corn,Delta Region,Loamy,Autumn,7.42,25.3,1490.0,82.1,136.2,145.7,5.39,1.8,138.6,37.0,92.4,4.63
+Cotton,Pacific Northwest,Silt Loam,Autumn,6.22,34.4,1524.5,50.6,162.6,275.9,1.7,40.6,76.3,62.1,63.4,1.66
+Rice,Central Valley,Silt Loam,Kharif,7.17,25.2,937.4,72.9,695.4,217.0,3.06,1.7,82.4,71.9,81.7,3.77
+Soybean,Pacific Northwest,Alluvial,Spring,5.46,18.7,626.7,80.8,656.8,93.3,2.05,40.4,43.8,48.7,34.5,2.03
+Wheat,Great Plains,Alluvial,Autumn,6.1,25.3,1037.3,41.1,232.9,85.1,3.18,10.4,138.4,82.5,67.1,3.09
+Cotton,Great Plains,Black Soil,Rabi,6.91,32.7,423.8,40.4,604.3,214.0,1.82,10.9,177.1,74.4,93.7,1.7
+Tomato,Pacific Northwest,Black Soil,Summer,6.4,26.3,1400.7,86.8,824.1,249.6,20.69,2.8,72.5,19.2,21.9,18.57
+Tomato,Southeast,Black Soil,Kharif,7.14,33.8,519.6,71.1,616.9,153.1,13.8,14.1,101.1,26.3,92.6,15.54
+Potato,Southeast,Silt Loam,Rabi,6.96,29.7,1686.5,82.7,672.2,157.7,17.76,25.9,163.6,65.6,59.0,15.19
+Potato,Pacific Northwest,Alluvial,Summer,7.6,32.9,1251.7,54.1,699.4,203.4,13.74,40.0,58.1,29.0,80.6,12.68
+Rice,Great Plains,Silt Loam,Summer,6.87,36.0,870.2,53.0,641.5,90.2,3.62,12.5,160.3,50.2,100.7,3.92
+Corn,Great Plains,Loamy,Autumn,6.89,25.7,1790.8,79.2,715.5,227.1,4.86,12.1,118.0,77.7,105.3,4.76
+Cotton,Delta Region,Black Soil,Kharif,7.98,24.8,1012.8,82.1,188.7,74.4,2.08,35.6,125.5,69.8,114.7,1.82
+Cotton,Delta Region,Loamy,Autumn,7.09,33.4,1670.9,47.9,333.7,151.5,1.73,6.2,110.8,66.3,29.9,1.65
+Soybean,Southeast,Sandy Loam,Rabi,5.81,35.4,1465.4,40.3,767.9,158.9,2.18,7.0,80.1,27.0,46.6,1.97
+Soybean,Great Plains,Sandy Loam,Rabi,7.46,24.4,680.9,80.1,430.7,144.1,2.44,8.4,104.2,74.7,99.5,2.22
+Corn,Central Valley,Silt Loam,Rabi,7.35,26.3,450.9,56.9,421.3,227.6,5.11,38.7,100.8,42.5,23.7,4.85
+Soybean,Midwest,Black Soil,Kharif,8.14,32.0,1619.9,88.6,435.4,253.7,2.23,48.9,138.1,76.1,92.2,1.86
+Corn,Southeast,Loamy,Summer,7.03,18.9,935.7,72.2,810.1,193.6,5.23,45.1,126.5,46.0,54.5,4.89
+Cotton,Pacific Northwest,Silt Loam,Rabi,5.45,26.7,915.5,75.9,803.9,169.7,2.07,44.2,115.7,30.0,71.2,1.66
+Corn,Delta Region,Sandy Loam,Rabi,7.87,26.8,725.1,81.6,343.2,147.2,6.04,2.1,110.7,66.2,104.2,4.88
+Corn,Pacific Northwest,Black Soil,Summer,7.47,34.8,1000.7,68.6,104.2,128.0,5.36,7.1,73.1,67.2,78.2,4.49
+Soybean,Pacific Northwest,Alluvial,Autumn,5.9,22.0,1317.0,80.8,558.2,82.2,2.4,42.4,92.9,66.6,30.5,2.17
+Tomato,Delta Region,Clay,Summer,5.64,24.5,947.5,44.6,439.9,79.9,16.32,23.3,70.1,20.5,87.7,17.81
+Potato,Delta Region,Black Soil,Autumn,7.82,27.7,1272.9,89.8,651.2,268.0,14.09,39.2,142.4,44.2,36.3,12.99
+Tomato,Midwest,Silt Loam,Spring,7.31,33.3,521.2,50.6,478.7,221.7,20.35,7.3,172.2,40.9,115.2,18.79
+Tomato,Great Plains,Loamy,Kharif,6.07,26.5,520.7,55.2,399.6,117.6,18.41,19.1,43.9,25.0,98.4,18.76
+Potato,Central Valley,Sandy Loam,Summer,7.66,25.8,527.4,57.4,796.3,146.0,19.73,11.6,120.2,54.6,110.0,15.24
+Cotton,Great Plains,Silt Loam,Autumn,5.62,28.7,1454.4,73.4,219.2,217.4,1.85,7.5,52.5,58.7,82.4,1.89
+Potato,Midwest,Silt Loam,Summer,8.07,33.8,1417.1,72.3,792.8,212.7,16.9,27.5,120.1,70.7,90.7,14.44
+Tomato,Pacific Northwest,Loamy,Autumn,8.07,26.8,1448.5,87.9,517.4,222.6,19.72,5.2,110.4,16.3,85.8,16.58
+Tomato,Midwest,Loamy,Summer,5.94,30.1,1637.1,62.2,745.5,189.6,22.41,39.6,96.3,18.1,106.2,18.47
+Rice,Southeast,Silt Loam,Rabi,7.78,22.3,722.9,45.7,179.5,88.7,3.97,21.3,60.2,32.9,29.0,3.59
+Corn,Great Plains,Alluvial,Rabi,8.08,19.6,1384.3,54.9,179.0,82.8,4.56,3.9,165.0,33.1,114.2,4.24
+Rice,Central Valley,Clay,Rabi,6.96,25.9,1441.0,59.3,192.1,63.9,3.98,37.9,105.1,43.5,68.4,3.83
+Potato,Pacific Northwest,Clay,Kharif,8.09,29.5,707.2,67.7,728.2,120.1,18.01,14.2,96.9,20.9,83.6,14.55
+Wheat,Midwest,Sandy Loam,Autumn,7.55,26.8,964.4,85.6,461.4,50.2,3.08,49.3,105.1,73.1,48.9,2.93
+Wheat,Central Valley,Loamy,Spring,5.95,29.6,1798.9,82.1,270.2,243.4,3.77,14.4,79.4,26.3,73.4,3.04
+Rice,Southeast,Loamy,Spring,7.69,30.5,1798.3,83.9,268.7,166.1,4.14,35.2,152.3,76.9,114.5,3.84
+Soybean,Southeast,Alluvial,Spring,7.19,22.4,655.4,87.9,362.8,260.2,2.1,14.4,58.7,79.6,80.9,2.36
+Rice,Central Valley,Alluvial,Rabi,7.89,30.1,1455.6,66.9,729.8,199.3,3.71,21.2,50.9,17.2,103.2,3.54
+Soybean,Great Plains,Alluvial,Kharif,7.64,32.5,869.1,48.9,714.4,210.3,2.14,18.3,41.2,47.4,113.6,2.09
+Potato,Central Valley,Clay,Kharif,7.24,30.2,627.7,80.8,600.2,235.9,12.12,38.2,71.0,83.6,116.7,11.88
+Rice,Southeast,Silt Loam,Autumn,5.79,32.4,924.3,83.5,555.3,163.6,4.71,11.2,117.2,61.2,76.6,3.88
+Soybean,Delta Region,Black Soil,Rabi,5.58,17.3,726.5,68.5,282.4,170.3,1.87,4.2,149.5,28.4,87.8,1.77
+Soybean,Pacific Northwest,Black Soil,Autumn,6.88,25.1,1709.9,72.0,854.5,61.9,1.99,13.4,171.4,45.3,119.5,1.89
+Corn,Central Valley,Alluvial,Autumn,6.28,31.2,1631.5,51.2,322.3,146.6,5.73,23.9,102.8,15.4,39.5,5.15
+Rice,Delta Region,Loamy,Rabi,6.47,17.5,712.5,48.2,348.6,194.0,3.41,48.9,53.5,48.6,100.8,4.01
+Tomato,Pacific Northwest,Sandy Loam,Summer,6.62,35.2,1557.2,81.1,515.7,104.5,20.65,13.1,50.2,57.0,63.9,17.28
+Rice,Pacific Northwest,Silt Loam,Autumn,8.12,34.3,897.2,84.5,654.7,230.0,2.38,7.1,48.7,71.2,25.5,3.29
+Tomato,Pacific Northwest,Silt Loam,Kharif,5.37,17.0,1582.4,60.1,593.8,144.6,14.25,6.0,161.0,70.1,82.4,13.48
+Potato,Great Plains,Silt Loam,Spring,7.06,22.8,1709.5,79.1,463.3,125.5,16.72,44.1,66.9,22.2,79.5,16.25
+Rice,Delta Region,Clay,Autumn,6.73,23.1,1048.0,71.0,248.7,81.7,4.59,7.2,46.2,23.9,78.5,4.16
+Tomato,Pacific Northwest,Sandy Loam,Summer,6.82,18.9,1030.8,70.2,332.9,273.2,19.61,29.6,112.5,61.0,34.5,18.71
+Wheat,Delta Region,Black Soil,Kharif,5.79,20.0,1667.3,79.3,373.2,203.6,3.56,21.7,137.3,83.7,80.0,3.25
+Corn,Delta Region,Black Soil,Summer,6.46,19.2,1008.7,79.5,133.8,100.5,4.67,31.2,40.5,30.6,43.0,4.51
+Tomato,Midwest,Clay,Spring,8.06,22.6,1423.1,50.3,247.4,277.7,15.96,37.0,90.8,20.2,23.0,16.01
+Rice,Midwest,Sandy Loam,Spring,6.96,31.3,413.7,41.5,258.3,90.1,2.84,10.5,164.0,65.3,54.0,3.19
+Tomato,Midwest,Clay,Rabi,7.73,34.2,380.4,73.9,403.1,231.1,15.33,2.1,55.5,80.5,50.5,14.57
+Wheat,Southeast,Sandy Loam,Rabi,8.13,36.0,1628.4,83.9,152.3,83.2,3.29,47.1,169.4,70.6,39.2,3.02
+Potato,Pacific Northwest,Sandy Loam,Summer,8.13,20.9,417.0,70.8,251.3,173.2,16.5,30.4,150.5,37.9,25.3,12.99
+Cotton,Southeast,Clay,Autumn,7.86,20.2,468.0,63.5,630.8,64.9,1.53,48.5,111.2,67.6,84.5,1.58
+Tomato,Southeast,Silt Loam,Autumn,6.17,23.5,1357.0,75.8,495.8,111.7,15.35,23.7,96.1,79.5,78.4,16.95
+Rice,Midwest,Clay,Rabi,5.9,20.4,966.3,58.9,225.8,243.8,4.11,23.2,75.6,20.9,95.2,3.6
+Corn,Great Plains,Black Soil,Summer,5.32,26.2,837.7,62.6,446.0,134.5,4.67,12.3,109.7,34.1,22.5,4.22
+Potato,Midwest,Sandy Loam,Kharif,5.45,32.9,1093.5,72.2,728.7,263.1,13.19,18.6,53.8,20.0,23.8,12.92
+Wheat,Southeast,Clay,Summer,7.44,31.4,1575.9,49.5,583.2,81.7,2.44,13.3,159.7,65.1,74.3,2.57
+Corn,Central Valley,Sandy Loam,Summer,7.55,24.1,938.3,69.0,624.2,158.6,4.59,41.3,111.8,68.3,34.9,4.52
+Potato,Midwest,Clay,Rabi,6.75,31.7,1448.6,76.1,469.1,232.1,14.99,24.2,83.8,28.1,97.0,14.34
+Soybean,Great Plains,Clay,Spring,6.88,23.5,1187.4,46.4,854.7,52.2,2.24,23.0,153.5,73.4,54.0,2.02
+Potato,Great Plains,Alluvial,Spring,7.27,22.0,1201.1,68.4,125.8,82.0,14.77,38.4,176.8,84.6,76.8,14.86
+Cotton,Delta Region,Black Soil,Autumn,8.14,20.1,916.4,66.7,250.7,75.0,1.81,43.5,119.7,46.6,109.5,1.63
+Rice,Midwest,Loamy,Autumn,7.68,28.1,388.9,49.9,829.1,138.8,3.4,9.7,68.8,35.4,72.4,3.5
+Potato,Central Valley,Sandy Loam,Autumn,6.18,34.2,917.1,89.5,203.3,146.2,11.45,1.5,144.0,42.2,110.4,13.36
+Wheat,Midwest,Clay,Summer,7.33,25.5,1225.4,87.0,570.0,165.6,2.6,22.2,135.9,34.3,20.7,2.65
+Wheat,Great Plains,Loamy,Spring,5.94,22.6,1175.4,64.5,470.2,59.0,2.86,30.6,52.8,60.2,111.9,3.14
+Corn,Pacific Northwest,Alluvial,Summer,7.67,33.0,951.8,49.0,594.2,149.4,4.4,20.2,93.9,61.1,89.9,4.52
+Rice,Great Plains,Alluvial,Kharif,7.81,21.5,1260.7,54.6,833.0,210.6,3.42,12.7,141.1,30.2,69.3,3.35
+Cotton,Delta Region,Loamy,Summer,5.52,31.3,822.7,62.5,302.2,166.4,1.57,4.8,104.7,20.1,89.4,1.85
+Soybean,Great Plains,Silt Loam,Summer,7.77,23.9,365.6,45.7,833.7,125.2,1.81,37.6,144.8,48.9,26.8,2.0
+Tomato,Pacific Northwest,Clay,Spring,7.66,32.8,597.4,40.9,180.4,117.7,19.71,7.9,114.9,42.4,27.8,17.25
+Cotton,Central Valley,Alluvial,Summer,6.27,20.3,399.9,73.8,272.9,210.3,1.75,8.5,157.1,71.8,84.1,1.71
+Soybean,Pacific Northwest,Loamy,Spring,6.53,28.0,420.6,58.9,261.4,107.4,2.21,34.8,167.2,29.0,21.6,2.19
+Rice,Central Valley,Sandy Loam,Rabi,5.39,35.2,490.1,81.8,631.3,216.5,4.35,34.3,46.2,50.9,101.6,4.05
+Corn,Delta Region,Alluvial,Rabi,8.0,23.9,970.4,51.6,184.7,124.4,4.22,31.6,42.1,60.8,21.2,4.01
+Wheat,Great Plains,Clay,Kharif,6.04,28.5,413.7,84.3,428.9,226.5,3.16,33.2,109.9,84.3,91.3,3.34
+Cotton,Delta Region,Clay,Summer,7.0,35.6,1359.7,73.9,877.9,209.6,1.58,48.0,86.5,59.5,108.4,1.69
+Corn,Pacific Northwest,Silt Loam,Kharif,7.03,27.7,904.4,72.0,285.9,185.1,5.76,17.4,178.4,31.3,81.6,5.08
+Rice,Southeast,Clay,Spring,7.06,17.2,893.1,54.8,221.3,97.0,4.12,38.1,45.3,79.6,79.8,3.96
+Potato,Pacific Northwest,Sandy Loam,Rabi,7.13,31.2,1105.3,88.9,618.4,116.3,13.68,14.6,43.3,74.3,53.1,12.99
+Wheat,Midwest,Black Soil,Kharif,7.2,21.0,1346.7,76.0,586.5,137.7,2.92,45.4,85.0,46.0,20.6,2.83
+Cotton,Great Plains,Loamy,Rabi,8.18,34.8,532.1,48.7,539.1,232.9,1.62,3.6,68.6,50.5,62.6,1.51
+Potato,Southeast,Clay,Rabi,5.73,21.0,763.8,62.4,608.5,112.5,14.57,13.0,149.4,20.6,117.3,13.57
+Potato,Great Plains,Clay,Spring,6.72,30.7,1452.5,81.0,734.8,54.6,15.01,22.6,93.4,74.8,95.9,12.26
+Corn,Delta Region,Black Soil,Rabi,5.73,23.6,793.5,54.2,549.7,160.6,4.83,28.1,86.7,65.0,39.6,4.84
+Wheat,Central Valley,Loamy,Autumn,6.32,24.1,952.9,59.7,693.8,138.3,2.24,36.8,83.1,84.1,27.1,2.98
+Rice,Central Valley,Silt Loam,Autumn,7.49,35.1,1468.3,77.6,378.9,213.1,4.5,9.0,128.9,40.8,25.8,3.75
+Potato,Great Plains,Alluvial,Rabi,5.3,32.3,1264.9,73.8,658.0,198.4,18.14,12.9,76.6,46.9,88.1,14.68
+Corn,Midwest,Black Soil,Autumn,7.72,16.2,1467.9,72.2,833.5,141.5,4.11,47.6,122.1,78.1,71.9,3.95
+Wheat,Great Plains,Clay,Spring,6.11,35.4,1304.8,59.1,346.4,144.7,3.47,13.4,162.7,65.9,28.9,3.12
+Soybean,Delta Region,Sandy Loam,Rabi,5.83,31.0,1363.6,40.3,234.7,163.1,2.38,14.2,53.6,69.2,61.8,2.13
+Potato,Pacific Northwest,Sandy Loam,Spring,6.32,30.1,637.1,49.1,858.8,153.7,14.87,9.4,154.0,28.0,25.9,12.98
+Wheat,Midwest,Sandy Loam,Spring,7.94,18.2,1272.8,44.0,168.6,78.7,3.15,22.6,49.0,17.1,43.5,2.81
+Potato,Pacific Northwest,Loamy,Kharif,7.46,16.1,1194.5,89.4,177.5,170.1,12.9,4.0,41.0,57.2,118.7,14.72
+Cotton,Southeast,Silt Loam,Spring,7.01,22.7,1338.7,57.2,352.2,105.1,2.09,38.1,90.6,42.9,81.1,1.98
+Corn,Southeast,Loamy,Kharif,7.29,30.5,1637.6,46.9,581.5,249.9,3.85,23.4,79.1,63.9,101.5,4.14
+Corn,Great Plains,Black Soil,Spring,7.18,16.1,1275.2,87.1,357.7,195.8,5.44,26.2,162.3,82.9,93.6,4.86
+Soybean,Great Plains,Clay,Autumn,7.42,31.9,855.1,87.0,853.2,159.5,2.97,24.7,132.2,64.0,30.0,2.49
+Potato,Southeast,Black Soil,Rabi,7.81,33.5,1488.0,75.8,125.4,164.5,14.92,35.9,52.2,73.3,119.6,13.41
+Cotton,Great Plains,Clay,Spring,6.65,26.8,702.9,48.5,855.4,211.0,1.84,47.8,54.8,84.5,22.9,1.84
+Corn,Great Plains,Sandy Loam,Rabi,7.2,35.0,1322.4,73.3,838.2,195.7,5.09,36.2,108.9,70.7,53.3,4.56
+Wheat,Delta Region,Black Soil,Kharif,6.33,30.3,1417.2,59.1,613.7,179.2,2.82,32.6,159.9,71.6,42.4,2.66
+Rice,Southeast,Loamy,Kharif,7.42,34.7,1429.7,45.8,394.2,246.3,2.75,5.4,173.6,55.4,20.2,3.37
+Rice,Delta Region,Black Soil,Rabi,8.14,22.4,879.3,74.0,737.3,169.5,3.17,42.5,124.2,30.5,59.5,3.03
+Tomato,Great Plains,Sandy Loam,Rabi,6.09,20.4,1336.0,47.4,326.7,221.8,19.05,41.0,158.9,72.9,23.4,19.4
+Corn,Southeast,Black Soil,Kharif,7.74,27.5,1265.1,50.8,333.2,272.3,4.6,14.4,48.2,71.7,35.3,4.71
+Soybean,Midwest,Alluvial,Rabi,5.36,33.3,609.6,64.4,413.4,276.4,2.23,35.3,132.3,74.4,119.1,2.1
+Tomato,Great Plains,Sandy Loam,Spring,8.17,31.2,917.0,66.4,326.4,210.2,20.48,34.2,67.3,74.9,59.4,17.48
+Wheat,Southeast,Black Soil,Kharif,7.33,25.2,587.4,46.9,656.8,116.9,3.33,42.6,60.3,30.3,94.8,3.11
+Soybean,Pacific Northwest,Loamy,Summer,6.93,29.6,1783.3,47.4,860.3,148.2,1.98,36.6,157.8,79.8,29.6,2.16
+Potato,Midwest,Loamy,Kharif,7.15,27.9,1756.1,71.3,423.2,57.8,14.12,49.0,73.7,49.2,88.8,12.52
+Wheat,Pacific Northwest,Alluvial,Spring,8.17,29.4,479.9,63.2,754.6,137.9,3.46,39.0,128.5,46.2,21.2,2.89
+Rice,Central Valley,Loamy,Spring,7.93,20.5,1200.9,89.4,483.6,209.6,3.82,32.4,53.2,56.5,58.4,3.59
+Soybean,Pacific Northwest,Silt Loam,Summer,5.5,17.3,1667.9,79.8,247.9,237.0,2.56,29.0,42.8,53.9,73.6,2.19
+Cotton,Delta Region,Silt Loam,Kharif,6.95,30.3,1495.6,46.2,702.4,272.1,1.79,26.4,165.7,27.6,79.9,1.83
+Wheat,Central Valley,Black Soil,Spring,5.57,18.6,649.0,48.1,550.0,245.8,3.87,40.2,44.9,83.6,70.6,3.53
+Corn,Delta Region,Clay,Spring,7.17,21.0,416.9,87.3,823.7,117.5,4.61,48.9,114.8,24.8,69.0,4.11
+Corn,Delta Region,Sandy Loam,Autumn,5.83,18.0,1538.7,51.9,250.5,118.9,3.87,27.4,156.6,82.0,80.2,3.93
+Wheat,Delta Region,Sandy Loam,Summer,7.07,17.5,719.7,59.1,822.9,142.0,2.91,7.3,51.7,32.8,62.5,3.01
+Soybean,Midwest,Black Soil,Rabi,7.4,35.9,1360.4,49.6,397.7,201.2,2.22,4.5,154.9,57.3,62.0,2.18
+Wheat,Southeast,Silt Loam,Spring,7.01,17.6,530.7,45.5,538.7,65.2,3.17,2.3,129.6,40.4,53.4,3.23
+Corn,Midwest,Clay,Summer,6.33,35.4,899.0,45.3,840.5,90.4,4.64,1.5,142.0,36.5,102.1,4.02
+Potato,Central Valley,Black Soil,Summer,7.8,27.0,1230.8,84.8,236.6,267.7,12.46,35.3,94.5,39.2,94.1,12.65
+Cotton,Delta Region,Black Soil,Autumn,6.41,27.8,725.6,74.3,670.6,201.2,1.47,44.2,60.0,54.7,46.7,1.79
+Soybean,Pacific Northwest,Sandy Loam,Rabi,6.45,25.2,986.5,57.7,474.9,116.0,2.71,34.2,173.4,51.4,91.8,2.49
+Cotton,Midwest,Sandy Loam,Kharif,6.42,22.3,480.7,44.0,684.0,267.3,1.74,47.4,63.1,19.0,94.3,1.91
+Tomato,Great Plains,Loamy,Spring,8.0,18.7,1071.8,74.3,641.4,172.5,18.4,34.2,57.5,16.0,39.0,16.74
+Cotton,Pacific Northwest,Loamy,Spring,7.45,20.9,1421.5,87.5,758.7,252.5,1.63,35.4,113.9,57.6,80.7,1.59
+Wheat,Pacific Northwest,Black Soil,Rabi,6.3,18.7,862.3,42.5,496.4,89.2,3.01,9.6,175.8,38.7,87.9,3.18
+Cotton,Delta Region,Loamy,Summer,6.08,20.3,1420.1,68.4,274.0,120.1,1.84,15.7,170.6,60.0,102.6,1.77
+Rice,Great Plains,Black Soil,Spring,5.22,25.2,782.6,45.4,379.8,216.2,4.05,3.8,96.3,15.6,63.1,3.96
+Wheat,Central Valley,Black Soil,Autumn,6.43,34.3,360.0,78.5,300.1,158.3,3.66,45.0,92.4,40.5,109.2,3.01
+Tomato,Southeast,Loamy,Spring,6.52,18.8,1433.3,40.3,806.9,213.1,11.1,33.2,55.5,34.9,33.4,15.2
+Potato,Pacific Northwest,Sandy Loam,Kharif,5.8,25.6,1314.6,53.3,436.9,176.5,11.53,8.9,152.0,65.0,52.5,12.09
+Cotton,Great Plains,Black Soil,Spring,8.07,31.9,532.9,57.2,110.9,207.4,1.48,7.4,47.3,73.1,63.0,1.42
+Tomato,Pacific Northwest,Loamy,Spring,6.05,17.7,972.0,70.9,683.4,93.0,19.46,24.5,79.4,23.1,46.4,18.54
+Soybean,Midwest,Alluvial,Spring,7.32,32.2,1366.7,65.1,245.0,278.3,2.01,10.7,122.8,59.4,42.9,1.86
+Wheat,Great Plains,Loamy,Summer,7.99,24.5,1243.9,44.5,140.8,143.7,2.94,49.5,82.9,59.3,43.1,3.04
+Corn,Great Plains,Silt Loam,Kharif,7.13,22.1,740.4,54.0,380.8,146.2,3.58,26.0,84.8,18.3,24.1,4.29
+Rice,Pacific Northwest,Alluvial,Summer,6.62,34.2,496.1,49.2,858.7,133.6,3.79,11.4,82.6,21.8,21.4,3.87
+Tomato,Midwest,Sandy Loam,Summer,6.28,31.6,1116.8,58.6,620.2,98.3,18.32,37.3,93.8,77.1,33.0,17.07
+Soybean,Delta Region,Loamy,Kharif,7.94,29.1,626.1,75.2,840.4,67.2,2.59,29.7,116.5,39.0,92.5,2.23
+Cotton,Midwest,Black Soil,Rabi,5.78,27.0,716.2,83.9,782.8,258.6,1.79,3.1,176.5,77.6,64.8,1.75
+Soybean,Central Valley,Silt Loam,Kharif,6.77,35.0,1496.8,48.3,319.3,272.5,2.05,24.7,80.6,81.9,26.1,2.06
+Soybean,Midwest,Alluvial,Spring,6.8,26.3,458.7,61.9,507.4,179.4,2.14,25.3,94.6,57.5,40.7,2.43
+Rice,Midwest,Black Soil,Rabi,5.23,34.6,1093.6,65.2,676.5,109.5,3.02,30.0,159.3,35.7,46.9,2.94
+Rice,Midwest,Clay,Kharif,6.08,28.8,1716.0,53.9,206.4,250.9,4.64,27.1,47.2,83.6,119.0,3.94
+Wheat,Delta Region,Loamy,Kharif,7.1,35.4,820.6,87.3,807.2,110.7,2.88,32.8,58.7,77.9,49.5,3.08
+Rice,Pacific Northwest,Loamy,Summer,8.1,19.5,1758.8,66.9,883.0,229.0,3.45,11.7,149.3,22.5,94.6,3.55
+Potato,Pacific Northwest,Sandy Loam,Autumn,7.65,20.4,739.8,69.1,746.2,223.2,15.97,28.0,61.8,31.2,92.6,14.28
+Corn,Midwest,Silt Loam,Kharif,6.58,32.3,605.4,68.5,854.7,91.5,6.09,25.3,79.5,36.7,108.5,4.97
+Cotton,Great Plains,Alluvial,Autumn,5.63,24.5,1009.8,72.3,422.0,216.6,2.0,10.2,59.2,67.5,21.2,1.91
+Rice,Great Plains,Silt Loam,Kharif,5.24,32.6,1705.3,46.6,716.1,111.6,4.54,6.4,171.4,57.0,99.2,3.9
+Rice,Central Valley,Black Soil,Summer,5.45,18.8,1451.5,84.6,752.4,120.7,3.82,42.8,107.0,32.1,74.4,3.31
+Corn,Pacific Northwest,Black Soil,Kharif,5.33,26.9,498.7,84.3,432.2,50.3,4.92,2.0,71.4,30.9,58.5,4.33
+Corn,Pacific Northwest,Sandy Loam,Rabi,7.25,29.7,1386.5,85.1,493.5,277.9,5.99,46.2,71.4,82.0,48.2,5.14
+Rice,Delta Region,Sandy Loam,Kharif,7.97,17.7,412.9,47.6,442.9,127.0,3.59,18.7,65.4,44.8,109.3,3.37
+Soybean,Southeast,Black Soil,Summer,5.51,34.3,1309.5,86.6,748.6,213.6,1.76,18.1,50.7,15.2,113.3,1.75
+Wheat,Pacific Northwest,Clay,Summer,6.54,31.9,1765.7,80.7,190.5,148.3,3.78,8.2,141.7,25.1,52.3,3.07
+Wheat,Midwest,Silt Loam,Summer,6.47,29.9,950.2,79.7,366.8,234.5,2.7,16.6,131.6,32.2,61.9,3.01
+Potato,Delta Region,Black Soil,Spring,7.66,23.7,1192.4,61.1,562.3,209.5,17.08,27.1,144.8,64.2,43.5,15.83
+Rice,Midwest,Loamy,Summer,8.07,34.4,436.4,57.5,779.0,249.4,4.37,28.4,154.7,35.6,34.4,3.67
+Cotton,Delta Region,Silt Loam,Rabi,5.87,30.9,520.0,74.8,214.5,218.6,1.42,11.3,137.5,44.7,25.4,1.73
+Rice,Pacific Northwest,Black Soil,Kharif,6.98,19.2,563.0,47.1,296.0,52.9,3.62,24.4,156.3,44.2,96.5,3.51
+Potato,Pacific Northwest,Clay,Autumn,6.1,24.2,839.1,79.1,656.2,116.0,17.39,35.2,61.8,76.7,23.2,15.76
+Cotton,Midwest,Black Soil,Rabi,7.7,29.6,1620.2,67.7,763.6,261.4,1.92,1.5,110.3,64.7,62.4,1.91
+Wheat,Southeast,Loamy,Autumn,8.05,30.9,930.6,42.8,413.8,239.2,2.89,19.5,176.6,57.4,27.7,2.95
+Soybean,Great Plains,Silt Loam,Summer,6.42,23.6,429.3,58.6,439.4,112.1,2.22,33.0,54.6,40.4,97.9,2.28
+Corn,Central Valley,Clay,Summer,5.52,20.2,365.9,85.5,250.2,96.4,5.65,9.0,170.1,31.8,28.5,4.61
+Tomato,Delta Region,Loamy,Autumn,6.65,17.0,485.2,55.4,884.4,222.9,19.45,49.3,174.2,50.0,51.4,19.57
+Potato,Pacific Northwest,Sandy Loam,Rabi,5.49,24.1,1425.1,45.1,746.0,84.5,13.71,35.4,122.2,41.7,78.6,12.26
+Cotton,Central Valley,Sandy Loam,Rabi,6.59,33.7,485.3,75.9,807.5,235.7,1.52,8.4,131.6,68.8,36.1,1.5
+Tomato,Delta Region,Alluvial,Autumn,7.99,22.8,1488.8,57.0,388.3,246.9,23.55,32.9,100.3,77.3,97.4,19.01
+Potato,Midwest,Clay,Autumn,8.07,27.3,1791.9,44.9,112.0,226.3,14.02,30.7,83.3,75.7,99.7,12.28
+Rice,Great Plains,Loamy,Spring,8.0,19.2,756.2,58.2,171.4,91.2,3.98,16.4,148.1,33.1,67.3,3.69
+Corn,Great Plains,Alluvial,Rabi,8.12,25.8,877.0,54.3,427.2,192.5,5.19,47.1,135.3,45.9,71.2,4.55
+Tomato,Southeast,Sandy Loam,Kharif,6.72,21.3,1619.5,74.1,596.5,198.1,17.55,34.4,143.7,32.1,102.1,16.68
+Rice,Midwest,Loamy,Summer,6.91,33.1,673.4,83.7,635.3,130.3,3.66,19.4,105.6,52.5,101.8,3.94
+Rice,Central Valley,Clay,Kharif,7.97,31.4,639.2,56.4,353.8,279.2,4.08,46.0,108.1,64.2,67.6,3.84
+Corn,Great Plains,Loamy,Autumn,6.61,28.8,814.3,41.6,580.9,137.5,5.06,8.6,171.1,40.3,63.0,5.22
+Potato,Midwest,Loamy,Rabi,8.06,29.7,741.3,71.8,166.9,65.9,14.89,43.5,96.7,35.9,91.2,12.44
+Cotton,Great Plains,Black Soil,Rabi,5.98,32.6,484.0,85.1,373.6,223.2,1.91,33.8,63.0,39.4,61.9,1.76
+Potato,Delta Region,Alluvial,Rabi,6.51,34.3,1177.0,81.2,548.7,255.6,13.35,48.3,67.8,65.6,77.8,14.29
+Wheat,Southeast,Alluvial,Summer,7.89,34.7,1074.2,55.8,733.6,205.0,3.79,1.7,76.8,65.6,118.8,3.22
+Cotton,Midwest,Alluvial,Spring,6.94,16.7,1431.3,49.4,657.2,228.1,1.88,32.3,124.1,30.1,41.0,1.87
+Wheat,Pacific Northwest,Black Soil,Kharif,6.29,22.0,795.1,81.0,199.8,164.8,3.32,19.1,179.9,44.0,55.2,3.68
+Cotton,Delta Region,Silt Loam,Autumn,6.21,34.5,1015.3,58.7,542.2,87.4,1.95,48.7,101.0,35.0,86.0,1.67
+Soybean,Great Plains,Alluvial,Summer,8.01,34.1,493.9,44.4,769.8,70.6,2.45,35.4,42.3,80.3,30.4,2.14
+Soybean,Delta Region,Black Soil,Kharif,6.71,32.1,1318.2,82.6,269.5,228.7,2.63,32.0,117.2,23.0,105.6,2.43
+Rice,Southeast,Silt Loam,Spring,7.13,31.7,923.9,87.0,725.8,166.7,3.72,45.5,77.5,61.1,50.7,3.65
+Cotton,Great Plains,Alluvial,Rabi,7.93,16.7,388.1,79.5,772.6,169.4,1.74,1.2,143.8,37.2,37.0,1.6
+Tomato,Great Plains,Clay,Autumn,5.78,28.9,1551.4,80.1,562.3,79.6,16.43,48.7,129.1,83.4,37.4,16.32
+Corn,Delta Region,Clay,Spring,7.33,18.5,521.6,68.8,413.6,225.3,5.75,12.3,168.3,73.6,35.9,4.91
+Corn,Midwest,Loamy,Kharif,5.23,31.4,571.9,70.9,534.9,273.7,3.77,2.3,120.1,16.8,93.4,4.27
+Potato,Pacific Northwest,Alluvial,Summer,7.16,20.4,631.1,82.0,681.1,235.6,17.1,10.1,92.9,33.2,25.2,15.71
+Rice,Midwest,Alluvial,Kharif,6.94,18.1,1015.7,69.8,185.7,115.0,3.72,32.3,165.2,21.5,69.4,3.7
+Corn,Midwest,Silt Loam,Kharif,5.27,17.5,1740.9,43.8,649.9,136.3,4.06,25.1,83.9,78.6,100.9,4.01
+Wheat,Southeast,Loamy,Rabi,7.09,33.1,520.0,57.1,377.4,278.8,3.14,33.3,124.0,15.4,72.2,3.17
+Corn,Central Valley,Clay,Autumn,5.27,26.2,570.9,83.3,191.8,99.9,3.99,2.4,85.9,30.4,92.8,3.88
+Wheat,Southeast,Sandy Loam,Spring,5.48,30.2,1295.3,63.4,747.2,150.3,3.55,10.8,172.5,79.6,45.0,2.9
+Wheat,Pacific Northwest,Alluvial,Summer,5.51,31.9,1202.0,48.3,264.7,216.1,4.03,48.1,100.7,46.2,79.6,3.3
+Corn,Southeast,Black Soil,Kharif,6.49,27.3,892.2,71.6,151.4,88.5,4.76,30.8,44.7,50.8,78.7,4.92
+Corn,Delta Region,Alluvial,Autumn,5.29,19.6,817.9,79.5,386.2,66.7,3.62,18.3,132.0,41.0,98.0,3.5
+Rice,Central Valley,Sandy Loam,Kharif,5.84,27.3,816.3,51.6,153.0,115.2,2.93,36.1,69.7,30.2,76.1,3.51
+Soybean,Delta Region,Alluvial,Kharif,7.14,29.6,981.0,80.7,258.5,61.4,2.02,29.1,109.2,18.3,47.4,2.34
+Rice,Central Valley,Silt Loam,Rabi,6.97,20.7,380.8,40.9,726.6,182.4,3.48,30.5,40.7,47.3,33.1,3.64
+Potato,Central Valley,Black Soil,Autumn,7.13,17.4,487.9,80.1,678.6,113.2,17.85,2.9,145.5,43.0,75.6,17.11
+Corn,Great Plains,Black Soil,Kharif,7.29,25.1,1580.6,88.4,197.1,136.0,6.02,20.3,126.5,17.1,24.8,5.41
+Rice,Midwest,Loamy,Summer,7.37,20.5,477.6,76.2,749.8,237.7,4.38,43.2,115.3,15.3,88.8,4.05
+Rice,Southeast,Loamy,Kharif,6.11,21.3,1347.5,79.6,403.6,210.7,4.24,3.4,169.5,55.8,32.0,3.87
+Corn,Midwest,Black Soil,Spring,7.2,26.4,698.8,63.9,492.1,114.5,4.04,32.2,148.2,48.8,29.2,4.39
+Cotton,Southeast,Alluvial,Kharif,7.71,20.8,1288.3,82.8,656.0,67.3,1.75,18.3,109.2,29.9,87.0,1.56
+Potato,Great Plains,Clay,Spring,5.83,27.8,1115.1,82.9,708.4,121.7,16.01,6.1,103.6,25.8,70.5,14.55
+Wheat,Midwest,Sandy Loam,Spring,7.8,26.3,1481.0,49.4,322.3,87.8,3.24,48.8,83.0,75.9,84.8,3.06
+Wheat,Great Plains,Loamy,Kharif,7.88,19.7,391.5,73.1,462.1,111.1,2.65,12.8,169.8,20.9,63.1,2.85
+Wheat,Great Plains,Black Soil,Spring,5.36,21.5,491.8,72.4,685.6,147.2,2.86,25.9,81.2,43.2,79.4,2.73
+Tomato,Delta Region,Silt Loam,Autumn,7.24,28.9,1740.5,51.0,142.5,58.2,17.78,22.2,77.3,19.6,30.1,17.43
+Wheat,Delta Region,Alluvial,Spring,5.5,30.7,1625.3,53.4,264.6,230.7,3.93,20.2,88.7,35.2,79.6,3.39
+Soybean,Central Valley,Loamy,Rabi,7.3,25.5,792.7,85.3,290.9,122.5,1.86,25.7,49.7,28.1,110.0,2.25
+Wheat,Central Valley,Alluvial,Spring,5.26,35.5,1627.8,48.5,708.2,52.2,3.79,22.0,89.3,48.2,20.1,3.1
+Cotton,Midwest,Silt Loam,Kharif,5.25,29.6,771.5,51.4,502.5,223.6,1.74,3.2,148.5,22.0,100.4,1.65
+Corn,Great Plains,Silt Loam,Summer,5.97,25.7,878.2,40.7,382.1,213.3,4.34,49.5,164.8,69.2,105.7,4.78
+Cotton,Delta Region,Silt Loam,Kharif,6.76,28.8,564.5,60.5,276.2,278.6,2.31,14.2,90.0,17.2,77.8,2.2
+Soybean,Great Plains,Sandy Loam,Rabi,5.78,35.1,1276.2,88.3,801.7,206.1,2.04,37.5,165.9,46.4,115.8,1.82
+Tomato,Midwest,Sandy Loam,Summer,6.37,24.3,1791.2,55.5,132.9,169.6,18.38,44.5,88.1,57.9,63.3,16.03
+Potato,Delta Region,Sandy Loam,Summer,5.23,34.5,563.3,74.0,518.5,116.6,15.2,6.4,118.1,26.4,68.7,13.1
+Rice,Southeast,Loamy,Spring,6.05,27.9,427.1,55.3,444.3,201.9,3.53,3.0,40.1,32.6,55.0,3.58
+Corn,Delta Region,Alluvial,Autumn,5.46,21.4,1794.1,49.8,568.2,68.6,4.95,8.6,70.6,48.1,55.5,4.15
+Cotton,Pacific Northwest,Alluvial,Spring,8.1,18.0,728.8,55.1,348.6,179.7,1.48,21.7,135.0,37.6,77.8,1.33
+Soybean,Midwest,Sandy Loam,Rabi,5.8,22.1,781.1,86.4,468.9,92.2,2.19,21.4,149.5,73.4,29.6,2.25
+Tomato,Great Plains,Alluvial,Summer,7.26,23.2,863.6,63.3,869.2,156.1,22.49,25.7,167.8,16.8,96.7,19.79
+Rice,Midwest,Black Soil,Summer,6.94,23.5,1250.3,85.0,802.2,62.3,3.46,39.5,158.3,23.8,87.0,3.54
+Potato,Delta Region,Silt Loam,Kharif,6.01,35.7,505.2,69.7,757.6,180.1,12.33,5.1,136.7,75.5,32.1,13.2
+Tomato,Pacific Northwest,Black Soil,Kharif,6.75,27.2,1752.6,46.8,816.0,197.1,20.07,35.4,61.7,59.0,91.9,19.5
+Rice,Great Plains,Black Soil,Rabi,5.2,28.1,525.5,44.8,263.4,159.0,3.74,6.6,156.6,46.1,25.6,3.52
+Rice,Southeast,Silt Loam,Spring,7.66,32.8,1142.7,81.1,645.1,247.6,3.3,49.2,126.4,45.3,83.6,3.3
+Wheat,Midwest,Alluvial,Rabi,7.42,26.9,1040.4,54.5,634.0,270.6,3.09,9.4,109.0,61.7,59.1,3.08
+Soybean,Central Valley,Silt Loam,Spring,5.64,21.7,524.2,59.5,564.4,57.8,2.5,40.9,131.1,61.0,64.4,2.09
+Corn,Midwest,Silt Loam,Spring,8.15,23.2,1591.0,65.2,379.1,212.4,5.63,14.6,94.7,19.4,85.6,4.57
+Corn,Pacific Northwest,Alluvial,Autumn,7.35,31.7,753.6,78.1,342.3,140.6,4.59,17.6,168.3,60.2,57.7,4.5
+Potato,Delta Region,Alluvial,Rabi,7.98,31.5,1111.9,46.5,359.3,269.7,9.23,29.2,88.7,58.2,60.4,11.88
+Rice,Central Valley,Alluvial,Rabi,7.2,26.0,1335.0,56.2,285.2,227.5,4.22,12.4,168.4,70.7,30.5,4.05
+Wheat,Pacific Northwest,Silt Loam,Spring,5.39,21.0,404.3,77.5,453.2,136.1,3.23,46.2,128.4,17.1,37.4,3.18
+Rice,Pacific Northwest,Silt Loam,Spring,7.11,27.1,633.8,64.6,643.1,101.9,2.91,7.5,143.9,45.4,72.9,3.37
+Cotton,Midwest,Loamy,Autumn,8.08,17.9,398.2,47.0,104.2,228.1,2.01,2.2,119.6,75.5,54.1,1.61
+Soybean,Pacific Northwest,Alluvial,Autumn,7.7,27.4,1036.9,57.6,594.8,178.5,2.3,25.3,59.3,19.7,62.8,2.1
+Potato,Central Valley,Black Soil,Kharif,6.75,18.0,1073.1,42.6,532.4,55.2,15.51,7.2,155.0,35.3,102.8,14.89
+Potato,Pacific Northwest,Sandy Loam,Kharif,5.67,21.8,1124.9,52.1,514.2,190.6,10.99,43.7,83.7,58.3,74.6,13.3
+Rice,Delta Region,Silt Loam,Summer,5.3,24.4,640.7,84.4,147.5,97.0,3.38,33.0,154.3,38.1,95.7,3.25
+Rice,Midwest,Silt Loam,Kharif,6.89,28.2,1560.8,80.4,376.7,66.3,3.91,40.5,98.3,66.8,112.9,3.83
+Tomato,Great Plains,Clay,Summer,5.51,25.9,676.6,57.5,482.1,229.8,15.26,36.4,162.7,30.9,113.1,16.38
+Rice,Midwest,Black Soil,Autumn,7.25,30.8,1151.1,42.6,712.5,210.0,4.04,43.2,100.2,44.9,33.8,4.08
+Potato,Central Valley,Black Soil,Summer,6.23,34.4,695.3,44.6,108.0,145.0,14.88,18.2,145.4,71.5,73.6,13.92
+Rice,Central Valley,Alluvial,Rabi,5.43,18.5,611.9,42.2,379.7,200.7,3.33,40.8,74.2,35.5,80.6,3.44
+Potato,Pacific Northwest,Loamy,Kharif,8.02,20.1,1372.6,80.7,818.1,247.5,12.17,4.7,102.1,36.2,56.7,10.91
+Tomato,Southeast,Alluvial,Rabi,6.0,30.0,1080.0,42.7,820.3,212.3,19.18,26.8,127.1,34.6,40.4,18.71
+Wheat,Delta Region,Clay,Summer,5.83,23.4,1533.8,47.1,882.3,210.6,2.07,37.4,131.0,46.8,31.4,2.43
+Potato,Central Valley,Sandy Loam,Summer,6.1,35.3,436.6,82.7,407.1,54.3,15.85,29.8,93.6,46.1,42.4,14.94
+Potato,Midwest,Alluvial,Spring,7.18,16.6,1456.3,86.9,828.0,223.5,14.55,27.1,87.1,73.0,46.3,13.8
+Cotton,Delta Region,Clay,Kharif,7.69,24.7,969.9,76.5,688.3,63.1,1.75,17.7,55.3,42.2,92.1,1.77
+Soybean,Southeast,Black Soil,Spring,7.36,31.4,727.1,88.0,473.9,278.3,1.99,21.8,73.4,78.5,48.1,2.09
+Soybean,Southeast,Loamy,Rabi,6.09,27.4,406.0,53.7,315.0,107.6,2.04,38.8,131.4,69.0,21.2,2.02
+Corn,Delta Region,Alluvial,Summer,7.74,24.9,375.0,40.4,129.6,132.5,4.68,42.0,129.3,54.0,60.9,4.65
+Tomato,Central Valley,Sandy Loam,Autumn,8.06,24.8,724.1,79.3,307.6,163.8,18.87,28.0,71.8,27.2,107.1,16.92
+Soybean,Central Valley,Clay,Kharif,5.75,26.1,988.4,55.9,542.7,102.4,2.1,33.1,173.2,84.4,117.5,1.94
+Rice,Pacific Northwest,Sandy Loam,Autumn,7.0,23.0,462.3,62.2,508.8,104.5,4.3,36.2,85.6,41.0,102.3,3.91
+Potato,Central Valley,Alluvial,Spring,5.63,22.5,1492.8,56.7,426.5,200.0,14.11,43.9,105.9,83.1,82.2,15.56
+Wheat,Southeast,Loamy,Summer,7.94,16.5,1233.1,80.4,508.6,229.6,3.34,46.6,111.1,55.7,54.4,3.1
+Wheat,Great Plains,Black Soil,Kharif,5.65,31.3,1291.4,87.8,866.9,278.2,3.0,33.2,119.2,84.8,83.0,2.98
+Soybean,Great Plains,Black Soil,Kharif,6.78,17.0,1034.9,66.2,452.8,111.9,2.24,42.5,157.0,35.5,44.4,2.04
+Wheat,Southeast,Clay,Spring,8.12,29.9,995.3,87.9,427.9,68.3,3.64,16.4,118.5,20.4,56.2,2.9
+Potato,Delta Region,Clay,Spring,5.89,32.6,1780.8,86.3,296.0,259.1,18.57,39.5,134.4,61.6,80.6,15.37
+Cotton,Southeast,Sandy Loam,Summer,6.43,26.1,565.2,64.7,805.2,95.6,1.68,6.8,65.2,46.8,36.7,1.82
+Potato,Southeast,Black Soil,Spring,5.58,16.7,975.6,74.5,891.9,80.4,14.65,37.4,161.4,79.3,110.4,14.59
+Corn,Midwest,Silt Loam,Autumn,6.08,22.7,1545.8,56.8,587.0,74.8,4.93,12.8,141.1,20.2,112.1,4.33
+Potato,Great Plains,Alluvial,Spring,6.51,31.2,1365.2,76.7,679.0,185.6,13.1,37.3,154.8,50.7,35.2,13.69
+Rice,Delta Region,Black Soil,Summer,6.56,22.4,606.2,76.1,323.4,227.8,3.61,34.0,72.5,49.5,24.8,3.86
+Tomato,Delta Region,Black Soil,Autumn,6.48,22.5,811.9,48.9,214.6,237.2,15.42,42.4,142.8,84.2,41.1,18.18
+Tomato,Southeast,Black Soil,Autumn,6.24,19.3,767.4,64.3,278.9,88.9,23.57,16.4,171.5,33.2,80.6,18.85
+Rice,Midwest,Alluvial,Summer,5.82,32.8,1444.6,41.4,822.0,270.8,3.81,7.9,115.6,70.9,20.7,3.78
+Cotton,Central Valley,Sandy Loam,Rabi,8.04,24.5,995.0,46.3,463.1,261.1,1.78,14.8,140.3,79.3,32.0,1.72
+Potato,Great Plains,Sandy Loam,Kharif,8.18,30.6,518.9,57.7,163.3,232.5,12.19,43.4,141.8,37.9,70.7,11.96
+Corn,Great Plains,Alluvial,Autumn,5.42,29.8,1643.8,41.9,180.4,212.2,4.47,33.9,113.0,28.3,75.8,4.68
+Cotton,Pacific Northwest,Loamy,Kharif,6.96,33.4,669.3,49.8,476.1,161.4,2.12,13.0,66.2,49.8,33.2,2.1
+Soybean,Central Valley,Black Soil,Rabi,5.4,27.2,652.4,48.9,434.5,110.5,2.39,1.2,93.2,55.9,83.8,2.23
+Potato,Delta Region,Alluvial,Rabi,7.72,33.5,1318.6,64.5,604.0,187.5,14.92,44.0,116.1,35.7,41.9,13.06
+Cotton,Southeast,Silt Loam,Spring,7.19,18.3,1023.9,55.9,190.8,210.3,1.89,16.9,138.7,69.2,68.4,1.77
+Cotton,Great Plains,Black Soil,Spring,5.29,21.4,661.9,82.5,427.2,179.3,1.85,34.7,85.2,62.2,61.1,1.8
+Cotton,Great Plains,Silt Loam,Spring,5.36,25.7,667.5,71.8,136.5,153.0,1.53,13.8,71.0,76.3,73.6,1.72
+Cotton,Pacific Northwest,Loamy,Autumn,5.59,26.8,1727.9,41.1,403.4,229.5,2.16,30.9,86.7,39.7,96.6,1.86
+Rice,Pacific Northwest,Loamy,Autumn,6.81,35.7,1565.3,59.8,674.3,116.7,2.59,11.3,62.6,41.2,61.3,3.01
+Tomato,Pacific Northwest,Clay,Kharif,5.26,34.8,498.7,59.9,487.9,86.1,21.5,2.8,82.2,31.1,97.2,17.59
+Wheat,Central Valley,Sandy Loam,Kharif,6.33,24.0,1536.5,83.8,789.6,67.6,2.72,40.8,110.6,64.2,93.3,2.72
+Rice,Central Valley,Alluvial,Autumn,5.66,30.7,1499.3,49.7,584.6,121.8,4.28,30.6,85.3,50.9,22.3,3.87
+Corn,Great Plains,Clay,Kharif,7.17,25.4,772.3,44.7,873.5,179.0,4.44,13.9,107.7,78.5,73.3,4.44
+Wheat,Great Plains,Loamy,Spring,8.05,31.3,1386.1,62.6,562.3,55.7,3.01,36.7,148.0,46.3,67.7,2.59
+Rice,Pacific Northwest,Sandy Loam,Summer,7.09,17.7,1163.3,50.4,853.7,186.5,4.72,8.0,51.7,43.2,103.8,3.79
+Tomato,Pacific Northwest,Black Soil,Rabi,6.68,24.2,1423.7,81.7,129.2,208.5,21.29,3.9,123.8,76.0,46.8,21.28
+Wheat,Delta Region,Silt Loam,Autumn,8.08,20.7,1019.0,64.1,543.8,220.1,3.68,25.5,142.6,79.5,62.6,3.21
+Rice,Great Plains,Clay,Kharif,7.44,19.3,984.5,88.6,131.2,147.6,4.03,8.9,63.9,71.2,68.7,3.65
+Soybean,Delta Region,Silt Loam,Spring,5.55,35.9,1393.9,84.0,316.9,124.1,1.9,1.5,164.5,54.5,36.6,1.98
+Corn,Delta Region,Alluvial,Rabi,8.06,23.4,1226.6,63.6,268.5,125.9,3.79,40.3,144.5,84.7,112.8,4.29
+Wheat,Delta Region,Alluvial,Spring,6.45,19.0,447.2,88.8,349.5,93.2,2.98,1.5,137.2,52.6,53.1,3.14
+Rice,Delta Region,Silt Loam,Autumn,6.25,27.2,677.7,71.4,842.3,113.2,3.96,8.7,154.9,75.8,78.4,3.88
+Corn,Southeast,Black Soil,Spring,6.88,28.8,643.8,69.6,182.4,99.8,5.0,46.8,65.0,54.5,32.7,4.74
+Tomato,Delta Region,Alluvial,Spring,7.52,27.8,752.0,80.4,797.1,203.8,20.35,17.2,106.3,26.8,98.3,18.12
+Wheat,Central Valley,Black Soil,Rabi,6.63,16.0,462.8,88.5,209.6,235.7,3.26,8.0,99.6,48.0,50.3,3.51
+Cotton,Central Valley,Clay,Autumn,7.52,30.1,864.7,81.9,353.6,68.0,1.53,20.3,124.8,30.0,36.6,1.55
+Soybean,Southeast,Alluvial,Rabi,6.88,25.8,1494.0,74.3,546.3,150.1,2.37,42.2,88.7,16.8,56.6,2.25
+Potato,Pacific Northwest,Sandy Loam,Spring,6.88,36.0,1712.1,59.1,243.2,222.0,15.26,11.5,41.5,45.9,72.6,13.8
+Rice,Delta Region,Sandy Loam,Summer,6.31,21.1,1686.3,70.3,126.8,113.2,4.16,5.6,107.0,18.1,89.5,3.91
+Corn,Southeast,Alluvial,Kharif,7.67,33.3,1695.0,89.9,605.8,162.8,4.88,48.6,106.3,76.2,95.1,4.27
+Cotton,Central Valley,Loamy,Summer,7.88,19.1,1417.5,83.5,205.3,146.5,1.98,2.4,158.4,18.9,83.7,1.9
+Rice,Southeast,Loamy,Autumn,7.76,29.1,1419.3,56.6,637.6,256.9,3.72,14.6,165.7,26.8,118.6,3.43
+Soybean,Southeast,Black Soil,Kharif,6.41,32.8,1321.0,43.2,760.0,165.4,2.57,47.1,142.1,20.9,64.3,2.22
+Corn,Delta Region,Clay,Autumn,7.11,32.8,1714.6,55.6,548.4,77.1,3.1,21.1,105.3,73.5,28.6,3.7
+Potato,Central Valley,Loamy,Kharif,5.46,22.4,1258.6,41.0,235.5,52.4,13.34,9.9,129.3,47.2,107.7,13.36
+Wheat,Southeast,Alluvial,Rabi,7.41,22.2,900.0,54.4,323.2,180.0,3.36,37.6,98.0,73.5,47.3,3.33
+Wheat,Midwest,Sandy Loam,Summer,5.99,25.8,1189.1,57.4,613.5,153.4,3.54,35.2,128.3,73.2,23.7,3.06
+Cotton,Delta Region,Silt Loam,Rabi,5.83,30.0,853.0,80.5,737.0,97.7,1.94,27.4,138.0,50.3,103.0,1.81
+Cotton,Southeast,Loamy,Autumn,5.97,25.4,395.6,45.8,626.7,92.9,2.0,38.9,59.6,56.1,57.2,1.93
+Potato,Pacific Northwest,Black Soil,Kharif,5.51,23.2,1656.5,47.9,480.4,127.4,12.47,16.8,166.4,28.1,55.8,13.35
+Wheat,Great Plains,Black Soil,Rabi,6.52,28.3,1210.7,74.7,684.8,158.9,2.94,37.9,74.1,65.6,80.1,3.12
+Potato,Pacific Northwest,Silt Loam,Summer,7.99,20.7,1705.4,86.3,186.3,148.0,15.3,3.0,77.7,55.4,79.3,15.27
+Wheat,Delta Region,Clay,Summer,8.1,34.9,637.8,88.6,701.5,79.9,3.09,44.4,86.6,82.2,117.0,2.73
+Corn,Midwest,Sandy Loam,Spring,6.58,29.2,640.6,48.6,346.0,92.5,4.59,20.4,160.1,45.6,92.4,4.48
+Wheat,Pacific Northwest,Black Soil,Summer,5.68,18.0,1147.3,59.7,270.0,158.6,3.58,1.2,92.7,47.4,44.3,3.13
+Rice,Great Plains,Clay,Summer,5.6,31.5,1652.1,81.0,684.3,147.7,3.2,38.4,95.1,20.0,68.8,3.11
+Soybean,Delta Region,Loamy,Rabi,5.73,20.7,875.3,65.1,101.3,187.8,2.51,44.4,95.7,20.4,43.0,2.41
+Potato,Midwest,Loamy,Rabi,5.48,23.7,610.8,47.5,348.9,205.3,14.27,15.8,107.3,33.3,115.5,14.26
+Wheat,Midwest,Silt Loam,Autumn,6.59,17.7,1344.8,45.1,790.0,234.8,3.23,41.9,41.7,37.3,77.5,3.34
+Potato,Pacific Northwest,Silt Loam,Kharif,8.08,24.0,1468.5,55.1,306.9,195.8,12.48,24.8,124.5,71.2,65.0,13.21
+Corn,Great Plains,Alluvial,Summer,8.12,18.2,609.3,61.2,707.7,250.2,5.27,42.4,51.2,15.5,114.8,4.64
+Soybean,Delta Region,Sandy Loam,Rabi,7.04,33.4,980.6,63.2,131.9,249.6,2.26,26.2,104.4,18.5,79.9,2.22
+Corn,Southeast,Silt Loam,Summer,7.5,16.5,737.5,54.7,433.6,152.8,2.73,34.1,81.7,17.5,31.2,3.76
+Soybean,Central Valley,Black Soil,Spring,5.45,17.9,1403.8,71.6,444.9,113.2,1.98,13.2,176.1,63.2,44.4,1.8
+Cotton,Pacific Northwest,Black Soil,Autumn,5.43,23.5,562.8,88.8,610.3,252.9,1.94,23.5,93.5,83.6,27.9,1.93
+Soybean,Pacific Northwest,Sandy Loam,Spring,5.75,30.9,1396.3,77.1,163.4,259.8,2.15,20.6,175.1,70.6,77.1,2.22
+Corn,Delta Region,Black Soil,Autumn,5.93,32.0,892.6,63.6,708.6,150.5,5.71,42.9,144.6,69.5,47.7,5.33
+Soybean,Central Valley,Black Soil,Spring,7.23,21.5,940.4,40.9,431.5,79.8,2.74,45.6,77.4,56.9,117.6,2.37
+Corn,Central Valley,Clay,Rabi,6.17,17.3,767.4,75.6,761.6,185.2,4.65,1.9,128.9,38.0,58.9,4.15
+Tomato,Central Valley,Sandy Loam,Summer,7.67,19.0,1588.8,64.9,525.8,89.1,17.34,16.7,94.6,43.2,86.1,14.95
+Tomato,Central Valley,Alluvial,Spring,6.24,20.2,1778.1,58.5,333.5,122.5,23.86,28.5,134.4,17.1,82.5,19.1
+Wheat,Delta Region,Sandy Loam,Autumn,8.19,16.5,1761.4,67.8,492.6,104.0,3.26,22.1,169.0,24.2,80.7,2.91
+Cotton,Central Valley,Loamy,Spring,8.18,27.4,609.0,48.0,722.0,218.9,1.81,11.7,96.2,43.6,95.1,1.86
+Potato,Delta Region,Sandy Loam,Summer,7.09,29.3,1345.9,71.7,609.0,165.5,13.15,38.8,114.6,30.8,60.4,12.63
+Cotton,Great Plains,Sandy Loam,Spring,7.82,24.0,354.8,81.5,710.3,200.9,1.6,8.7,135.7,21.9,78.0,1.54
+Potato,Great Plains,Silt Loam,Rabi,7.06,18.8,1248.9,89.9,579.7,218.4,13.17,32.2,172.4,37.8,45.0,14.37
+Tomato,Pacific Northwest,Silt Loam,Kharif,5.27,28.0,1495.3,59.5,509.1,94.4,16.84,47.6,167.8,47.0,92.3,15.45
+Wheat,Midwest,Silt Loam,Rabi,6.08,33.9,650.2,63.1,296.0,188.7,2.52,16.8,178.6,70.8,117.3,2.8
+Tomato,Pacific Northwest,Loamy,Autumn,7.82,34.2,705.1,76.1,155.9,222.2,13.94,42.1,135.5,43.4,72.0,16.05
+Potato,Great Plains,Loamy,Spring,7.85,26.7,1387.9,70.3,891.4,214.4,14.68,47.9,101.4,72.9,26.0,12.28
+Cotton,Great Plains,Alluvial,Kharif,7.35,26.2,1292.0,61.4,199.2,83.6,1.72,18.8,76.7,72.8,95.4,1.7
+Rice,Pacific Northwest,Clay,Summer,6.22,34.3,1503.6,50.5,177.7,197.7,3.98,21.2,50.4,77.9,69.2,3.94
+Wheat,Southeast,Sandy Loam,Summer,6.19,25.0,724.0,53.8,128.6,82.2,2.3,34.8,113.0,16.8,108.0,2.61
+Tomato,Southeast,Alluvial,Summer,7.35,27.4,791.9,75.7,638.6,85.5,17.57,16.0,152.7,24.0,80.7,18.18
+Cotton,Great Plains,Sandy Loam,Rabi,5.83,22.1,1197.1,53.0,676.9,221.5,1.86,2.4,179.5,43.4,81.8,1.73
+Wheat,Southeast,Alluvial,Rabi,6.7,26.5,898.1,86.3,618.7,250.3,3.05,29.8,107.5,48.9,58.0,3.02
+Soybean,Central Valley,Sandy Loam,Rabi,5.87,21.6,1478.1,79.5,620.0,132.0,2.56,16.2,104.3,78.9,110.6,2.12
+Cotton,Pacific Northwest,Black Soil,Rabi,6.29,16.7,1258.3,87.6,505.9,112.4,2.31,37.3,174.6,74.3,73.8,1.95
+Rice,Central Valley,Silt Loam,Autumn,5.93,31.9,614.9,86.8,786.0,102.5,3.4,26.6,140.4,27.4,117.9,3.39
+Corn,Delta Region,Sandy Loam,Kharif,7.4,34.3,1663.9,46.6,342.2,97.8,3.36,37.4,74.2,68.3,67.7,3.31
+Rice,Delta Region,Loamy,Summer,5.42,25.6,990.8,63.8,179.9,185.6,3.95,39.7,123.8,36.0,21.0,3.9
+Potato,Central Valley,Alluvial,Spring,5.78,32.1,1240.9,62.8,100.4,223.5,11.06,39.1,124.2,49.5,37.7,13.05
+Tomato,Great Plains,Black Soil,Summer,6.1,33.3,711.1,53.8,549.0,121.0,16.7,47.6,101.6,83.4,114.6,17.03
+Potato,Central Valley,Sandy Loam,Autumn,5.69,17.3,976.4,55.2,840.2,151.9,18.01,24.1,129.3,52.7,38.3,15.89
+Cotton,Central Valley,Clay,Rabi,6.12,31.3,1034.2,74.2,842.0,98.4,1.73,16.1,134.1,37.7,39.2,1.67
+Potato,Midwest,Clay,Autumn,6.18,26.3,1037.0,69.8,433.5,217.1,9.82,33.5,72.0,33.4,113.4,11.49
+Cotton,Southeast,Sandy Loam,Rabi,7.38,32.6,807.3,55.4,550.6,225.4,1.74,16.0,40.8,80.8,25.5,1.6
+Potato,Southeast,Alluvial,Rabi,7.5,16.4,1371.3,50.4,673.3,117.8,14.21,48.8,92.3,37.5,99.1,13.66
+Corn,Delta Region,Black Soil,Rabi,7.05,24.8,747.2,43.7,228.3,216.3,4.44,40.1,171.8,56.5,115.2,4.56
+Rice,Pacific Northwest,Silt Loam,Spring,8.16,27.7,436.0,42.8,374.2,173.7,3.9,13.2,101.3,34.9,67.2,3.71
+Soybean,Central Valley,Sandy Loam,Spring,7.82,27.8,1182.4,68.1,450.6,125.4,1.84,41.4,116.5,61.2,75.7,2.05
+Cotton,Southeast,Alluvial,Kharif,7.51,33.4,1363.9,77.0,865.8,133.1,1.77,7.9,148.2,67.3,41.5,1.64
+Corn,Great Plains,Clay,Spring,5.8,35.4,725.6,70.2,846.1,82.3,5.09,18.7,129.9,44.9,100.6,4.5
+Cotton,Central Valley,Black Soil,Kharif,6.74,16.3,984.0,41.6,503.4,233.6,2.06,45.7,150.6,49.4,77.5,1.93
+Soybean,Central Valley,Alluvial,Kharif,8.12,31.6,1121.1,79.9,777.0,70.2,2.0,28.7,169.1,57.7,119.3,2.01
+Cotton,Central Valley,Alluvial,Spring,6.6,33.8,1791.8,47.6,364.3,91.8,1.49,41.1,120.5,46.8,98.1,1.58
+Soybean,Great Plains,Loamy,Spring,5.22,32.6,377.4,51.3,441.7,109.5,2.19,29.2,71.2,62.2,52.7,2.01
+Potato,Pacific Northwest,Alluvial,Rabi,6.92,23.1,1626.5,83.4,222.1,227.8,14.22,38.7,68.9,27.7,22.6,14.0
+Tomato,Central Valley,Clay,Autumn,5.41,33.4,1696.3,72.9,261.4,87.6,16.52,18.1,178.7,31.3,112.0,15.28
+Cotton,Southeast,Loamy,Rabi,8.03,18.5,1724.6,41.3,794.0,246.5,1.84,44.0,69.2,18.4,63.9,1.57
+Wheat,Midwest,Silt Loam,Autumn,5.48,19.5,1674.3,76.2,197.4,224.0,3.81,40.9,56.9,49.2,80.5,3.29
+Soybean,Southeast,Silt Loam,Rabi,5.47,26.1,1043.1,65.4,855.9,53.7,2.52,11.3,93.2,44.4,116.2,2.25
+Rice,Southeast,Sandy Loam,Summer,6.5,33.0,786.0,90.0,167.6,198.0,3.43,42.0,94.6,48.0,115.1,3.8
+Corn,Pacific Northwest,Alluvial,Summer,7.74,19.5,363.4,65.9,212.2,158.1,3.78,3.2,45.5,56.7,41.0,4.05
+Soybean,Pacific Northwest,Sandy Loam,Summer,7.67,24.4,603.2,65.9,221.1,236.2,2.53,31.3,133.6,40.6,112.5,2.19
+Cotton,Midwest,Loamy,Spring,6.41,23.5,1570.1,71.1,122.8,55.9,2.18,11.0,44.0,47.9,93.5,1.95
+Wheat,Great Plains,Loamy,Autumn,7.0,26.5,579.4,40.7,817.8,71.2,3.34,19.5,178.3,22.9,67.6,3.13
+Potato,Delta Region,Silt Loam,Rabi,7.63,16.0,1040.6,85.0,305.5,124.3,14.21,43.0,115.6,82.0,86.8,14.53
+Rice,Great Plains,Silt Loam,Autumn,5.86,18.6,1716.3,51.3,165.8,71.8,4.25,10.6,96.5,77.1,30.5,3.49
+Wheat,Southeast,Clay,Summer,8.12,29.4,1103.9,68.9,806.9,224.8,3.83,17.1,58.4,44.5,86.1,2.82
+Tomato,Pacific Northwest,Loamy,Spring,7.58,35.6,370.8,71.7,768.3,104.7,20.79,32.0,95.5,15.8,68.1,19.0
+Cotton,Southeast,Clay,Autumn,8.18,25.1,731.1,62.0,696.0,200.8,1.51,20.9,112.0,38.6,119.7,1.53
+Wheat,Southeast,Sandy Loam,Spring,6.57,17.9,1591.5,78.2,310.3,229.8,2.67,38.8,99.7,16.8,74.3,2.85
+Rice,Midwest,Silt Loam,Kharif,7.34,18.5,854.1,62.6,542.6,266.1,3.62,6.9,175.3,83.0,38.3,3.75
+Cotton,Delta Region,Clay,Rabi,5.87,16.3,1413.4,57.7,580.7,84.9,2.15,42.2,160.4,51.8,100.0,1.85
+Corn,Delta Region,Clay,Autumn,5.68,29.6,1270.6,82.9,281.0,264.0,4.21,9.2,140.3,52.9,115.5,4.32
+Potato,Midwest,Sandy Loam,Kharif,8.05,21.9,1656.4,88.6,815.0,157.6,10.84,48.0,59.1,80.7,20.0,11.06
+Corn,Pacific Northwest,Black Soil,Summer,7.4,27.9,446.9,77.8,212.2,160.6,5.27,11.2,62.4,83.0,117.6,5.02
+Wheat,Great Plains,Clay,Spring,5.78,32.7,452.3,88.2,321.0,255.3,2.61,20.2,57.3,66.8,114.4,2.62
+Wheat,Midwest,Silt Loam,Rabi,7.48,16.2,520.1,55.6,182.1,194.6,3.19,33.9,106.0,61.2,49.9,3.13
+Rice,Delta Region,Alluvial,Autumn,5.41,35.6,1670.2,57.1,317.7,277.2,3.34,23.3,93.4,77.4,31.3,3.36
+Potato,Great Plains,Black Soil,Rabi,7.27,31.9,1449.8,51.2,182.4,279.4,13.47,43.9,124.5,56.9,56.3,13.56
+Cotton,Pacific Northwest,Silt Loam,Spring,7.11,33.3,756.3,76.2,320.7,107.9,1.95,21.7,111.1,44.4,103.6,1.79
+Corn,Central Valley,Loamy,Kharif,6.66,27.7,671.0,61.7,312.6,279.4,4.3,35.9,155.7,49.2,80.7,4.77
+Tomato,Great Plains,Black Soil,Autumn,7.2,16.8,506.3,81.9,614.1,72.7,17.76,43.6,53.3,82.7,43.9,16.74
+Tomato,Pacific Northwest,Alluvial,Autumn,6.38,30.9,853.6,79.4,781.8,181.9,17.3,21.7,113.2,80.8,101.3,19.72
+Soybean,Pacific Northwest,Silt Loam,Kharif,5.74,28.6,827.0,54.6,429.7,56.5,2.39,11.6,103.9,77.4,55.9,2.17
+Soybean,Southeast,Sandy Loam,Rabi,7.55,22.5,1363.7,71.7,714.9,86.9,2.43,14.6,118.2,75.4,84.8,2.06
+Soybean,Great Plains,Sandy Loam,Rabi,7.77,22.7,1243.8,77.0,769.0,102.3,2.59,42.4,156.0,22.1,92.2,2.17
+Soybean,Great Plains,Sandy Loam,Autumn,5.76,23.7,733.8,75.4,380.5,235.4,2.16,25.4,165.4,67.8,115.9,2.17
+Corn,Central Valley,Loamy,Rabi,7.93,30.0,1162.7,77.8,530.6,141.5,3.52,29.5,137.4,28.9,29.1,3.83
+Tomato,Pacific Northwest,Silt Loam,Summer,6.22,23.1,542.9,59.3,776.0,219.3,14.78,8.1,162.7,70.9,81.3,17.42
+Rice,Southeast,Clay,Spring,5.94,19.1,1789.4,41.3,279.6,209.9,4.79,41.5,70.7,76.3,64.0,4.21
+Cotton,Midwest,Clay,Kharif,8.09,33.2,1050.7,61.9,545.1,279.6,1.97,15.5,66.9,28.0,71.9,1.75
+Potato,Pacific Northwest,Black Soil,Spring,7.32,35.6,1515.0,53.2,396.2,257.0,10.58,37.6,171.2,37.4,55.7,11.46
+Soybean,Midwest,Sandy Loam,Rabi,6.94,17.9,1680.3,89.3,666.7,173.1,1.94,40.0,54.7,72.8,42.8,1.86
+Corn,Pacific Northwest,Alluvial,Autumn,5.87,21.4,1563.1,63.0,450.3,185.9,4.48,41.2,49.1,84.7,22.2,4.15
+Potato,Delta Region,Alluvial,Kharif,6.63,30.1,442.5,57.7,863.8,113.5,10.2,44.9,75.3,77.8,22.8,12.84
+Tomato,Great Plains,Silt Loam,Rabi,5.85,25.0,1130.7,73.7,364.4,181.1,15.1,49.3,162.6,81.2,34.4,17.14
+Tomato,Pacific Northwest,Black Soil,Summer,8.11,17.1,1444.0,69.4,719.7,66.3,23.6,43.3,48.9,44.0,36.1,17.28
+Wheat,Midwest,Black Soil,Rabi,5.29,34.6,1406.6,56.6,175.3,142.8,1.99,42.0,138.1,63.0,100.5,2.41
+Potato,Pacific Northwest,Silt Loam,Rabi,5.75,22.2,607.2,61.5,301.6,70.9,16.89,42.5,76.5,29.0,55.1,16.19
+Soybean,Pacific Northwest,Loamy,Summer,5.48,21.2,1625.0,43.0,545.7,207.0,1.79,23.1,53.4,15.1,118.5,1.9
+Rice,Central Valley,Sandy Loam,Spring,7.6,27.4,893.5,43.5,237.9,196.4,3.53,16.0,109.7,52.5,117.6,3.54
+Rice,Pacific Northwest,Clay,Autumn,5.73,24.8,1576.7,78.6,505.9,237.3,5.31,19.3,102.3,58.5,113.5,3.94
+Cotton,Central Valley,Sandy Loam,Summer,7.25,27.8,592.7,45.0,254.5,85.7,1.87,6.3,125.8,38.6,65.5,1.79
+Soybean,Delta Region,Silt Loam,Spring,7.21,17.3,707.0,47.1,868.3,162.9,2.56,47.3,151.2,17.9,25.9,2.29
+Potato,Pacific Northwest,Alluvial,Autumn,6.76,29.3,814.8,66.4,560.1,172.3,15.17,5.8,95.2,53.2,40.1,14.29
+Corn,Midwest,Silt Loam,Rabi,7.08,24.1,896.7,64.5,493.0,123.9,4.79,15.4,107.8,42.2,69.8,4.66
+Cotton,Southeast,Alluvial,Kharif,5.32,34.9,795.3,69.4,820.2,174.8,1.97,26.8,129.7,66.7,73.4,1.74
+Rice,Southeast,Silt Loam,Rabi,6.81,32.5,1342.0,61.7,506.7,245.3,4.01,18.2,111.2,62.7,24.5,3.87
+Wheat,Central Valley,Silt Loam,Rabi,7.34,17.5,645.2,50.3,612.3,53.6,3.74,44.7,169.1,29.4,88.9,3.32
+Corn,Central Valley,Clay,Summer,8.16,32.5,889.1,81.9,135.8,82.6,3.38,49.2,74.5,61.8,108.2,3.83
+Potato,Pacific Northwest,Black Soil,Summer,7.84,30.7,745.3,74.5,432.7,145.1,12.53,11.0,78.9,78.1,101.7,12.2
+Potato,Southeast,Black Soil,Kharif,6.39,29.9,1001.2,73.1,278.4,196.6,13.2,31.7,56.1,78.2,68.9,14.45
+Wheat,Delta Region,Sandy Loam,Rabi,5.97,29.6,1699.4,59.9,529.0,115.5,2.17,47.2,119.8,22.6,31.9,2.84
+Cotton,Midwest,Loamy,Autumn,5.8,26.4,401.8,63.9,189.1,58.7,2.09,42.5,94.3,20.9,89.4,1.83
+Rice,Midwest,Silt Loam,Autumn,7.42,24.8,1465.2,73.1,502.9,274.1,3.77,19.2,147.6,65.7,24.4,3.69
+Rice,Midwest,Sandy Loam,Summer,6.25,20.0,1284.0,59.6,222.5,117.1,4.1,46.2,48.9,27.9,39.4,3.81
+Soybean,Pacific Northwest,Silt Loam,Kharif,5.41,20.9,1116.4,67.8,214.7,271.8,2.38,43.7,47.9,62.9,61.0,2.16
+Tomato,Central Valley,Black Soil,Rabi,6.16,16.8,1657.2,74.2,104.7,50.8,17.47,36.5,48.2,42.1,76.7,16.75
+Cotton,Midwest,Alluvial,Kharif,5.42,29.0,1670.7,86.9,615.8,115.0,1.75,28.6,126.2,46.5,94.8,1.74
+Soybean,Great Plains,Black Soil,Summer,8.16,25.1,1683.2,47.7,529.2,132.8,2.4,17.9,60.2,59.6,37.4,1.82
+Potato,Southeast,Clay,Summer,6.5,22.0,411.7,60.5,803.8,245.9,15.93,37.3,178.2,23.8,82.6,15.52
+Wheat,Great Plains,Silt Loam,Spring,6.56,35.0,1022.1,56.9,632.3,80.6,3.19,23.6,114.2,32.2,91.3,3.01
+Tomato,Midwest,Alluvial,Autumn,6.59,33.2,1498.5,58.7,345.5,140.4,21.04,18.8,105.8,53.0,65.2,19.86
+Cotton,Delta Region,Silt Loam,Kharif,6.21,33.8,1306.5,86.9,445.4,266.9,1.59,10.8,43.3,29.5,76.7,1.73
+Wheat,Southeast,Alluvial,Autumn,7.12,27.5,1511.2,47.5,353.2,106.5,2.73,38.7,143.4,68.4,68.7,2.69
+Tomato,Delta Region,Black Soil,Kharif,7.56,17.7,362.6,83.1,142.2,246.1,16.31,34.1,83.9,78.1,40.3,16.56
+Wheat,Midwest,Sandy Loam,Kharif,7.93,27.7,1551.0,63.8,662.9,116.6,3.66,18.8,54.2,54.3,110.1,3.02
+Wheat,Midwest,Silt Loam,Kharif,7.05,19.2,1150.9,63.5,886.6,208.7,3.55,27.1,166.5,83.3,86.4,3.33
+Wheat,Great Plains,Loamy,Kharif,6.34,23.6,597.2,41.0,650.5,238.1,2.89,7.6,170.3,55.9,38.2,3.31
+Rice,Great Plains,Alluvial,Autumn,6.22,17.7,886.5,48.9,599.2,205.8,4.26,17.8,168.3,22.8,113.5,4.08
+Soybean,Midwest,Alluvial,Summer,7.58,31.7,864.3,89.2,495.8,193.0,2.59,15.3,122.6,84.4,56.5,2.42
+Corn,Midwest,Black Soil,Summer,7.91,16.5,811.9,48.3,619.5,211.1,4.84,49.1,76.8,84.7,53.8,4.61
+Corn,Pacific Northwest,Alluvial,Spring,6.2,16.6,1614.5,86.3,108.5,181.9,4.58,33.3,82.4,29.0,67.0,4.39
+Potato,Central Valley,Alluvial,Summer,6.21,32.1,1587.8,79.2,425.8,128.7,14.15,35.1,172.0,65.3,75.2,12.84
+Potato,Southeast,Sandy Loam,Kharif,7.96,17.7,1316.0,55.9,507.0,76.1,13.03,45.8,153.5,71.4,30.7,12.66
+Rice,Midwest,Sandy Loam,Kharif,7.6,31.6,1602.4,40.5,110.8,235.6,3.35,8.5,161.8,58.2,35.6,3.45
+Soybean,Great Plains,Alluvial,Summer,5.52,18.4,1371.0,50.0,696.9,68.7,1.58,39.5,52.8,81.6,20.4,1.74
+Cotton,Pacific Northwest,Clay,Rabi,5.44,22.4,1117.5,63.8,257.8,277.2,1.8,3.4,124.8,28.0,48.8,1.68
+Soybean,Delta Region,Loamy,Spring,5.22,19.5,636.7,47.2,533.6,273.7,2.42,10.1,138.0,64.2,27.6,2.25
+Wheat,Southeast,Clay,Rabi,7.71,21.9,947.8,72.0,274.6,107.7,2.43,20.3,88.3,31.9,20.7,2.63
+Soybean,Southeast,Sandy Loam,Rabi,5.39,22.9,1412.7,71.0,754.2,68.4,1.95,4.2,147.0,65.1,21.2,1.78
+Soybean,Pacific Northwest,Loamy,Summer,7.95,23.2,1337.6,73.9,152.7,110.4,2.47,29.8,157.6,46.6,94.2,2.21
+Potato,Southeast,Silt Loam,Summer,6.14,36.0,625.9,69.4,134.2,131.2,13.92,38.4,105.1,47.3,112.3,12.15
+Cotton,Great Plains,Silt Loam,Spring,5.63,31.0,958.4,41.2,211.5,122.8,1.97,23.2,178.6,59.3,59.9,1.75
+Rice,Great Plains,Alluvial,Rabi,8.04,20.3,373.8,63.6,316.7,95.5,3.83,8.4,109.6,26.1,103.0,3.46
+Cotton,Delta Region,Sandy Loam,Rabi,7.02,26.0,980.9,82.6,489.9,203.1,2.17,10.3,89.5,22.4,115.3,1.85
+Soybean,Great Plains,Black Soil,Summer,6.76,25.9,663.8,64.5,865.5,195.2,1.2,7.9,87.4,36.7,81.8,1.91
+Tomato,Central Valley,Black Soil,Rabi,6.22,23.5,1348.3,46.4,552.3,158.9,22.86,27.0,42.5,40.9,44.6,20.37
+Corn,Pacific Northwest,Clay,Summer,7.91,25.5,756.8,57.0,735.1,210.6,4.74,32.1,166.3,82.6,98.2,4.35
+Tomato,Midwest,Alluvial,Autumn,7.64,21.0,1166.8,84.5,350.8,252.6,20.18,30.9,93.8,25.4,52.2,17.51
+Tomato,Great Plains,Silt Loam,Autumn,8.04,30.6,447.0,59.5,254.5,227.1,19.29,45.1,139.7,40.5,97.8,17.74
+Potato,Midwest,Clay,Kharif,7.67,25.7,561.9,53.6,356.0,276.6,16.81,17.0,124.7,52.5,102.4,15.93
+Soybean,Midwest,Black Soil,Autumn,7.4,30.7,632.7,79.9,326.0,231.9,2.33,6.9,99.2,72.3,21.1,2.23
+Corn,Midwest,Clay,Summer,7.15,31.2,464.1,63.2,827.8,84.0,4.58,2.2,127.6,53.9,79.4,4.14
+Cotton,Southeast,Loamy,Summer,5.79,28.1,762.9,69.3,358.2,53.9,1.61,23.3,47.3,37.9,67.7,1.65
+Wheat,Southeast,Alluvial,Spring,7.09,28.9,923.5,56.3,768.9,57.9,2.95,28.0,79.6,54.6,76.9,2.93
+Tomato,Central Valley,Alluvial,Rabi,7.98,18.8,498.3,48.2,671.1,71.1,15.78,25.3,90.4,40.0,28.1,16.38
+Corn,Central Valley,Silt Loam,Spring,6.77,28.8,924.2,47.7,758.3,237.3,4.6,27.7,102.8,23.1,111.1,4.81
+Corn,Midwest,Clay,Kharif,6.87,17.0,1572.2,51.3,133.9,100.4,4.37,32.6,72.6,25.7,107.0,4.31
+Tomato,Southeast,Sandy Loam,Spring,7.21,16.4,1460.0,64.6,635.7,210.3,20.23,38.0,117.0,17.8,79.0,16.67
+Wheat,Midwest,Black Soil,Spring,7.31,27.6,883.8,84.9,231.3,98.9,2.88,1.4,115.1,79.1,94.4,2.84
+Corn,Southeast,Black Soil,Summer,5.68,20.0,1231.0,56.7,361.6,109.9,3.67,26.0,56.7,35.0,22.9,3.83
+Tomato,Pacific Northwest,Alluvial,Autumn,5.81,18.3,911.8,45.3,846.5,97.3,16.71,38.7,146.4,66.5,49.9,17.3
+Soybean,Pacific Northwest,Clay,Autumn,6.28,17.1,1257.9,68.3,807.5,108.0,2.29,41.1,111.6,36.7,41.6,2.06
+Wheat,Southeast,Clay,Spring,6.37,22.5,1777.1,70.1,232.2,163.1,3.61,47.4,118.5,35.0,118.7,3.21
+Cotton,Midwest,Loamy,Autumn,5.2,16.6,422.5,40.6,319.4,50.0,1.91,6.3,102.3,66.0,116.1,1.64
+Rice,Central Valley,Sandy Loam,Rabi,8.11,30.8,890.6,54.0,622.9,118.4,3.95,32.6,44.9,23.4,34.2,3.47
+Potato,Midwest,Loamy,Kharif,8.0,19.5,513.3,76.2,464.2,253.9,9.2,44.1,137.3,34.1,22.3,11.99
+Tomato,Great Plains,Loamy,Rabi,6.39,23.5,403.9,61.6,472.6,90.3,21.84,11.6,41.9,77.8,85.7,20.65
+Cotton,Southeast,Alluvial,Summer,5.81,21.3,1323.3,88.2,250.5,208.6,2.06,36.2,153.4,84.7,24.4,1.95
+Tomato,Great Plains,Black Soil,Spring,7.35,30.9,765.4,44.4,393.8,238.8,18.24,39.8,116.2,41.1,110.2,18.53
+Soybean,Delta Region,Black Soil,Rabi,7.12,24.1,1191.3,58.6,886.8,226.5,2.0,16.7,60.7,62.1,108.9,2.04
+Soybean,Delta Region,Silt Loam,Summer,5.46,21.1,549.6,86.2,616.4,153.7,2.4,48.1,115.5,62.6,109.0,2.25
+Corn,Delta Region,Alluvial,Rabi,6.82,32.6,581.2,79.9,211.6,237.7,4.5,30.3,68.8,63.5,28.2,4.39
+Potato,Central Valley,Black Soil,Autumn,5.51,16.1,1705.0,73.2,231.8,102.2,14.5,3.1,139.4,38.4,31.7,13.81
+Soybean,Southeast,Black Soil,Spring,7.66,20.4,859.1,60.4,701.3,74.5,1.72,26.6,129.7,46.8,103.4,1.65
+Cotton,Midwest,Alluvial,Kharif,8.11,32.0,1068.0,85.8,655.9,120.5,1.65,44.8,145.8,36.2,40.9,1.56
+Soybean,Central Valley,Clay,Kharif,6.09,20.1,1550.1,74.0,153.6,154.1,2.03,1.8,56.7,81.1,86.2,2.02
+Rice,Pacific Northwest,Black Soil,Summer,6.32,22.1,1247.9,86.0,608.2,186.5,3.54,17.8,135.1,83.4,70.0,4.06
+Corn,Central Valley,Sandy Loam,Spring,6.35,26.8,492.1,74.4,596.2,130.7,4.83,43.2,176.0,49.3,22.7,4.71
+Rice,Great Plains,Loamy,Spring,5.48,20.9,1554.4,71.6,175.2,137.4,4.15,13.4,87.2,57.3,66.9,3.57
+Corn,Southeast,Black Soil,Spring,6.43,16.2,536.2,83.1,724.7,265.2,5.32,11.6,102.2,50.1,66.3,4.88
+Soybean,Delta Region,Silt Loam,Autumn,5.35,27.7,1362.4,64.6,821.8,117.5,2.42,33.0,62.8,35.3,53.1,2.02
+Rice,Pacific Northwest,Clay,Kharif,6.66,16.1,1474.8,80.3,824.3,227.7,2.91,10.8,46.1,27.8,54.0,3.32
+Soybean,Delta Region,Silt Loam,Rabi,7.63,35.0,518.3,48.2,205.6,275.1,2.32,36.0,124.7,16.7,69.6,2.02
+Cotton,Pacific Northwest,Silt Loam,Kharif,7.89,23.4,1138.1,60.9,126.8,150.3,1.57,35.7,138.3,19.7,28.7,1.73
+Soybean,Southeast,Silt Loam,Spring,5.93,34.6,549.4,41.2,169.1,93.0,1.81,25.8,67.5,61.2,74.6,2.03
+Tomato,Southeast,Silt Loam,Kharif,7.17,27.6,518.0,42.0,262.0,119.1,15.57,48.6,144.5,42.3,57.2,17.1
+Tomato,Central Valley,Loamy,Autumn,6.96,16.2,1626.6,46.9,836.6,247.9,17.11,33.6,152.2,28.2,67.5,17.26
+Potato,Midwest,Loamy,Rabi,7.1,26.8,1515.6,47.3,201.6,167.3,13.32,20.0,160.6,19.8,71.3,13.51
+Rice,Delta Region,Clay,Rabi,6.44,28.5,1709.5,81.4,425.1,223.0,3.82,31.7,46.0,37.4,59.5,3.53
+Wheat,Pacific Northwest,Alluvial,Summer,7.02,33.3,1435.5,46.4,591.9,231.8,3.56,20.1,164.4,60.2,95.5,3.07
+Wheat,Midwest,Black Soil,Autumn,7.52,24.7,394.8,43.3,167.9,255.1,3.09,15.1,60.4,59.9,57.0,2.91
+Potato,Southeast,Silt Loam,Summer,6.81,22.5,796.8,87.4,509.2,138.8,8.93,15.9,162.0,63.2,89.5,12.56
+Soybean,Delta Region,Black Soil,Autumn,6.21,29.8,1764.1,66.6,593.1,64.5,3.0,7.7,128.1,80.4,107.5,2.48
+Tomato,Delta Region,Clay,Summer,6.17,20.8,627.3,88.6,253.5,127.0,17.95,46.4,134.7,34.5,79.8,16.93
+Soybean,Pacific Northwest,Clay,Autumn,5.62,31.4,777.8,74.4,389.2,174.8,2.21,44.6,85.0,70.9,78.2,2.19
+Wheat,Central Valley,Alluvial,Summer,5.82,31.8,1554.1,49.2,618.0,164.3,2.63,32.3,74.4,48.9,47.1,2.84
+Tomato,Great Plains,Black Soil,Summer,7.02,21.1,1751.4,80.7,887.1,50.8,19.93,8.2,66.4,80.4,112.8,17.69
+Potato,Delta Region,Black Soil,Summer,6.46,21.3,1773.3,71.4,491.6,74.9,15.45,26.0,101.2,36.9,34.0,14.33
+Rice,Southeast,Loamy,Kharif,6.03,27.0,739.2,79.2,840.6,207.9,4.18,42.5,68.7,77.4,76.7,4.17
+Rice,Central Valley,Sandy Loam,Autumn,6.05,20.8,669.6,70.2,701.4,263.4,3.6,36.3,89.5,31.5,22.3,3.47
+Tomato,Southeast,Clay,Rabi,7.68,20.1,1243.6,87.7,172.9,220.3,18.28,40.5,177.0,33.9,68.6,18.02
+Rice,Midwest,Silt Loam,Rabi,7.03,33.8,1680.6,54.0,102.5,204.4,3.09,12.9,100.9,75.3,105.0,3.23
+Potato,Midwest,Clay,Kharif,6.43,24.9,568.1,84.4,780.5,222.7,14.86,42.5,43.2,68.6,40.5,14.94
+Soybean,Great Plains,Silt Loam,Autumn,5.26,26.2,912.5,62.1,264.4,83.2,2.26,17.8,50.8,73.6,88.3,2.13
+Wheat,Great Plains,Clay,Rabi,6.42,21.0,771.5,51.5,580.3,158.0,3.09,16.4,43.4,80.5,44.4,3.37
+Soybean,Central Valley,Silt Loam,Kharif,6.24,23.6,1061.9,76.2,827.4,70.6,1.67,20.1,75.7,31.0,56.7,1.91
+Corn,Great Plains,Clay,Rabi,6.96,26.3,1119.9,49.8,129.0,137.7,4.53,11.7,46.7,31.0,90.7,4.25
+Wheat,Central Valley,Black Soil,Autumn,5.44,34.6,1007.0,54.7,786.8,114.1,3.12,3.5,168.2,31.0,51.2,3.13
+Tomato,Central Valley,Clay,Kharif,6.92,31.7,1614.2,83.3,692.9,116.3,18.06,31.4,105.8,44.6,36.8,17.23
+Rice,Midwest,Black Soil,Kharif,5.5,32.3,609.2,46.2,470.0,225.0,3.08,4.3,141.2,25.7,113.2,3.24
+Wheat,Central Valley,Sandy Loam,Rabi,6.74,16.4,1081.5,42.8,208.0,61.1,3.02,38.6,61.8,24.3,106.2,3.0
+Cotton,Southeast,Black Soil,Summer,6.56,30.2,1384.5,48.1,584.8,59.7,2.15,23.7,177.6,24.5,48.7,1.9
+Tomato,Great Plains,Alluvial,Spring,7.38,33.8,1026.6,72.4,515.7,230.9,15.0,28.0,120.8,73.6,60.5,16.57
+Corn,Delta Region,Silt Loam,Rabi,6.7,32.1,650.0,70.0,394.0,118.6,4.94,25.7,124.6,43.9,57.6,4.86
+Corn,Central Valley,Sandy Loam,Spring,5.25,24.7,1275.8,47.4,792.2,231.8,5.69,10.7,144.9,60.4,50.2,4.42
+Wheat,Midwest,Loamy,Rabi,5.96,24.0,1383.7,58.6,263.8,80.0,2.81,45.3,174.3,32.2,34.6,2.88
+Soybean,Central Valley,Sandy Loam,Summer,6.6,23.7,1297.5,61.7,578.6,131.6,2.12,3.6,111.8,48.4,113.4,2.21
+Cotton,Great Plains,Loamy,Summer,6.13,26.1,366.0,45.1,695.5,179.2,2.07,17.2,48.4,50.7,83.1,1.97
+Corn,Central Valley,Silt Loam,Spring,7.04,22.9,823.5,58.4,741.0,184.7,4.38,17.4,163.7,68.1,63.3,4.66
+Tomato,Central Valley,Alluvial,Autumn,6.9,17.3,1753.8,86.6,402.3,201.9,15.75,36.7,101.6,65.6,46.7,17.72
+Wheat,Midwest,Loamy,Autumn,6.38,16.8,789.2,87.7,255.6,180.9,2.43,19.8,98.5,72.8,35.2,3.07
+Tomato,Delta Region,Sandy Loam,Rabi,5.4,33.2,735.0,64.1,152.9,157.7,23.46,1.0,177.4,79.7,69.3,18.66
+Rice,Pacific Northwest,Silt Loam,Summer,8.14,33.0,1735.7,52.9,546.9,254.5,3.69,31.2,154.0,38.1,86.5,3.29
+Tomato,Midwest,Alluvial,Autumn,6.04,27.9,1650.1,51.3,117.8,161.2,17.51,26.5,85.9,50.6,69.9,19.24
+Soybean,Great Plains,Loamy,Autumn,7.79,18.1,564.6,51.2,726.8,252.6,1.47,15.7,74.8,78.4,112.6,1.95
+Soybean,Delta Region,Black Soil,Summer,6.4,27.3,783.7,52.1,598.4,268.2,1.73,21.2,132.8,69.2,112.6,2.1
+Rice,Great Plains,Silt Loam,Spring,6.62,16.6,1709.5,45.9,288.5,252.2,3.56,8.5,108.9,82.1,78.8,3.62
+Potato,Great Plains,Clay,Summer,7.61,22.7,1217.1,69.7,782.6,73.2,11.02,12.9,51.5,66.6,35.0,12.04
+Potato,Great Plains,Loamy,Rabi,5.21,19.6,543.6,89.2,393.4,207.7,18.9,49.6,155.7,40.0,77.2,15.12
+Rice,Midwest,Sandy Loam,Summer,8.19,17.6,407.3,40.0,838.0,231.6,3.91,5.9,165.6,72.7,69.0,3.36
+Corn,Delta Region,Sandy Loam,Autumn,5.42,28.3,551.0,63.1,781.9,86.2,4.89,42.0,148.7,51.0,69.6,4.41
+Wheat,Pacific Northwest,Sandy Loam,Kharif,6.22,19.3,1035.4,62.6,861.4,120.5,2.89,20.3,131.5,72.0,61.8,3.09
+Wheat,Southeast,Alluvial,Summer,6.58,30.1,403.4,42.9,800.1,84.0,4.07,11.3,179.8,23.8,92.3,3.41
+Corn,Southeast,Alluvial,Summer,7.36,24.7,527.8,72.2,854.1,177.0,5.1,29.4,122.3,80.6,41.0,4.63
+Potato,Pacific Northwest,Loamy,Summer,5.77,17.3,395.5,82.7,301.7,92.9,12.42,8.7,109.7,61.1,59.7,13.39
+Soybean,Southeast,Silt Loam,Rabi,7.44,30.1,1304.7,87.9,701.2,249.7,2.69,41.0,65.8,75.8,36.4,2.34
+Corn,Great Plains,Loamy,Spring,6.2,16.8,553.5,65.6,496.3,113.9,4.38,43.9,68.3,27.6,23.8,4.42
+Rice,Pacific Northwest,Sandy Loam,Summer,6.32,16.1,1050.1,81.2,500.9,98.5,3.09,40.2,86.6,61.1,93.7,3.4
+Tomato,Southeast,Black Soil,Spring,8.18,28.2,1237.7,61.7,859.9,234.1,20.38,44.6,103.7,65.3,74.7,17.1
+Tomato,Great Plains,Loamy,Summer,6.42,28.5,1498.2,63.7,802.6,263.7,16.73,17.3,168.0,57.6,43.1,17.73
+Corn,Delta Region,Clay,Spring,7.87,33.0,1534.3,73.4,563.7,140.8,4.3,14.0,40.6,31.0,42.2,3.93
+Cotton,Great Plains,Clay,Spring,5.34,17.5,1514.8,66.8,819.6,266.2,2.37,1.1,42.3,75.8,93.3,1.82
+Cotton,Pacific Northwest,Sandy Loam,Autumn,6.69,27.6,1124.4,67.6,723.7,246.7,1.7,33.5,169.6,42.2,92.6,1.74
+Wheat,Delta Region,Alluvial,Rabi,6.49,22.6,706.1,64.0,179.6,264.1,3.56,1.7,142.3,26.8,49.2,3.52
+Corn,Great Plains,Clay,Spring,5.69,18.0,1701.0,55.5,533.9,176.2,4.15,11.0,49.6,83.8,107.3,4.21
+Cotton,Central Valley,Clay,Kharif,7.58,34.9,1749.5,45.7,461.0,77.9,2.18,39.2,147.2,69.6,66.5,1.7
+Rice,Great Plains,Alluvial,Autumn,5.45,31.8,862.2,59.4,251.4,267.3,2.74,14.6,141.5,78.8,82.0,3.52
+Cotton,Central Valley,Loamy,Rabi,5.68,32.3,1125.5,63.9,839.8,195.3,1.62,8.1,44.2,74.7,99.3,1.65
+Potato,Central Valley,Black Soil,Spring,5.77,28.7,1471.5,77.4,153.5,278.4,10.22,11.4,71.7,61.0,111.3,12.67
+Potato,Delta Region,Silt Loam,Spring,6.31,34.0,402.8,49.4,556.8,53.9,11.87,16.8,133.0,41.1,53.9,12.99
+Soybean,Central Valley,Sandy Loam,Spring,7.73,27.9,1164.0,45.8,208.6,163.7,2.2,5.2,179.5,65.8,54.1,2.01
+Tomato,Central Valley,Alluvial,Summer,6.81,24.5,406.5,45.3,851.2,202.9,16.9,13.1,179.8,63.7,101.6,18.97
+Wheat,Southeast,Sandy Loam,Spring,8.13,23.3,1072.5,76.9,425.5,56.0,3.25,49.1,79.9,27.9,29.3,2.99
+Wheat,Delta Region,Black Soil,Autumn,6.29,17.9,733.1,56.7,810.7,92.0,4.15,42.7,69.7,71.0,43.2,3.42
+Corn,Southeast,Black Soil,Autumn,5.44,30.3,1706.1,83.5,536.9,258.5,5.72,45.7,132.1,22.0,60.4,4.81
+Rice,Southeast,Silt Loam,Kharif,6.01,17.0,449.7,87.4,570.6,74.6,3.29,33.2,106.8,47.8,56.1,3.2
+Tomato,Central Valley,Sandy Loam,Rabi,6.88,31.9,468.9,48.4,618.8,180.9,17.49,30.0,161.3,59.2,21.7,18.46
+Wheat,Pacific Northwest,Alluvial,Rabi,8.07,33.3,1089.0,89.5,104.2,170.3,3.14,9.3,78.3,70.6,97.6,3.1
+Wheat,Great Plains,Black Soil,Rabi,5.83,29.3,629.1,66.4,375.4,143.0,2.5,3.9,122.7,78.8,48.8,2.75
+Wheat,Delta Region,Loamy,Spring,7.02,16.0,516.2,69.5,697.4,209.0,2.6,13.5,120.7,72.0,78.0,3.15
+Soybean,Midwest,Clay,Kharif,5.95,16.9,454.7,59.7,872.2,113.6,2.49,12.3,55.8,15.2,41.0,2.15
+Rice,Pacific Northwest,Loamy,Spring,5.82,18.9,1400.3,79.3,795.0,124.8,2.32,6.2,97.6,61.2,88.0,2.95
+Potato,Pacific Northwest,Clay,Rabi,6.26,33.4,1594.3,73.1,491.9,268.3,15.45,11.1,101.2,32.6,63.3,13.92
+Wheat,Central Valley,Loamy,Spring,5.81,18.2,766.5,54.2,241.6,226.9,3.79,26.7,106.3,68.4,26.5,3.37
+Potato,Southeast,Sandy Loam,Rabi,7.27,21.5,1041.4,59.5,228.4,100.7,15.98,23.0,166.7,16.2,43.4,15.28
+Potato,Great Plains,Clay,Autumn,8.0,18.2,1395.8,66.1,651.9,112.5,10.63,26.0,132.2,71.0,94.6,11.65
+Rice,Central Valley,Black Soil,Kharif,6.05,32.2,1448.7,73.4,544.8,191.1,3.51,12.8,151.9,52.1,38.3,3.43
+Potato,Delta Region,Loamy,Rabi,6.18,29.8,1153.1,68.4,101.2,94.5,15.26,48.0,55.2,36.4,96.4,13.92
+Corn,Pacific Northwest,Sandy Loam,Autumn,6.41,32.8,1222.3,68.2,176.9,158.5,4.13,10.8,67.5,32.1,24.6,4.23
+Corn,Southeast,Silt Loam,Rabi,6.68,24.6,1165.5,74.5,182.6,256.1,3.85,27.1,72.4,75.7,40.5,4.33
+Potato,Delta Region,Alluvial,Kharif,8.17,27.0,1391.7,51.0,271.6,135.3,15.98,6.0,45.1,15.8,78.7,13.05
+Rice,Southeast,Alluvial,Autumn,7.88,17.9,1689.2,70.6,174.8,107.6,4.18,44.6,123.8,67.2,113.8,3.76
+Wheat,Central Valley,Silt Loam,Summer,7.17,29.9,359.2,82.1,753.7,99.8,2.37,27.5,97.7,38.2,28.9,2.6
+Tomato,Midwest,Black Soil,Summer,7.29,34.7,1442.3,67.8,231.4,219.9,21.22,1.0,177.3,55.0,86.7,18.13
+Wheat,Midwest,Clay,Rabi,7.4,19.9,653.2,46.6,468.7,202.2,2.98,37.1,71.6,24.4,31.8,3.12
+Soybean,Midwest,Sandy Loam,Summer,6.5,29.8,1558.7,48.0,402.5,89.4,2.46,41.9,44.9,27.3,104.3,2.15
+Potato,Central Valley,Loamy,Rabi,5.66,18.2,682.4,80.6,312.9,169.7,13.2,11.4,117.7,62.4,115.0,14.87
+Tomato,Delta Region,Sandy Loam,Spring,8.19,26.7,1172.6,87.7,439.9,190.5,22.7,8.7,151.3,34.5,46.0,19.23
+Wheat,Pacific Northwest,Loamy,Rabi,6.33,26.7,1694.5,83.7,192.3,209.7,3.24,20.9,166.1,31.1,90.0,3.07
+Cotton,Central Valley,Black Soil,Spring,7.15,30.2,1534.2,42.6,243.8,251.4,1.58,20.3,151.9,31.8,25.1,1.8
+Cotton,Delta Region,Black Soil,Kharif,6.86,22.8,1129.5,53.0,365.7,81.3,1.91,12.8,65.0,44.9,105.0,1.96
+Wheat,Midwest,Clay,Kharif,7.07,17.4,1395.3,67.3,690.2,124.0,3.51,26.4,63.0,34.3,104.7,2.95
+Rice,Central Valley,Loamy,Kharif,7.27,33.3,1398.5,44.2,231.9,220.7,4.4,39.0,129.2,20.7,88.8,3.83
+Potato,Central Valley,Silt Loam,Autumn,5.37,28.6,1754.5,41.3,219.8,131.3,13.66,32.7,93.1,23.1,111.4,12.66
+Soybean,Southeast,Sandy Loam,Summer,6.84,19.0,1318.8,67.0,329.7,170.1,2.86,8.8,147.5,25.5,102.4,2.65
+Corn,Delta Region,Black Soil,Kharif,6.61,26.1,1027.6,42.2,139.1,202.3,5.02,16.4,164.0,41.5,83.7,4.96
+Rice,Southeast,Alluvial,Autumn,5.65,23.6,528.3,60.6,738.2,167.7,4.1,14.5,178.7,40.9,24.9,4.06
+Corn,Midwest,Black Soil,Spring,6.86,16.8,1031.2,60.3,292.3,188.5,4.38,36.8,126.0,47.2,55.5,4.8
+Rice,Delta Region,Alluvial,Autumn,5.39,21.4,418.1,46.1,413.3,242.0,3.93,10.1,57.4,53.9,72.9,3.74
+Rice,Southeast,Alluvial,Summer,7.13,26.9,1036.8,84.0,299.2,94.6,4.18,48.1,140.5,28.1,84.8,4.05
+Potato,Southeast,Clay,Rabi,5.62,24.0,1333.0,76.3,517.4,198.4,16.32,34.0,133.4,36.5,49.8,14.47
+Rice,Midwest,Silt Loam,Rabi,7.38,26.6,660.1,55.5,722.6,68.9,3.48,19.0,162.3,72.5,49.2,3.41
+Soybean,Great Plains,Clay,Summer,6.32,21.8,1616.5,49.3,730.9,215.9,2.35,47.4,91.7,53.0,38.7,2.17
+Wheat,Pacific Northwest,Loamy,Kharif,6.12,31.8,1601.5,65.6,868.0,172.0,3.42,24.0,168.3,16.6,42.6,3.28
+Rice,Southeast,Clay,Autumn,6.76,32.6,749.4,76.3,207.4,190.3,3.8,35.2,137.6,62.2,54.0,3.79
+Corn,Pacific Northwest,Alluvial,Kharif,6.07,20.1,663.4,88.5,759.2,94.7,3.85,49.7,113.7,56.1,108.3,4.08
+Rice,Great Plains,Alluvial,Rabi,7.62,17.8,1381.4,62.7,473.2,252.1,4.2,40.5,57.3,18.4,117.6,3.95
+Wheat,Delta Region,Loamy,Rabi,5.6,28.9,1799.2,42.0,425.3,58.0,3.06,25.1,50.8,20.9,95.0,2.78
+Cotton,Delta Region,Silt Loam,Summer,5.49,35.2,1594.6,78.9,676.2,170.6,1.39,49.6,41.2,78.8,40.9,1.44
+Rice,Central Valley,Black Soil,Kharif,6.45,27.0,1564.5,66.2,110.5,208.3,4.31,17.4,86.7,59.6,69.7,4.26
+Soybean,Southeast,Black Soil,Kharif,7.92,34.3,1629.3,74.0,413.4,190.2,2.37,48.1,88.4,77.0,27.6,2.05
+Tomato,Central Valley,Loamy,Autumn,6.93,18.2,773.8,51.6,523.9,128.9,18.02,32.3,43.7,24.8,119.7,17.3
+Wheat,Midwest,Alluvial,Rabi,7.02,26.1,456.6,62.6,368.2,146.2,3.54,47.1,52.9,80.4,89.5,3.29
+Cotton,Pacific Northwest,Sandy Loam,Rabi,6.42,30.9,1552.9,71.5,722.4,127.6,1.93,26.5,108.9,42.7,63.5,1.72
+Cotton,Pacific Northwest,Loamy,Autumn,5.55,18.6,1481.4,40.9,133.7,94.4,1.22,35.0,178.6,51.4,40.3,1.54
+Potato,Great Plains,Black Soil,Kharif,7.49,23.7,1343.1,43.6,852.2,99.0,13.46,41.1,173.4,68.7,45.4,12.68
+Corn,Southeast,Loamy,Spring,5.75,27.4,1053.8,82.4,439.6,179.1,5.08,25.9,166.3,58.5,118.4,4.78
+Cotton,Southeast,Sandy Loam,Kharif,6.11,27.1,1501.0,89.3,724.2,128.8,2.09,6.7,73.2,75.4,111.3,1.85
+Soybean,Delta Region,Clay,Spring,5.9,23.5,1399.6,42.7,633.6,153.9,2.43,3.3,137.2,57.4,24.7,2.04
+Corn,Delta Region,Black Soil,Kharif,6.06,19.6,372.9,89.8,893.5,184.1,5.44,40.4,63.2,67.9,90.6,4.88
+Tomato,Pacific Northwest,Silt Loam,Autumn,6.33,31.6,779.8,67.6,583.7,188.1,17.0,29.1,142.2,62.5,118.1,18.33
+Potato,Central Valley,Black Soil,Summer,7.55,27.6,1273.3,68.4,217.5,180.0,10.64,8.1,81.2,69.1,108.7,12.35
+Tomato,Delta Region,Clay,Rabi,5.53,32.8,1520.3,51.2,724.4,228.5,15.22,44.6,100.2,54.5,116.1,14.1
+Rice,Great Plains,Black Soil,Kharif,6.62,24.0,520.7,78.2,877.9,57.0,2.93,49.5,101.9,67.4,51.0,3.64
+Soybean,Midwest,Black Soil,Autumn,7.21,28.0,874.6,52.2,860.1,81.9,1.99,11.8,165.6,68.0,103.6,2.23
+Corn,Central Valley,Sandy Loam,Spring,5.55,18.8,1358.0,70.5,373.1,176.3,4.23,44.5,158.9,25.3,79.1,3.79
+Corn,Delta Region,Alluvial,Rabi,6.0,31.7,904.5,58.9,425.5,66.7,3.83,22.3,156.1,16.0,68.2,4.49
+Potato,Central Valley,Alluvial,Rabi,7.62,22.3,838.4,86.2,196.1,244.0,14.16,38.6,148.8,42.9,34.9,14.12
+Tomato,Southeast,Black Soil,Summer,5.32,16.6,1740.9,63.9,279.0,51.5,18.43,31.7,159.3,45.4,59.1,16.35
+Potato,Central Valley,Loamy,Kharif,7.49,26.1,458.8,73.4,751.5,127.0,16.93,41.9,175.7,74.8,24.8,15.51
+Rice,Great Plains,Black Soil,Kharif,6.04,21.9,1229.5,82.9,357.1,154.2,3.59,31.0,148.3,75.4,72.2,3.41
+Cotton,Delta Region,Silt Loam,Spring,5.35,23.4,1274.4,53.5,816.6,151.3,1.69,31.7,123.8,42.4,25.8,1.64
+Potato,Midwest,Alluvial,Spring,6.43,18.6,548.9,41.0,738.9,221.5,12.4,38.4,108.9,58.8,67.4,13.9
+Potato,Central Valley,Clay,Autumn,7.01,31.4,732.1,59.9,519.2,172.7,15.25,35.3,49.4,28.7,40.3,13.99
+Wheat,Central Valley,Clay,Summer,7.99,20.1,1677.9,60.1,473.8,263.2,3.22,18.5,105.0,29.3,119.6,2.83
+Wheat,Pacific Northwest,Loamy,Kharif,5.2,18.3,1438.0,51.9,510.6,204.0,3.09,30.5,58.5,49.7,77.3,2.82
+Corn,Great Plains,Loamy,Rabi,5.42,29.4,780.3,53.2,139.3,271.1,5.21,11.7,161.0,37.6,34.1,5.02
+Potato,Southeast,Black Soil,Kharif,5.48,21.5,1792.6,51.8,263.9,107.5,10.48,48.7,54.2,47.9,30.8,11.31
+Wheat,Great Plains,Alluvial,Spring,5.71,19.7,370.3,48.1,173.8,163.1,2.48,33.7,154.9,52.5,38.2,2.7
+Soybean,Midwest,Sandy Loam,Autumn,6.46,27.5,843.2,81.5,727.5,208.0,2.17,46.6,101.3,68.1,106.7,2.08
+Wheat,Delta Region,Clay,Kharif,5.73,29.6,811.7,41.5,283.1,222.6,2.76,42.6,174.4,16.6,98.6,2.68
+Tomato,Delta Region,Alluvial,Spring,7.98,18.4,1043.6,43.1,788.7,164.2,18.56,20.7,166.0,51.3,100.8,17.07
+Cotton,Central Valley,Sandy Loam,Kharif,5.63,29.2,597.9,51.2,379.4,205.0,1.61,19.4,52.1,42.5,107.3,1.68
+Corn,Central Valley,Sandy Loam,Autumn,8.01,29.7,937.2,47.5,158.3,199.8,4.22,49.5,171.2,20.1,77.1,4.11
+Corn,Delta Region,Silt Loam,Spring,8.06,27.2,1124.7,74.1,288.2,193.4,5.75,38.0,115.9,69.8,106.8,5.11
+Wheat,Midwest,Loamy,Summer,8.05,29.8,683.2,82.1,446.5,215.4,2.58,40.1,140.3,32.6,116.9,2.81
+Soybean,Midwest,Sandy Loam,Autumn,7.41,26.2,1262.8,72.4,326.9,153.9,2.47,17.5,116.4,47.1,101.0,2.14
+Rice,Pacific Northwest,Alluvial,Spring,7.97,20.7,1138.8,62.4,482.1,174.0,4.27,5.5,176.1,28.1,113.4,3.98
+Potato,Southeast,Silt Loam,Kharif,5.39,28.6,1761.4,64.7,525.8,138.4,12.06,48.2,61.0,58.7,111.5,11.37
+Tomato,Great Plains,Alluvial,Rabi,5.59,26.3,634.4,89.7,130.5,198.0,20.75,42.0,84.6,51.7,59.9,18.84
+Wheat,Pacific Northwest,Alluvial,Rabi,7.29,33.7,1312.2,83.4,704.5,139.7,3.46,19.1,141.9,38.2,65.7,3.08
+Rice,Central Valley,Alluvial,Kharif,7.9,19.5,1432.4,82.6,314.7,92.0,4.02,9.2,113.3,47.2,59.4,3.4
+Wheat,Southeast,Black Soil,Summer,5.94,35.0,1341.1,77.0,777.4,231.6,3.7,10.1,156.2,30.6,114.1,3.3
+Tomato,Delta Region,Loamy,Summer,5.98,29.7,1678.2,49.3,709.2,216.2,17.38,20.8,170.5,27.5,114.5,17.34
+Potato,Midwest,Black Soil,Rabi,6.97,33.4,672.3,66.5,725.3,135.1,11.17,20.8,71.3,84.4,70.4,12.92
+Tomato,Pacific Northwest,Silt Loam,Summer,8.05,25.8,731.1,59.3,780.1,124.6,19.54,18.9,125.4,67.9,97.3,17.64
+Corn,Southeast,Clay,Kharif,7.08,18.4,1329.4,65.6,561.6,263.1,5.38,10.5,55.8,48.7,68.4,4.69
+Rice,Midwest,Black Soil,Summer,6.01,16.8,1565.9,50.5,346.1,124.8,4.12,29.5,103.5,37.9,52.8,3.49
+Rice,Midwest,Alluvial,Rabi,7.86,32.4,1040.0,82.3,519.6,104.8,3.79,18.9,99.7,74.6,24.6,3.51
+Tomato,Southeast,Clay,Kharif,7.51,17.7,1475.7,48.9,406.3,171.7,18.61,14.9,179.7,63.7,72.4,16.85
+Tomato,Central Valley,Black Soil,Rabi,5.22,23.2,690.8,65.7,546.2,226.4,17.65,38.1,96.3,77.3,113.5,17.91
+Tomato,Great Plains,Silt Loam,Kharif,7.79,27.7,952.5,77.7,531.1,114.3,16.82,47.8,160.8,24.7,90.6,15.73
+Tomato,Southeast,Alluvial,Summer,6.22,27.8,1748.6,79.8,353.9,213.9,22.72,27.5,125.9,27.4,32.9,20.66
+Tomato,Central Valley,Loamy,Spring,5.28,34.7,359.1,42.0,224.8,120.6,14.51,49.3,129.5,56.0,107.8,15.35
+Rice,Midwest,Clay,Kharif,7.81,17.4,358.1,57.0,127.0,96.9,3.51,40.2,128.6,53.9,38.2,3.27
+Rice,Southeast,Sandy Loam,Summer,6.77,23.7,1200.3,89.8,492.5,164.9,3.97,42.7,159.0,84.3,42.2,3.84
+Potato,Pacific Northwest,Silt Loam,Summer,5.65,16.1,881.1,65.8,691.0,88.6,12.8,32.5,91.6,29.6,115.9,13.02
+Tomato,Midwest,Clay,Autumn,5.52,18.7,1562.7,46.3,585.3,252.1,15.53,40.6,130.3,58.9,82.4,14.61
+Rice,Great Plains,Alluvial,Kharif,6.76,24.3,1059.8,50.2,542.2,129.4,3.76,44.4,114.6,68.7,60.4,3.82
+Soybean,Central Valley,Alluvial,Spring,5.74,23.0,1023.2,53.0,878.6,179.3,2.43,9.7,77.2,24.5,35.5,2.33
+Tomato,Central Valley,Sandy Loam,Rabi,6.73,31.5,1321.2,62.7,819.7,177.4,16.43,31.3,142.1,42.5,74.9,16.76
+Wheat,Pacific Northwest,Silt Loam,Kharif,5.73,25.1,661.8,62.1,673.8,100.0,3.44,32.6,119.0,55.8,38.6,3.13
+Cotton,Central Valley,Sandy Loam,Rabi,6.93,27.3,1241.5,77.0,805.2,269.7,1.82,9.5,142.6,71.0,85.7,1.79
+Tomato,Central Valley,Alluvial,Summer,6.85,20.7,591.5,72.7,662.0,106.2,19.3,12.6,120.9,77.6,40.3,17.3
+Tomato,Southeast,Sandy Loam,Spring,7.37,25.3,1428.3,64.7,229.2,140.4,20.35,7.0,74.6,16.4,53.3,19.02
+Cotton,Southeast,Black Soil,Spring,7.38,19.6,997.9,81.2,788.5,150.9,1.59,30.9,66.2,27.2,27.0,1.65
+Rice,Southeast,Clay,Autumn,6.78,26.0,513.1,64.5,816.3,125.2,4.19,24.0,121.1,54.1,111.5,3.93
+Wheat,Midwest,Clay,Kharif,7.46,18.0,1500.2,59.9,732.5,248.5,3.72,40.8,116.7,27.1,108.3,3.52
+Corn,Delta Region,Silt Loam,Autumn,7.26,25.3,1080.0,83.2,450.7,207.2,4.06,40.7,137.1,65.5,107.9,4.2
+Soybean,Delta Region,Sandy Loam,Rabi,6.8,34.5,1508.1,86.1,732.3,237.1,2.3,12.6,45.7,16.2,117.8,2.14
+Wheat,Great Plains,Alluvial,Kharif,7.77,27.5,508.7,43.3,768.1,87.5,3.09,40.9,69.4,66.0,109.9,3.08
+Cotton,Central Valley,Loamy,Rabi,5.7,34.5,1715.6,77.5,631.2,71.3,1.44,32.5,67.8,34.4,106.8,1.54
+Tomato,Midwest,Loamy,Autumn,7.93,27.5,1788.7,44.1,649.4,165.0,16.36,41.3,125.2,23.1,59.8,17.36
+Soybean,Midwest,Alluvial,Rabi,5.67,33.3,1689.8,88.0,428.1,223.1,2.86,6.7,59.5,23.1,97.1,2.23
+Soybean,Central Valley,Loamy,Kharif,5.51,34.3,410.7,70.9,125.5,81.3,2.02,19.7,88.0,67.0,72.9,1.99
+Potato,Midwest,Clay,Autumn,5.84,21.9,629.0,59.0,266.7,53.1,13.66,37.6,65.0,60.5,86.5,13.42
+Corn,Delta Region,Loamy,Rabi,6.05,18.0,762.5,79.5,646.4,193.8,4.62,38.5,59.7,38.6,20.9,4.2
+Soybean,Southeast,Clay,Rabi,6.33,16.3,1543.7,49.7,777.5,278.8,2.2,30.2,89.0,41.6,99.1,1.99
+Cotton,Pacific Northwest,Alluvial,Kharif,5.84,29.3,1214.5,46.4,655.6,164.2,1.67,40.5,42.4,21.8,116.9,1.88
+Rice,Midwest,Sandy Loam,Rabi,6.28,22.5,881.7,55.3,839.2,98.8,3.08,21.8,43.8,80.9,108.8,3.56
+Cotton,Midwest,Loamy,Rabi,7.99,24.4,874.6,48.1,284.6,163.8,1.72,49.5,48.4,56.9,26.2,1.69
+Soybean,Pacific Northwest,Loamy,Spring,6.97,24.2,538.5,83.0,524.8,267.4,2.46,21.9,55.0,37.4,115.3,2.45
+Wheat,Pacific Northwest,Alluvial,Kharif,7.33,21.7,712.1,46.2,592.9,258.8,3.47,11.9,96.8,49.7,111.4,3.52
+Soybean,Great Plains,Sandy Loam,Spring,6.12,17.3,992.1,73.9,898.4,135.6,2.09,44.8,99.5,27.1,44.6,1.98
+Potato,Central Valley,Clay,Summer,5.21,16.9,436.1,45.9,726.9,78.2,12.14,23.6,69.0,71.4,93.7,11.98
+Potato,Delta Region,Clay,Kharif,6.03,34.9,1059.0,61.2,134.1,53.0,20.91,23.0,53.6,65.9,56.6,16.53
+Rice,Midwest,Black Soil,Kharif,5.52,22.9,438.2,44.2,506.7,144.0,3.03,43.6,54.2,18.8,91.3,3.22
+Corn,Central Valley,Loamy,Summer,6.79,21.5,785.3,80.1,240.0,211.9,4.93,18.7,43.5,54.6,38.2,4.86
+Tomato,Delta Region,Alluvial,Summer,7.31,27.9,1069.5,50.2,549.0,126.8,19.48,22.9,180.0,71.3,97.7,18.56
+Tomato,Great Plains,Clay,Spring,7.71,33.8,983.4,47.4,382.6,64.7,17.66,46.2,73.7,24.7,105.4,16.41
+Rice,Central Valley,Loamy,Summer,6.48,22.2,829.0,69.5,704.1,232.9,3.85,20.7,47.1,56.2,86.7,3.72
+Rice,Southeast,Loamy,Kharif,5.99,20.7,1464.0,67.6,756.4,179.5,3.67,37.7,138.0,64.5,89.6,3.39
+Tomato,Central Valley,Sandy Loam,Rabi,7.32,22.3,599.6,52.8,587.1,58.7,18.47,33.7,122.6,60.3,79.8,19.4
+Potato,Great Plains,Black Soil,Autumn,7.12,29.0,638.1,69.5,648.1,237.1,15.3,49.5,93.5,54.0,49.3,14.19
+Potato,Great Plains,Loamy,Rabi,6.06,17.0,1045.8,53.3,286.6,90.1,16.5,11.6,85.1,27.8,93.7,15.71
+Tomato,Pacific Northwest,Black Soil,Autumn,6.91,18.3,1235.3,80.4,153.6,239.2,19.13,15.2,77.0,76.8,104.8,18.79
+Soybean,Midwest,Loamy,Rabi,6.75,32.4,1133.8,48.6,171.2,62.6,2.88,23.9,62.2,61.6,22.7,2.31
+Cotton,Pacific Northwest,Alluvial,Summer,7.99,34.7,1718.4,80.0,288.2,207.4,1.93,5.7,145.1,55.0,79.5,1.61
+Cotton,Delta Region,Silt Loam,Rabi,5.45,24.9,382.5,81.8,502.9,185.2,1.95,45.0,80.6,61.3,23.1,1.76
+Cotton,Central Valley,Black Soil,Spring,6.11,18.8,1448.9,62.6,804.1,131.9,1.69,44.8,111.8,79.9,77.1,1.61
+Potato,Delta Region,Sandy Loam,Spring,6.82,17.2,387.3,67.0,435.0,123.6,16.62,46.7,133.3,73.0,38.0,15.75
+Wheat,Great Plains,Black Soil,Kharif,6.41,31.3,1318.6,86.7,508.7,164.9,2.6,15.7,154.4,33.9,36.5,2.88
+Soybean,Great Plains,Black Soil,Autumn,7.38,23.8,1717.7,73.5,778.3,202.9,1.97,8.4,47.0,18.0,55.5,1.91
+Soybean,Central Valley,Sandy Loam,Kharif,6.47,23.1,413.8,85.0,613.9,90.7,2.13,39.7,79.8,77.6,89.1,2.11
+Tomato,Midwest,Sandy Loam,Spring,7.54,25.2,1506.9,80.2,636.0,141.6,24.55,18.3,81.0,18.2,80.5,19.49
+Potato,Pacific Northwest,Alluvial,Summer,6.33,26.9,1394.5,86.8,443.4,111.1,11.5,41.9,111.6,25.6,64.4,12.49
+Wheat,Delta Region,Sandy Loam,Kharif,5.68,34.7,1191.0,52.2,604.3,113.3,3.69,19.9,116.5,15.0,116.8,3.38
+Cotton,Midwest,Sandy Loam,Autumn,7.29,20.6,409.6,61.8,888.0,140.9,1.37,20.6,61.2,84.1,72.7,1.38
+Tomato,Delta Region,Loamy,Spring,7.7,17.8,457.1,89.9,190.4,256.1,23.05,2.1,179.2,32.4,86.1,19.08
+Tomato,Pacific Northwest,Clay,Rabi,5.52,20.3,1393.6,84.7,373.4,275.6,15.66,36.0,46.1,32.8,75.6,16.3
+Rice,Great Plains,Sandy Loam,Kharif,6.28,35.1,1438.2,64.8,309.7,191.7,2.3,45.6,100.0,60.5,107.3,3.05
+Soybean,Southeast,Sandy Loam,Kharif,6.45,32.9,1031.6,77.0,817.3,264.2,2.31,39.6,49.1,51.1,90.0,2.26
+Tomato,Delta Region,Black Soil,Autumn,6.84,35.1,1407.8,83.3,469.4,176.8,15.26,31.9,53.6,20.6,47.1,16.79
+Tomato,Central Valley,Clay,Summer,7.96,28.5,1723.4,67.3,593.2,173.8,15.5,31.5,152.7,32.4,117.5,15.52
+Potato,Pacific Northwest,Black Soil,Autumn,7.99,23.6,802.9,84.6,172.2,128.3,12.55,22.6,76.6,36.9,86.0,12.84
+Rice,Central Valley,Black Soil,Rabi,7.24,17.2,1346.8,63.9,389.1,210.3,3.23,36.4,93.4,63.6,55.1,3.58
+Rice,Great Plains,Loamy,Spring,5.39,32.7,1129.8,78.6,746.0,97.6,4.29,34.5,84.0,43.8,90.9,3.71
+Wheat,Central Valley,Black Soil,Autumn,6.32,17.1,1054.0,42.5,575.3,199.8,3.22,13.7,82.2,24.5,73.0,3.15
+Tomato,Southeast,Clay,Kharif,6.33,23.5,1604.5,79.3,692.4,178.1,17.19,15.4,100.9,49.8,25.0,16.9
+Cotton,Great Plains,Sandy Loam,Rabi,7.57,22.2,964.2,58.2,705.0,128.2,2.51,1.7,164.9,55.0,98.3,1.92
+Corn,Southeast,Clay,Rabi,7.62,16.6,539.7,82.9,395.6,233.8,5.61,39.3,162.6,69.8,105.4,4.9
+Wheat,Great Plains,Sandy Loam,Summer,6.39,22.7,1231.9,51.4,143.0,209.8,3.33,3.7,134.5,26.2,38.7,3.5
+Wheat,Midwest,Sandy Loam,Rabi,7.59,24.6,1628.0,74.7,479.2,142.3,3.38,48.2,146.9,57.9,59.0,3.06
+Rice,Central Valley,Clay,Summer,5.5,23.5,1760.0,65.2,865.2,172.7,3.77,35.7,112.4,42.2,26.0,3.68
+Cotton,Delta Region,Loamy,Kharif,6.75,23.9,1380.9,89.6,202.3,251.2,2.1,24.3,64.2,56.7,114.2,1.99
+Potato,Central Valley,Sandy Loam,Spring,7.35,31.9,1586.5,71.9,440.0,83.9,11.63,7.6,55.5,26.5,40.4,11.5
+Corn,Midwest,Alluvial,Spring,6.49,29.9,1407.8,83.3,525.8,156.1,4.05,17.8,89.0,72.3,36.9,4.32
+Corn,Delta Region,Clay,Summer,7.22,29.9,687.2,56.2,302.6,233.3,5.45,7.3,177.2,33.8,23.1,4.84
+Potato,Southeast,Sandy Loam,Summer,6.6,30.8,1611.3,82.3,161.4,82.2,14.41,15.0,67.1,80.4,118.5,13.53
+Corn,Delta Region,Black Soil,Spring,7.06,32.3,473.1,61.9,718.8,225.8,5.19,34.4,74.0,35.5,84.2,4.36
+Soybean,Midwest,Silt Loam,Rabi,7.8,27.1,900.3,48.5,158.2,159.2,2.0,2.5,140.0,60.9,26.1,2.08
+Cotton,Central Valley,Black Soil,Spring,7.68,21.1,1386.4,49.7,409.3,278.7,2.12,48.2,177.0,37.7,74.5,1.81
+Cotton,Midwest,Sandy Loam,Autumn,6.19,20.6,793.1,41.8,836.7,211.0,1.29,44.8,128.8,22.3,26.9,1.56
+Cotton,Great Plains,Silt Loam,Spring,6.74,17.3,966.2,89.4,323.1,108.5,1.63,25.8,133.8,40.2,46.2,1.61
+Rice,Delta Region,Clay,Autumn,7.27,25.5,1248.3,62.5,727.4,74.6,3.44,44.1,129.9,60.6,111.0,3.33
+Soybean,Pacific Northwest,Sandy Loam,Rabi,5.57,26.7,1742.5,65.6,304.4,173.9,2.0,32.5,94.0,58.5,77.9,1.75
+Tomato,Delta Region,Black Soil,Rabi,7.49,28.0,793.8,89.3,485.0,211.7,20.42,44.4,157.3,22.3,104.0,19.96
+Soybean,Midwest,Sandy Loam,Spring,7.63,33.2,1780.4,67.0,870.8,213.4,2.42,12.4,64.5,24.3,40.4,1.96
+Tomato,Pacific Northwest,Clay,Autumn,6.76,20.8,1498.9,47.5,190.2,198.6,17.46,23.0,117.0,17.1,112.0,17.29
+Wheat,Delta Region,Clay,Rabi,6.74,17.0,1188.2,86.2,234.2,77.9,3.49,26.3,154.3,16.0,43.0,3.36
+Rice,Central Valley,Loamy,Autumn,6.5,18.3,1669.6,65.4,605.1,204.4,3.38,19.9,118.1,71.1,68.1,3.49
+Potato,Central Valley,Loamy,Autumn,6.09,23.5,1505.4,54.4,833.8,104.1,15.49,5.1,117.4,80.0,85.0,15.23
+Soybean,Central Valley,Black Soil,Autumn,7.56,21.5,1485.4,78.3,540.3,81.8,2.43,38.0,84.1,43.6,118.2,2.14
+Corn,Pacific Northwest,Loamy,Kharif,7.4,35.9,1012.7,77.6,832.8,50.8,4.66,1.2,154.4,34.5,52.9,4.61
+Soybean,Delta Region,Silt Loam,Spring,6.19,34.1,416.8,61.6,817.5,139.7,2.34,41.9,77.6,20.2,110.5,2.12
+Potato,Southeast,Sandy Loam,Kharif,7.31,33.8,1716.8,89.3,101.3,152.8,17.55,35.7,85.4,42.9,101.8,15.04
+Tomato,Southeast,Black Soil,Spring,7.05,23.3,1164.5,49.7,435.8,96.5,16.8,3.1,117.6,41.5,92.6,17.29
+Tomato,Delta Region,Silt Loam,Rabi,6.58,16.3,689.4,61.7,544.3,256.5,18.8,20.0,119.2,48.1,119.5,18.71
+Soybean,Pacific Northwest,Silt Loam,Autumn,5.29,32.1,971.7,58.2,775.1,181.0,2.27,4.6,165.6,16.6,79.5,2.11
+Wheat,Central Valley,Loamy,Rabi,7.3,35.8,1009.1,88.2,517.6,178.6,4.02,22.1,162.2,41.6,50.3,3.55
+Rice,Delta Region,Loamy,Autumn,5.62,17.5,1018.4,56.8,351.5,270.2,3.91,19.1,104.5,47.0,90.6,3.87
+Soybean,Pacific Northwest,Clay,Spring,7.01,31.7,490.0,73.6,767.8,176.8,1.86,15.5,79.2,57.6,79.2,2.1
+Wheat,Great Plains,Sandy Loam,Rabi,7.01,25.6,1092.7,43.7,142.7,212.6,4.07,9.0,179.4,76.9,92.1,3.34
+Corn,Southeast,Clay,Kharif,6.24,21.9,1054.9,81.8,355.2,229.3,4.02,41.3,57.7,74.1,34.2,4.1
+Cotton,Southeast,Silt Loam,Kharif,5.25,30.7,441.9,60.0,840.3,256.6,1.51,35.8,97.4,81.5,65.9,1.58
+Wheat,Midwest,Sandy Loam,Spring,6.71,34.4,1236.0,84.4,808.4,114.4,3.02,49.6,48.2,49.0,85.2,2.64
+Cotton,Delta Region,Clay,Rabi,7.35,20.8,547.6,61.0,411.6,264.8,1.8,34.8,169.4,70.6,57.3,1.78
+Potato,Central Valley,Loamy,Summer,7.12,31.1,435.6,45.8,397.4,50.2,12.53,47.2,64.9,47.5,100.7,13.7
+Cotton,Pacific Northwest,Loamy,Summer,5.44,33.6,1428.6,51.4,753.6,232.6,1.94,10.1,47.5,54.9,40.0,1.78
+Rice,Great Plains,Loamy,Spring,7.24,16.1,1051.6,85.3,764.0,200.3,3.43,30.1,162.8,55.2,51.2,3.72
+Soybean,Southeast,Alluvial,Summer,7.14,31.9,1106.8,60.7,544.3,99.1,1.84,12.1,160.0,39.1,79.5,2.16
+Corn,Great Plains,Loamy,Spring,5.46,28.5,1395.4,86.3,881.9,96.5,4.72,42.0,83.5,52.7,41.3,4.43
+Cotton,Pacific Northwest,Loamy,Kharif,5.34,23.0,1164.1,70.5,277.4,92.1,1.48,13.6,105.6,35.8,117.1,1.54
+Cotton,Pacific Northwest,Sandy Loam,Spring,7.49,32.5,839.2,85.9,436.5,63.9,1.96,13.5,160.7,83.5,63.5,1.63
+Soybean,Great Plains,Silt Loam,Rabi,5.86,30.4,714.5,55.0,533.6,94.9,2.35,29.8,82.5,27.4,100.0,2.11
+Potato,Pacific Northwest,Sandy Loam,Spring,6.82,22.6,427.0,80.8,841.6,212.1,16.34,45.8,95.1,46.4,53.6,14.62
+Rice,Southeast,Silt Loam,Rabi,5.75,32.5,1211.4,67.0,366.6,226.1,4.11,11.1,55.0,49.5,90.0,3.88
+Soybean,Central Valley,Alluvial,Autumn,5.9,35.0,1795.3,63.1,506.0,139.2,1.97,6.0,124.1,63.1,34.2,2.0
+Cotton,Southeast,Alluvial,Spring,5.36,30.1,593.9,41.2,673.7,135.3,1.87,34.4,72.7,72.2,113.2,1.74
+Soybean,Central Valley,Alluvial,Rabi,7.88,29.3,614.2,85.1,727.9,257.0,1.87,49.9,90.0,82.3,21.1,1.87
+Cotton,Great Plains,Alluvial,Kharif,5.53,20.3,1393.2,49.2,802.8,272.3,1.89,4.9,131.7,63.0,46.0,1.58
+Soybean,Delta Region,Sandy Loam,Kharif,5.33,32.7,494.8,62.1,253.0,79.7,2.23,22.5,123.3,18.5,55.4,1.93
+Soybean,Delta Region,Alluvial,Summer,7.94,29.3,1552.4,42.4,886.1,116.2,2.42,32.6,134.9,30.1,50.4,2.09
+Soybean,Central Valley,Clay,Autumn,6.03,18.5,395.6,50.7,136.5,190.7,2.09,6.8,176.1,34.9,27.2,2.04
+Corn,Pacific Northwest,Black Soil,Kharif,8.17,22.7,1242.3,84.6,867.9,132.6,4.83,47.8,146.4,32.1,57.4,4.32
+Tomato,Southeast,Clay,Kharif,5.41,17.2,1747.4,68.5,562.1,198.1,19.27,18.7,95.7,45.0,111.4,15.46
+Cotton,Delta Region,Loamy,Kharif,7.35,25.6,413.9,74.8,293.3,160.2,2.0,27.8,77.4,62.6,91.7,1.89
+Wheat,Pacific Northwest,Clay,Autumn,6.12,30.0,1780.5,83.1,116.4,140.3,2.71,42.6,104.2,68.1,104.7,2.78
+Corn,Southeast,Loamy,Rabi,6.24,16.2,1065.2,89.3,350.5,79.9,4.57,8.9,94.8,35.0,65.9,4.43
+Corn,Midwest,Black Soil,Kharif,7.18,27.5,1479.7,50.9,277.1,126.1,4.83,31.8,53.3,16.1,98.7,4.99
+Tomato,Central Valley,Alluvial,Spring,5.34,20.9,1273.9,88.0,544.6,145.2,20.92,42.1,75.5,16.0,108.6,17.11
+Rice,Central Valley,Silt Loam,Spring,7.58,28.3,359.4,84.8,367.6,274.3,4.15,22.8,167.7,38.4,107.6,4.03
+Tomato,Delta Region,Black Soil,Spring,6.9,19.7,597.9,76.8,716.9,121.7,19.04,16.8,95.3,31.2,104.3,18.8
+Potato,Pacific Northwest,Clay,Kharif,5.62,23.4,1105.0,43.9,469.6,156.6,18.88,44.4,43.5,56.7,20.1,16.37
+Potato,Central Valley,Loamy,Summer,5.88,31.0,358.9,49.5,660.3,88.7,15.04,42.3,130.6,57.6,86.0,14.5
+Rice,Southeast,Black Soil,Kharif,7.93,30.5,1345.3,68.3,447.0,227.7,3.88,26.6,110.4,29.8,57.1,3.74
+Tomato,Delta Region,Loamy,Autumn,6.91,25.3,1760.6,48.4,652.6,137.8,17.05,44.2,112.3,64.6,95.0,18.41
+Cotton,Southeast,Clay,Spring,7.62,28.1,663.1,67.4,400.4,266.8,1.58,27.2,111.2,55.7,109.9,1.78
+Cotton,Delta Region,Sandy Loam,Summer,6.13,17.1,489.2,65.7,234.5,223.4,1.93,48.1,62.8,18.8,75.1,1.63
+Tomato,Southeast,Black Soil,Rabi,7.72,20.6,1310.6,47.8,301.6,113.8,18.99,31.6,108.2,34.5,41.1,15.72
+Wheat,Pacific Northwest,Black Soil,Kharif,8.12,35.1,1187.0,75.5,660.9,204.8,3.5,4.2,143.0,66.4,32.8,3.15
+Soybean,Midwest,Loamy,Summer,7.29,20.4,540.2,75.8,498.4,245.6,2.0,46.9,57.8,76.3,44.4,2.1
+Soybean,Midwest,Loamy,Rabi,6.45,33.7,940.4,59.8,102.3,276.4,2.84,25.7,48.0,65.1,79.5,2.44
+Cotton,Great Plains,Silt Loam,Spring,7.91,17.9,1129.0,46.6,156.8,55.3,1.51,18.4,62.7,56.9,61.6,1.62
+Cotton,Pacific Northwest,Alluvial,Kharif,6.33,28.2,1597.9,48.0,699.3,172.1,2.33,24.0,56.7,70.0,46.4,1.99
+Cotton,Pacific Northwest,Black Soil,Summer,6.36,19.2,1172.9,80.1,262.4,77.3,2.07,4.3,108.2,50.1,56.7,1.94
+Tomato,Southeast,Silt Loam,Spring,7.46,33.8,905.6,75.0,843.9,69.3,16.0,23.6,111.7,42.6,56.2,15.68
+Corn,Delta Region,Sandy Loam,Summer,5.31,35.3,917.7,49.8,344.9,227.1,5.45,15.7,140.4,54.7,54.4,4.86
+Corn,Pacific Northwest,Black Soil,Spring,5.77,32.9,908.7,61.7,767.2,70.3,4.99,9.2,175.6,32.9,98.6,4.31
+Soybean,Midwest,Alluvial,Summer,6.86,22.4,1326.6,45.1,511.7,168.0,2.86,47.1,164.1,17.8,93.5,2.51
+Tomato,Pacific Northwest,Black Soil,Kharif,7.99,19.0,698.1,55.6,756.5,69.5,17.1,37.3,124.1,62.8,46.4,16.25
+Wheat,Delta Region,Sandy Loam,Rabi,7.36,35.2,758.5,63.0,866.4,254.5,3.95,44.5,133.3,40.5,43.6,3.39
+Wheat,Southeast,Clay,Kharif,5.92,17.6,1560.0,82.4,523.2,143.3,3.4,40.6,92.3,65.3,57.0,3.14
+Potato,Pacific Northwest,Silt Loam,Autumn,6.7,31.9,932.0,75.6,676.4,277.8,14.59,34.1,141.0,81.0,111.6,14.65
+Corn,Midwest,Sandy Loam,Rabi,6.89,35.8,742.7,59.3,682.5,228.7,2.85,22.4,93.5,71.5,63.1,3.68
+Corn,Midwest,Loamy,Rabi,6.31,26.7,1667.0,68.6,840.2,265.5,4.77,17.8,168.4,36.4,28.8,4.45
+Corn,Midwest,Silt Loam,Autumn,7.56,23.4,902.9,55.1,457.3,76.0,4.87,8.0,169.2,15.9,107.0,4.52
+Corn,Midwest,Clay,Summer,6.97,18.4,613.3,46.1,750.9,62.1,5.81,39.1,133.5,33.5,74.4,5.08
+Wheat,Midwest,Clay,Spring,6.1,22.3,798.0,75.9,144.7,180.3,2.98,41.0,70.8,68.9,42.6,3.09
+Soybean,Central Valley,Loamy,Autumn,7.39,25.9,1119.7,57.8,233.6,264.3,2.18,32.6,51.1,66.1,64.7,2.21
+Tomato,Southeast,Sandy Loam,Rabi,7.65,29.2,1421.7,48.8,811.3,166.3,18.53,11.2,104.5,33.7,88.0,16.19
+Soybean,Great Plains,Loamy,Kharif,7.13,19.3,1289.8,80.8,120.3,171.7,1.83,25.4,151.5,76.3,102.0,2.08
+Wheat,Great Plains,Silt Loam,Spring,6.49,29.6,939.8,49.7,102.7,114.1,3.5,7.5,48.7,72.9,112.5,3.1
+Soybean,Pacific Northwest,Sandy Loam,Rabi,8.0,17.3,1695.0,58.4,619.3,201.4,2.5,40.9,46.4,16.8,35.2,2.0
+Cotton,Pacific Northwest,Clay,Rabi,5.76,25.3,1577.7,49.7,440.3,189.0,1.87,4.2,71.7,55.2,99.2,1.77
+Cotton,Midwest,Silt Loam,Autumn,7.28,25.9,588.5,41.8,197.3,137.0,1.79,40.5,88.4,64.6,71.8,1.79
+Potato,Midwest,Alluvial,Kharif,5.76,30.5,1591.1,79.2,375.2,215.4,13.38,30.4,175.3,39.7,109.3,12.75
+Soybean,Pacific Northwest,Clay,Rabi,5.65,29.9,1531.3,51.3,592.8,255.5,2.13,8.3,124.5,27.2,48.7,1.97
+Cotton,Great Plains,Alluvial,Rabi,5.88,20.5,968.9,65.4,877.6,158.0,1.75,39.3,52.8,18.4,117.6,1.62
+Rice,Delta Region,Clay,Spring,7.56,18.4,1083.2,47.9,782.8,137.7,3.52,30.7,53.8,49.4,35.6,3.38
+Rice,Southeast,Alluvial,Autumn,8.09,29.6,1266.6,49.1,171.7,247.6,3.65,11.9,133.3,73.9,63.5,3.58
+Soybean,Southeast,Black Soil,Summer,6.64,22.5,1442.9,46.6,267.9,273.1,2.18,39.2,70.3,63.4,35.3,2.36
+Wheat,Pacific Northwest,Black Soil,Kharif,7.46,21.8,1795.9,57.3,892.3,247.4,3.62,32.1,119.3,65.2,86.5,3.16
+Soybean,Pacific Northwest,Clay,Rabi,6.26,17.1,615.4,84.4,894.3,127.6,1.8,37.0,92.0,18.5,59.0,1.85
+Cotton,Pacific Northwest,Alluvial,Spring,5.93,33.1,516.4,42.8,417.5,232.4,1.67,43.4,78.6,72.9,20.6,1.69
+Soybean,Southeast,Clay,Autumn,7.52,29.1,819.7,40.7,628.0,100.5,1.95,47.5,94.0,43.1,25.7,1.89
+Cotton,Southeast,Alluvial,Spring,7.68,25.5,879.8,43.2,684.4,231.9,1.68,12.2,46.3,37.3,76.9,1.76
+Cotton,Midwest,Alluvial,Kharif,6.48,30.4,454.4,68.3,834.6,128.7,1.96,19.0,100.0,16.2,113.3,1.89
+Rice,Delta Region,Alluvial,Spring,5.83,22.4,1143.3,57.9,247.9,159.7,3.56,30.0,40.1,24.6,45.4,3.61
+Potato,Midwest,Alluvial,Kharif,7.8,25.9,547.1,73.1,219.7,66.9,14.43,4.5,68.2,32.1,91.6,12.45
+Tomato,Great Plains,Silt Loam,Autumn,6.56,16.7,1734.6,63.7,159.4,148.1,19.55,28.8,165.0,31.2,99.8,17.14
+Cotton,Midwest,Clay,Spring,7.22,16.6,1740.8,74.8,871.1,173.0,1.7,32.9,106.5,53.1,55.2,1.63
+Cotton,Pacific Northwest,Clay,Autumn,7.29,22.2,517.2,44.6,716.0,125.6,1.85,45.1,66.4,81.8,87.2,1.97
+Cotton,Delta Region,Alluvial,Summer,5.57,16.9,525.5,43.5,773.7,228.2,1.89,9.9,108.1,41.5,119.3,1.7
+Tomato,Pacific Northwest,Silt Loam,Summer,7.33,16.0,960.3,68.1,416.5,121.1,17.74,24.5,133.2,45.5,60.1,15.83
+Tomato,Great Plains,Black Soil,Spring,7.85,17.8,1533.5,59.3,378.0,208.8,17.78,46.2,44.7,75.1,23.3,15.6
+Potato,Midwest,Sandy Loam,Summer,6.61,16.8,1421.7,88.8,552.0,191.8,16.49,35.3,174.8,45.9,31.0,14.41
+Soybean,Delta Region,Alluvial,Summer,7.29,20.5,648.5,74.7,574.9,215.4,2.16,7.7,65.1,39.5,36.2,2.09
+Wheat,Great Plains,Silt Loam,Rabi,5.9,17.6,805.3,54.5,519.6,245.5,4.03,21.9,157.7,68.4,81.2,3.55
+Corn,Southeast,Silt Loam,Spring,8.12,31.1,1618.3,87.1,333.7,100.9,5.86,13.2,139.3,70.0,99.2,4.8
+Corn,Delta Region,Loamy,Spring,7.01,20.9,1230.8,81.7,855.8,109.5,4.93,28.9,121.0,35.0,77.5,4.5
+Corn,Great Plains,Sandy Loam,Kharif,7.23,29.1,1164.0,47.3,138.2,125.5,4.87,26.8,98.8,57.4,67.7,4.23
+Wheat,Delta Region,Alluvial,Autumn,7.85,27.7,1703.9,45.0,226.2,272.5,3.07,32.5,179.7,68.2,64.6,2.94
+Rice,Pacific Northwest,Clay,Kharif,7.49,25.6,787.0,82.6,378.2,116.0,3.77,43.2,139.4,43.9,53.7,3.44
+Cotton,Delta Region,Clay,Rabi,5.23,22.0,1171.7,82.4,405.2,64.7,1.79,2.8,141.3,30.6,25.5,1.78
+Rice,Midwest,Alluvial,Summer,7.54,20.1,1602.5,56.7,414.8,131.9,4.51,6.2,139.0,42.4,53.1,3.76
+Corn,Pacific Northwest,Alluvial,Spring,6.87,24.6,1518.9,86.1,587.6,267.2,5.26,48.2,76.6,40.2,49.8,4.78
+Corn,Pacific Northwest,Sandy Loam,Spring,5.45,20.5,1136.0,58.5,808.0,118.2,3.42,20.0,65.7,73.0,35.8,3.41
+Soybean,Pacific Northwest,Clay,Kharif,5.78,25.2,615.5,60.3,624.8,54.3,2.72,43.0,72.5,46.6,77.9,2.27
+Tomato,Pacific Northwest,Alluvial,Spring,6.82,16.6,1150.6,85.1,859.6,122.2,17.34,39.3,139.1,24.9,106.0,16.48
+Potato,Delta Region,Loamy,Rabi,7.16,28.9,1759.8,61.9,328.8,157.1,18.64,44.4,66.4,17.6,40.8,16.01
+Corn,Central Valley,Clay,Rabi,7.57,23.3,418.1,48.1,547.3,267.2,6.13,27.3,99.1,38.7,64.8,5.09
+Corn,Pacific Northwest,Clay,Rabi,6.76,19.1,1500.2,40.5,113.0,125.9,4.8,10.9,120.3,22.5,40.4,4.22
+Rice,Midwest,Loamy,Rabi,6.42,24.8,1414.4,46.1,820.7,230.2,4.64,10.7,91.1,72.1,63.8,3.96
+Potato,Midwest,Silt Loam,Autumn,7.45,22.3,1653.0,42.8,322.4,135.1,14.97,30.9,47.8,80.9,37.3,13.27
+Wheat,Pacific Northwest,Black Soil,Autumn,7.65,19.4,392.1,53.5,834.3,232.3,2.92,38.7,46.5,52.8,65.8,2.96
+Cotton,Delta Region,Alluvial,Kharif,7.35,35.2,1309.8,46.6,141.7,135.9,1.64,5.5,101.5,76.5,61.4,1.64
+Cotton,Southeast,Alluvial,Autumn,7.53,18.0,1680.1,72.1,652.8,123.9,1.65,23.7,76.5,22.4,98.7,1.65
+Tomato,Midwest,Sandy Loam,Kharif,7.12,20.5,1615.0,62.0,730.9,157.9,15.02,19.9,60.8,50.4,113.1,15.34
+Wheat,Midwest,Sandy Loam,Autumn,8.07,31.6,847.7,59.7,527.0,213.9,3.78,3.0,168.1,65.7,34.7,3.03
+Wheat,Great Plains,Clay,Rabi,7.51,17.5,620.1,46.5,168.8,60.8,2.86,23.1,114.3,82.6,24.2,2.8
+Soybean,Southeast,Alluvial,Autumn,7.95,28.3,1320.9,84.5,819.0,154.5,2.59,21.4,46.9,72.7,49.1,2.21
+Rice,Pacific Northwest,Clay,Autumn,5.51,35.4,1245.0,74.7,242.6,123.2,3.5,8.4,164.0,68.5,69.4,3.45
+Wheat,Midwest,Clay,Spring,7.45,21.0,1158.5,49.1,117.2,247.1,2.67,47.3,61.0,22.9,37.6,3.03
+Soybean,Southeast,Alluvial,Summer,7.14,33.0,628.9,49.8,688.8,209.2,2.33,30.0,154.3,29.2,49.0,2.2
+Corn,Great Plains,Loamy,Summer,6.76,26.2,1191.2,56.5,316.8,54.8,4.02,25.6,63.3,75.2,81.4,4.25
+Potato,Delta Region,Alluvial,Summer,7.5,22.3,1492.6,62.4,305.9,211.5,15.66,4.5,65.4,44.9,85.8,15.83
+Wheat,Delta Region,Alluvial,Summer,6.0,25.0,1072.1,55.9,236.4,259.8,2.89,21.3,119.4,16.2,28.1,3.05
+Potato,Southeast,Black Soil,Kharif,7.01,16.6,884.9,76.3,226.1,186.3,9.96,7.9,56.4,37.6,106.5,12.78
+Cotton,Great Plains,Clay,Kharif,6.15,31.1,1366.6,60.1,448.7,156.6,1.79,8.4,140.8,25.8,60.9,1.72
+Cotton,Delta Region,Alluvial,Summer,8.06,16.9,896.6,56.8,307.4,168.3,1.55,33.5,130.5,53.6,29.7,1.52
+Wheat,Pacific Northwest,Loamy,Rabi,7.48,16.8,745.3,66.7,780.8,212.0,3.34,33.1,62.0,72.3,28.4,3.28
+Cotton,Midwest,Loamy,Rabi,6.32,21.9,1311.0,84.2,669.0,173.8,1.2,39.3,161.8,53.0,73.6,1.32
+Potato,Southeast,Loamy,Kharif,5.53,22.5,1156.6,42.9,347.4,120.3,13.18,38.4,58.7,73.6,20.1,14.02
+Cotton,Great Plains,Clay,Autumn,7.95,26.0,1275.5,64.0,765.5,169.8,1.06,46.5,148.6,82.2,83.8,1.3
+Corn,Great Plains,Alluvial,Summer,5.56,24.7,537.5,54.8,244.2,190.4,4.24,39.0,140.1,45.5,34.5,4.59
+Rice,Midwest,Clay,Kharif,5.39,21.7,1237.0,66.6,736.7,75.9,3.58,16.0,142.6,80.6,111.7,3.3
+Tomato,Pacific Northwest,Loamy,Kharif,7.04,19.1,1452.5,69.4,575.2,191.0,18.38,24.1,120.6,51.9,85.2,15.66
+Tomato,Pacific Northwest,Clay,Kharif,5.26,20.4,976.4,60.5,690.0,221.4,20.07,37.0,138.9,19.4,54.8,17.52
+Wheat,Pacific Northwest,Clay,Autumn,6.83,19.8,489.7,56.1,137.1,236.2,3.44,17.5,77.8,77.0,109.9,3.73
+Tomato,Pacific Northwest,Loamy,Summer,5.69,24.4,1525.0,48.5,722.7,226.5,12.37,28.1,48.7,46.6,73.4,16.34
+Potato,Midwest,Silt Loam,Spring,7.77,19.5,1155.9,84.5,805.6,165.4,13.87,46.7,165.0,62.1,108.3,13.44
+Wheat,Midwest,Silt Loam,Spring,5.45,22.7,515.4,71.6,533.9,236.6,3.18,45.1,155.8,43.2,59.8,3.09
+Rice,Midwest,Silt Loam,Autumn,7.53,16.0,457.9,47.8,504.7,86.1,3.48,15.9,166.0,65.2,35.2,3.48
+Soybean,Delta Region,Black Soil,Rabi,5.76,30.7,1406.1,43.2,481.5,212.9,1.7,18.1,147.0,80.9,22.0,2.08
+Potato,Great Plains,Silt Loam,Kharif,6.47,28.6,886.8,69.1,105.0,256.7,13.59,32.9,115.4,22.0,85.4,13.24
+Corn,Midwest,Loamy,Autumn,7.02,35.1,519.3,85.9,655.8,131.0,4.29,7.2,123.1,55.6,73.3,4.63
+Wheat,Delta Region,Alluvial,Summer,6.69,30.7,374.1,75.8,685.5,211.3,2.94,18.1,92.8,63.7,102.2,3.11
+Tomato,Great Plains,Clay,Autumn,6.92,17.9,819.3,50.2,593.4,186.4,16.03,43.6,164.8,26.4,52.6,17.14
+Tomato,Southeast,Alluvial,Spring,5.23,24.9,781.9,46.8,789.3,55.2,19.85,31.8,77.5,48.3,96.5,19.01
+Potato,Great Plains,Black Soil,Summer,6.51,28.4,1052.4,68.1,542.6,186.9,14.12,4.1,83.0,62.6,45.5,14.45
+Corn,Pacific Northwest,Black Soil,Autumn,6.03,35.1,630.6,70.4,503.3,119.5,4.67,14.9,97.5,32.0,103.9,4.71
+Tomato,Pacific Northwest,Sandy Loam,Rabi,6.94,32.2,504.9,59.0,721.1,172.8,16.06,20.5,77.1,37.1,99.2,16.98
+Wheat,Pacific Northwest,Alluvial,Autumn,7.83,22.5,597.8,81.8,889.3,87.7,3.11,40.5,59.5,47.1,59.7,3.04
+Corn,Delta Region,Black Soil,Kharif,6.83,21.4,1558.7,57.9,183.5,100.9,4.66,1.9,117.9,52.8,75.6,4.55
+Cotton,Pacific Northwest,Loamy,Summer,7.2,26.8,693.6,69.8,479.0,241.7,1.77,24.6,144.1,22.4,54.8,1.87
+Cotton,Midwest,Loamy,Rabi,6.54,23.4,368.5,40.0,136.7,129.3,2.23,46.3,94.7,62.5,30.2,2.03
+Cotton,Delta Region,Sandy Loam,Rabi,8.1,23.1,774.5,67.9,713.8,94.1,2.03,1.8,101.4,52.9,104.5,1.71
+Corn,Great Plains,Silt Loam,Autumn,7.48,34.3,1672.8,72.7,524.7,87.3,3.99,3.5,162.9,71.3,23.1,4.09
+Soybean,Midwest,Silt Loam,Summer,5.57,20.6,1682.5,55.2,875.1,80.3,2.49,44.5,123.3,18.0,68.4,2.22
+Soybean,Southeast,Silt Loam,Autumn,6.4,34.3,589.0,87.0,402.3,231.1,2.0,45.2,57.6,37.7,54.4,2.09
+Tomato,Great Plains,Silt Loam,Rabi,6.48,19.6,1711.5,49.0,587.2,126.3,13.57,16.5,70.2,59.5,86.0,14.83
+Potato,Central Valley,Sandy Loam,Spring,7.9,22.1,768.4,79.3,397.9,101.3,16.67,16.1,101.2,27.0,104.8,14.08
+Cotton,Midwest,Black Soil,Rabi,6.67,17.6,548.9,56.7,378.2,73.4,1.97,16.3,138.2,75.3,79.6,1.8
+Rice,Pacific Northwest,Clay,Spring,5.75,17.8,1609.9,86.5,723.3,104.5,3.98,7.3,149.0,25.0,117.0,3.3
+Potato,Midwest,Silt Loam,Summer,6.84,20.9,852.4,56.0,640.1,177.5,14.69,27.3,63.9,55.9,50.5,13.34
+Soybean,Southeast,Clay,Summer,5.55,26.0,1059.4,70.7,458.9,62.6,2.14,6.0,168.3,52.0,83.7,1.9
+Corn,Southeast,Black Soil,Kharif,6.56,21.4,684.0,58.3,271.9,227.6,5.43,13.7,81.7,76.2,93.2,5.09
+Cotton,Pacific Northwest,Sandy Loam,Kharif,7.73,18.4,1191.8,75.1,884.0,155.7,1.93,41.8,76.4,74.3,80.3,1.76
+Rice,Southeast,Clay,Spring,5.29,19.9,1118.3,61.1,799.1,65.8,3.26,26.0,68.1,72.8,72.1,3.35
+Tomato,Midwest,Silt Loam,Kharif,6.72,33.8,1527.5,67.8,382.1,90.0,20.52,26.1,116.1,28.7,48.5,17.58
+Tomato,Great Plains,Clay,Summer,6.14,18.4,1352.7,60.4,765.4,98.9,21.07,34.5,85.8,30.8,101.2,16.76
+Cotton,Delta Region,Loamy,Kharif,7.79,23.1,1344.1,49.4,323.4,137.7,1.58,26.1,52.3,48.5,94.2,1.63
+Wheat,Delta Region,Silt Loam,Autumn,8.16,20.5,1529.8,46.8,583.7,109.1,2.95,46.7,92.6,70.6,46.2,2.65
+Corn,Central Valley,Black Soil,Autumn,7.57,29.8,512.6,66.6,543.3,160.3,5.44,29.2,120.8,52.2,43.4,4.85
+Soybean,Pacific Northwest,Sandy Loam,Rabi,5.45,27.9,1312.2,54.5,330.0,199.6,2.32,5.7,94.6,66.5,71.5,2.1
+Tomato,Southeast,Black Soil,Autumn,6.95,24.8,1163.5,83.8,759.1,254.7,13.08,36.5,86.0,64.7,54.9,15.97
+Tomato,Midwest,Black Soil,Kharif,5.35,18.9,989.6,69.2,684.9,190.1,12.84,42.3,165.6,74.2,103.9,14.79
+Cotton,Midwest,Sandy Loam,Autumn,7.12,34.1,1005.2,44.1,111.5,125.5,1.43,27.5,121.3,35.9,116.5,1.69
+Corn,Central Valley,Sandy Loam,Rabi,7.48,19.2,1792.6,89.1,183.8,91.9,5.23,21.8,70.5,17.1,72.8,4.35
+Corn,Great Plains,Black Soil,Kharif,6.93,28.2,1779.5,81.7,163.8,267.4,5.47,39.0,87.1,15.8,102.1,4.73
+Soybean,Delta Region,Alluvial,Autumn,5.7,18.1,1028.6,42.3,352.5,178.9,2.38,31.9,99.5,44.6,40.8,2.21
+Cotton,Southeast,Loamy,Summer,6.82,16.4,1396.8,88.1,109.5,242.3,1.87,37.5,84.6,23.9,59.5,1.93
+Soybean,Pacific Northwest,Loamy,Kharif,7.56,17.6,710.5,82.9,200.5,181.9,2.44,29.2,106.4,24.4,106.6,2.24
+Corn,Central Valley,Clay,Spring,5.38,26.6,1548.2,79.9,784.5,215.0,3.46,3.1,46.0,37.9,107.9,3.59
+Corn,Midwest,Alluvial,Spring,5.41,22.9,1360.9,79.4,497.0,137.2,4.52,11.1,96.3,79.1,27.9,4.49
+Soybean,Southeast,Black Soil,Autumn,5.94,23.1,1507.8,43.0,105.7,126.8,1.83,20.6,85.0,76.2,95.1,2.27
+Potato,Central Valley,Sandy Loam,Summer,5.94,29.0,1598.1,81.0,291.5,162.1,17.8,23.1,66.0,39.3,107.7,15.14
+Rice,Great Plains,Sandy Loam,Rabi,7.24,16.9,544.3,65.4,292.0,161.8,3.84,20.3,104.0,74.9,74.5,3.57
+Potato,Pacific Northwest,Silt Loam,Spring,7.94,21.9,1105.8,58.9,303.9,65.8,12.43,1.2,138.7,43.9,23.5,12.84
+Rice,Delta Region,Alluvial,Spring,6.17,33.8,835.4,83.6,607.9,118.9,3.95,48.0,156.0,18.0,57.3,3.59
+Rice,Central Valley,Clay,Autumn,5.61,35.6,362.0,47.1,435.8,147.1,3.99,27.8,170.7,50.6,30.2,3.52

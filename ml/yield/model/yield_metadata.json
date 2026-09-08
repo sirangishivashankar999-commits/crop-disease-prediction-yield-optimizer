@@ -1,0 +1,45 @@
+{
+  "model_type": "Supervised Crop Yield Regressor",
+  "champion_model": "Gradient Boosting Regressor",
+  "champion_metrics": {
+    "mae": 0.3103,
+    "rmse": 0.5449,
+    "r2": 0.992
+  },
+  "comparison": {
+    "Linear Regression (Baseline)": {
+      "mae": 0.3446,
+      "rmse": 0.5672,
+      "r2": 0.9914
+    },
+    "Random Forest Regressor": {
+      "mae": 0.3337,
+      "rmse": 0.5607,
+      "r2": 0.9916
+    },
+    "Gradient Boosting Regressor": {
+      "mae": 0.3103,
+      "rmse": 0.5449,
+      "r2": 0.992
+    }
+  },
+  "feature_importance": {
+    "previous_yield": 96.42,
+    "crop": 2.95,
+    "ph": 0.16,
+    "temperature": 0.1,
+    "rainfall": 0.08,
+    "soil_type": 0.05,
+    "fertilizer": 0.05,
+    "irrigation": 0.05,
+    "humidity": 0.04,
+    "k_content": 0.03,
+    "p_content": 0.02,
+    "area": 0.02,
+    "growing_season": 0.01,
+    "n_content": 0.01,
+    "location": 0.01
+  },
+  "dataset_samples": 1500,
+  "trained_at": "2026-09-07 17:56:19"
+}
