@@ -3,7 +3,7 @@
  * Connects React pages to FastAPI endpoints with structured error handling.
  */
 
-const API_BASE = '/api';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || '/api';
 
 /**
  * Helper to handle fetch responses and parse error details gracefully
