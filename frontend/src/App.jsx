@@ -10,11 +10,13 @@ import WeatherPage from './pages/WeatherPage';
 import SoilIrrigation from './pages/SoilIrrigation';
 import RecommendationsPage from './pages/RecommendationsPage';
 import SettingsPage from './pages/SettingsPage';
+import CropWiseAIAssistant from './components/CropWiseAI/CropWiseAIAssistant';
 import { api } from './services/api';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('dashboard');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isAIAssistantOpen, setIsAIAssistantOpen] = useState(false);
   const [selectedFarm, setSelectedFarm] = useState('Central Valley Farm');
   const [modelStatus, setModelStatus] = useState(null);
   const [weatherData, setWeatherData] = useState(null);
@@ -86,17 +88,20 @@ export default function App() {
         modelStatus={modelStatus}
         isOpen={isSidebarOpen}
         setIsOpen={setIsSidebarOpen}
+        onOpenAI={() => setIsAIAssistantOpen(true)}
       />
 
       {/* Main Content Workspace */}
       <div className="main-content">
         <Header
           activeTab={activeTab}
+          setActiveTab={setActiveTab}
           setIsSidebarOpen={setIsSidebarOpen}
           weatherData={weatherData}
           modelStatus={modelStatus}
           selectedFarm={selectedFarm}
           setSelectedFarm={setSelectedFarm}
+          insightsData={insightsData}
           unreadAlertsCount={insightsData?.disease_alerts_active || 3}
         />
 
@@ -113,6 +118,7 @@ export default function App() {
               insightsData={insightsData}
               weatherData={weatherData}
               setActiveTab={setActiveTab}
+              onOpenAI={() => setIsAIAssistantOpen(true)}
             />
           )}
 
@@ -150,6 +156,15 @@ export default function App() {
           )}
         </main>
       </div>
+
+      {/* Floating CropWise AI Conversational Assistant */}
+      <CropWiseAIAssistant
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        insightsData={insightsData}
+        isOpen={isAIAssistantOpen}
+        setIsOpen={setIsAIAssistantOpen}
+      />
     </div>
   );
 }

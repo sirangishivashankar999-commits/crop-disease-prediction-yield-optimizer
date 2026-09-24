@@ -21,13 +21,13 @@ def get_farm_insights(
     """
     # Baseline multi-season yield trends (Historical vs. Predicted in tons/acre)
     yield_trend = [
-        {"season": "2023 Kharif", "historical": 3.8, "predicted": 3.9, "actual": 4.1},
-        {"season": "2023 Rabi", "historical": 3.2, "predicted": 3.4, "actual": 3.3},
-        {"season": "2024 Kharif", "historical": 4.0, "predicted": 4.2, "actual": 4.3},
-        {"season": "2024 Rabi", "historical": 3.5, "predicted": 3.7, "actual": 3.6},
-        {"season": "2025 Kharif", "historical": 4.1, "predicted": 4.4, "actual": 4.5},
-        {"season": "2025 Rabi", "historical": 3.6, "predicted": 3.8, "actual": 3.9},
-        {"season": "2026 Kharif (Current)", "historical": 4.2, "predicted": 4.6, "actual": None},
+        {"season": "2023 Monsoon", "historical": 3.8, "predicted": 3.9, "actual": 4.1},
+        {"season": "2023 Winter", "historical": 3.2, "predicted": 3.4, "actual": 3.3},
+        {"season": "2024 Monsoon", "historical": 4.0, "predicted": 4.2, "actual": 4.3},
+        {"season": "2024 Winter", "historical": 3.5, "predicted": 3.7, "actual": 3.6},
+        {"season": "2025 Monsoon", "historical": 4.1, "predicted": 4.4, "actual": 4.5},
+        {"season": "2025 Winter", "historical": 3.6, "predicted": 3.8, "actual": 3.9},
+        {"season": "2026 Monsoon (Current)", "historical": 4.2, "predicted": 4.6, "actual": None},
     ]
 
     # Crop performance breakdown

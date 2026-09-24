@@ -33,7 +33,7 @@ const PRESETS = {
     area: 5.0,
     location: 'Central Valley',
     soil_type: 'Loamy',
-    growing_season: 'Kharif',
+    growing_season: 'Monsoon',
     ph: 6.5,
     temperature: 27.0,
     rainfall: 1200.0,
@@ -84,7 +84,7 @@ const PRESETS = {
     area: 40.0,
     location: 'Great Plains',
     soil_type: 'Silt Loam',
-    growing_season: 'Rabi',
+    growing_season: 'Winter',
     ph: 6.8,
     temperature: 18.0,
     rainfall: 550.0,
@@ -269,9 +269,9 @@ export default function YieldOptimizer({ modelStatus }) {
               <div className="form-group">
                 <label className="form-label">Growing Season</label>
                 <select name="growing_season" value={formData.growing_season} onChange={handleChange} className="form-select">
-                  <option value="Kharif">Kharif (Monsoon)</option>
-                  <option value="Rabi">Rabi (Winter)</option>
-                  <option value="Summer">Summer (Zaid)</option>
+                  <option value="Monsoon">Monsoon</option>
+                  <option value="Winter">Winter</option>
+                  <option value="Summer">Summer</option>
                   <option value="Spring">Spring</option>
                   <option value="Autumn">Autumn</option>
                 </select>

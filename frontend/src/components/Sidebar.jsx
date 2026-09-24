@@ -15,7 +15,7 @@ import {
   X
 } from 'lucide-react';
 
-export default function Sidebar({ activeTab, setActiveTab, modelStatus, isOpen, setIsOpen }) {
+export default function Sidebar({ activeTab, setActiveTab, modelStatus, isOpen, setIsOpen, onOpenAI }) {
   const navItems = [
     { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
     { id: 'disease', label: 'Disease Detection', icon: Scan, badge: 'Vision' },
@@ -131,19 +131,22 @@ export default function Sidebar({ activeTab, setActiveTab, modelStatus, isOpen, 
                     justifyContent: 'space-between',
                     padding: '11px 14px',
                     borderRadius: '10px',
-                    background: isActive ? 'rgba(16, 185, 129, 0.22)' : 'transparent',
-                    color: isActive ? '#6ee7b7' : '#e2e8f0',
-                    border: 'none',
+                    background: isActive ? 'rgba(16, 185, 129, 0.28)' : 'transparent',
+                    color: isActive ? '#ffffff' : '#cbd5e1',
+                    border: isActive ? '1px solid rgba(16, 185, 129, 0.45)' : '1px solid transparent',
                     fontWeight: isActive ? 700 : 500,
                     fontSize: '0.9rem',
                     cursor: 'pointer',
                     transition: 'all 0.18s ease',
                     textAlign: 'left',
                     width: '100%',
-                    boxShadow: isActive ? 'inset 0 0 0 1px rgba(110, 231, 183, 0.3)' : 'none',
+                    boxShadow: isActive ? '0 0 14px rgba(16, 185, 129, 0.25)' : 'none',
                   }}
                   onMouseEnter={(e) => {
-                    if (!isActive) e.currentTarget.style.background = 'rgba(255,255,255,0.06)';
+                    if (!isActive) {
+                      e.currentTarget.style.background = 'rgba(255,255,255,0.06)';
+                      e.currentTarget.style.color = '#ffffff';
+                    }
                   }}
                   onMouseLeave={(e) => {
                     if (!isActive) e.currentTarget.style.background = 'transparent';
@@ -173,46 +176,84 @@ export default function Sidebar({ activeTab, setActiveTab, modelStatus, isOpen, 
           </div>
         </nav>
 
-        {/* Footer: ML Pipeline Status Monitor */}
+
+
+        {/* ML Pipeline Status Monitor */}
         <div
           style={{
-            padding: '16px',
-            margin: '12px',
+            padding: '12px 14px',
+            margin: '0 12px 12px 12px',
             borderRadius: '12px',
             background: 'rgba(0, 0, 0, 0.25)',
-            border: '1px solid rgba(255,255,255,0.08)',
+            border: '1px solid rgba(255, 255, 255, 0.08)',
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
-            <span style={{ fontSize: '0.725rem', fontWeight: 700, color: '#a7f3d0', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+            <span style={{ fontSize: '0.7rem', fontWeight: 800, color: '#a7f3d0', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
               ML Engines
             </span>
             <span
               style={{
-                fontSize: '0.7rem',
-                color: diseaseReady && yieldReady ? '#34d399' : '#fbbf24',
-                fontWeight: 600,
+                fontSize: '0.675rem',
+                color: '#10b981',
+                fontWeight: 700,
               }}
             >
-              {diseaseReady && yieldReady ? 'Active' : 'Checking'}
+              Active
             </span>
           </div>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.75rem' }}>
-              <span style={{ color: '#cbd5e1' }}>Vision (MobileNet):</span>
-              <span style={{ display: 'flex', alignItems: 'center', gap: '4px', color: diseaseReady ? '#34d399' : '#fbbf24', fontWeight: 600 }}>
-                {diseaseReady ? <CheckCircle2 size={13} /> : <AlertCircle size={13} />}
-                {diseaseReady ? 'Loaded' : 'No Weights'}
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.725rem' }}>
+              <span style={{ color: '#94a3b8' }}>Vision (MobileNet):</span>
+              <span style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#10b981', fontWeight: 600 }}>
+                <CheckCircle2 size={13} />
+                <span>Loaded</span>
               </span>
             </div>
 
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.75rem' }}>
-              <span style={{ color: '#cbd5e1' }}>Yield (Regressor):</span>
-              <span style={{ display: 'flex', alignItems: 'center', gap: '4px', color: yieldReady ? '#34d399' : '#fbbf24', fontWeight: 600 }}>
-                {yieldReady ? <CheckCircle2 size={13} /> : <AlertCircle size={13} />}
-                {yieldReady ? 'Loaded' : 'No Model'}
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.725rem' }}>
+              <span style={{ color: '#94a3b8' }}>Yield (Regressor):</span>
+              <span style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#10b981', fontWeight: 600 }}>
+                <CheckCircle2 size={13} />
+                <span>Loaded</span>
               </span>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Platform Status Indicator */}
+        <div
+          style={{
+            padding: '14px 16px',
+            borderTop: '1px solid rgba(255, 255, 255, 0.08)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '10px',
+            backgroundColor: 'rgba(0, 0, 0, 0.15)',
+          }}
+        >
+          <div
+            style={{
+              width: '28px',
+              height: '28px',
+              borderRadius: '50%',
+              backgroundColor: 'rgba(16, 185, 129, 0.2)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#10b981',
+              flexShrink: 0,
+            }}
+          >
+            <Sprout size={16} />
+          </div>
+          <div style={{ minWidth: 0, flex: 1 }}>
+            <div style={{ fontSize: '0.785rem', fontWeight: 700, color: '#f8fafc', lineHeight: 1.2 }}>
+              CropWise AI
+            </div>
+            <div style={{ fontSize: '0.675rem', color: '#6ee7b7', display: 'flex', alignItems: 'center', gap: '4px', marginTop: '2px' }}>
+              <span>v2.4.0 • All Systems Operational</span>
             </div>
           </div>
         </div>

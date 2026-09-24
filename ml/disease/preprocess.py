@@ -264,13 +264,22 @@ def get_eval_transforms() -> transforms.Compose:
     ])
 
 
+def ensure_rgb_white_bg(image: Image.Image) -> Image.Image:
+    """Converts image to RGB mode. If RGBA or transparent, composites over white background."""
+    if image.mode in ("RGBA", "LA") or (image.mode == "P" and "transparency" in image.info):
+        rgba = image.convert("RGBA")
+        bg = Image.new("RGBA", rgba.size, (255, 255, 255, 255))
+        composite = Image.alpha_composite(bg, rgba)
+        return composite.convert("RGB")
+    return image.convert("RGB")
+
+
 def preprocess_image_for_inference(image: Image.Image) -> torch.Tensor:
     """
     Validates, converts, and normalizes a PIL Image into a model-ready 4D batch tensor.
     Shape: [1, 3, 224, 224]
     """
-    if image.mode != "RGB":
-        image = image.convert("RGB")
+    image = ensure_rgb_white_bg(image)
     transform = get_eval_transforms()
     tensor = transform(image)
     return tensor.unsqueeze(0)  # Add batch dimension

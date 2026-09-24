@@ -55,32 +55,39 @@ def get_disease_model_info() -> Dict[str, Any]:
 def execute_disease_prediction(
     image: Image.Image,
     filename: str = "uploaded_leaf.jpg",
-    db: Session = None
+    db: Session = None,
+    file_bytes: bytes = None
 ) -> Dict[str, Any]:
-    """Runs prediction and logs record to SQLite database."""
+    """Runs multi-stage validation and MobileNetV2 prediction, then logs record to SQLite database."""
     if not is_disease_model_ready():
         raise FileNotFoundError(
             "Disease ML model is not available. Please run the training pipeline "
             "using 'python ml/disease/train.py' or 'python bootstrap_models.py'."
         )
 
-    # Execute real PyTorch inference
-    result = predict_crop_disease(image, top_k=3, model_path=MODEL_PATH)
+    # Execute real multi-stage validation + PyTorch inference
+    result = predict_crop_disease(
+        image_input=image,
+        top_k=3,
+        model_path=MODEL_PATH,
+        file_bytes=file_bytes,
+        filename=filename
+    )
 
     # Persist log if database session provided
     if db is not None:
         try:
             log_entry = DiseasePredictionLog(
                 filename=filename,
-                crop=result.get("crop", "Unknown"),
-                predicted_disease=result["disease"],
-                confidence=result["confidence"],
-                severity=result["severity"],
+                crop=result.get("crop") or "Unknown",
+                predicted_disease=result.get("disease") or "Unknown",
+                confidence=result.get("confidence", 0.0),
+                severity=result.get("severity", "None"),
                 symptoms_json=json.dumps(result.get("symptoms", [])),
                 treatment_json=json.dumps(result.get("treatment", [])),
                 prevention_json=json.dumps(result.get("prevention", [])),
                 top_predictions_json=json.dumps(result.get("top_predictions", [])),
-                is_real_ml=True
+                is_real_ml=result.get("is_valid", True)
             )
             db.add(log_entry)
             db.commit()

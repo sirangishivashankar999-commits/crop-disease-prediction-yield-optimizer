@@ -113,5 +113,20 @@ export const api = {
   async getModelStatus() {
     const res = await fetch(`${API_BASE}/model/status`);
     return handleResponse(res);
+  },
+
+  // 7. CropWise AI Conversational Assistant
+  async chatWithAI(messages, context = null) {
+    const res = await fetch(`${API_BASE}/ai/chat`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages, context }),
+    });
+    return handleResponse(res);
+  },
+
+  async getAIContext() {
+    const res = await fetch(`${API_BASE}/ai/context`);
+    return handleResponse(res);
   }
 };

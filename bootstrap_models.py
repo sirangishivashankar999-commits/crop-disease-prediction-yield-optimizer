@@ -37,12 +37,26 @@ except Exception as e:
 # 2. Disease Dataset & Model Training
 print("\n[Phase 2/2] Initializing Crop Disease Computer Vision Pipeline...")
 try:
+    from ml.disease.dataset_builder import build_all_datasets
+    from ml.disease.train_leaf_detector import train_leaf_detector
+    from ml.disease.train_crop_classifier import train_crop_classifier
     from ml.disease.dataset_generator import create_starter_disease_dataset
     from ml.disease.train import train_disease_model
 
+    print("Building multi-stage datasets for leaf detection and crop identification...")
+    build_all_datasets()
+
+    print("Training Stage 2 Leaf Detector model...")
+    leaf_meta = train_leaf_detector(epochs=3, batch_size=8)
+    print(f"Leaf Detector Model Trained: Best Val Accuracy: {leaf_meta['best_val_acc']:.2f}%")
+
+    print("Training Stage 3 Crop Classifier model (with UNKNOWN class)...")
+    crop_meta = train_crop_classifier(epochs=3, batch_size=8)
+    print(f"Crop Classifier Model Trained: Best Val Accuracy: {crop_meta['best_val_acc']:.2f}%")
+
     print("Generating starter image structure across 10 disease classes...")
     create_starter_disease_dataset()
-    print("Training MobileNetV2 transfer learning model (3 epochs for fast bootstrap)...")
+    print("Training MobileNetV2 transfer learning disease model...")
     disease_meta = train_disease_model(epochs=3, batch_size=8)
     print(f"Disease Model Trained: MobileNetV2 with Best Val Accuracy: {disease_meta['best_val_acc']:.2f}%")
 except Exception as e:

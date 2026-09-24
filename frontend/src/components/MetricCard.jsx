@@ -16,7 +16,7 @@ export default function MetricCard({
   inspectLabel = 'Details',
 }) {
   return (
-    <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+    <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', minWidth: 0, width: '100%' }}>
       <div>
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: '10px' }}>
           <div>
@@ -57,15 +57,11 @@ export default function MetricCard({
         {details && details.length > 0 && (
           <div
             style={{
-              marginTop: '10px',
-              marginBottom: '12px',
-              padding: '10px 12px',
-              backgroundColor: 'var(--surface-bg)',
-              borderRadius: '10px',
-              border: '1px solid var(--border-subtle)',
+              marginTop: '12px',
+              marginBottom: '14px',
               display: 'flex',
               flexDirection: 'column',
-              gap: '6px',
+              gap: '8px',
             }}
           >
             {details.map((item, idx) => (
@@ -75,12 +71,31 @@ export default function MetricCard({
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
-                  fontSize: '0.735rem',
-                  lineHeight: 1.3,
+                  fontSize: '0.775rem',
+                  lineHeight: 1.4,
+                  gap: '8px',
+                  minWidth: 0,
                 }}
               >
-                <span style={{ color: 'var(--text-muted)', fontWeight: 500 }}>{item.label}</span>
-                <span style={{ color: 'var(--text-main)', fontWeight: 700, textAlign: 'right', marginLeft: '6px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px', minWidth: 0 }}>
+                  <span style={{ width: '5px', height: '5px', borderRadius: '50%', backgroundColor: iconColor || '#10b981', flexShrink: 0 }} />
+                  <span style={{ color: 'var(--text-muted)', fontWeight: 500, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                    {item.label}
+                  </span>
+                </div>
+                <span
+                  style={{
+                    color: 'var(--text-main)',
+                    fontWeight: 700,
+                    textAlign: 'right',
+                    marginLeft: '6px',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                    whiteSpace: 'nowrap',
+                    flexShrink: 0,
+                  }}
+                  title={item.value}
+                >
                   {item.value}
                 </span>
               </div>
@@ -90,80 +105,38 @@ export default function MetricCard({
       </div>
 
       <div>
-        {(change || description || onInspect) && (
+        {onInspect && (
           <div
             style={{
               display: 'flex',
               alignItems: 'center',
-              justifyContent: 'space-between',
-              paddingTop: '10px',
+              justifyContent: 'center',
+              paddingTop: '12px',
               borderTop: '1px solid var(--border-subtle)',
-              gap: '8px',
-              flexWrap: 'wrap',
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1, minWidth: 0 }}>
-              {change && (
-                <div
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '4px',
-                    fontSize: '0.725rem',
-                    fontWeight: 700,
-                    color:
-                      changeType === 'positive' ? '#047857' : changeType === 'negative' ? '#b91c1c' : '#475569',
-                    backgroundColor:
-                      changeType === 'positive' ? '#d1fae5' : changeType === 'negative' ? '#fee2e2' : '#f1f5f9',
-                    padding: '2px 7px',
-                    borderRadius: '6px',
-                    flexShrink: 0,
-                  }}
-                >
-                  {changeType === 'positive' && <ArrowUpRight size={13} />}
-                  {changeType === 'negative' && <ArrowDownRight size={13} />}
-                  {changeType === 'neutral' && <Minus size={13} />}
-                  <span>{change}</span>
-                </div>
-              )}
-
-              {description && (
-                <span
-                  style={{
-                    fontSize: '0.715rem',
-                    color: 'var(--text-muted)',
-                    whiteSpace: 'nowrap',
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis',
-                  }}
-                  title={description}
-                >
-                  {description}
-                </span>
-              )}
-            </div>
-
-            {onInspect && (
-              <button
-                type="button"
-                onClick={onInspect}
-                style={{
-                  background: 'transparent',
-                  border: 'none',
-                  color: '#059669',
-                  fontSize: '0.75rem',
-                  fontWeight: 700,
-                  cursor: 'pointer',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '3px',
-                  padding: '2px 4px',
-                  borderRadius: '4px',
-                }}
-              >
-                {inspectLabel} →
-              </button>
-            )}
+            <button
+              type="button"
+              onClick={onInspect}
+              style={{
+                background: 'transparent',
+                border: 'none',
+                color: iconColor || 'var(--primary-accent)',
+                fontSize: '0.785rem',
+                fontWeight: 700,
+                cursor: 'pointer',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '4px',
+                padding: '4px 8px',
+                borderRadius: '6px',
+                transition: 'opacity 0.2s ease',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.8')}
+              onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
+            >
+              <span>{inspectLabel}</span>
+            </button>
           </div>
         )}
       </div>

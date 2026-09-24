@@ -77,7 +77,8 @@ async def predict_disease_endpoint(
         result = execute_disease_prediction(
             image=pil_img,
             filename=filename,
-            db=db
+            db=db,
+            file_bytes=contents
         )
         return result
     except FileNotFoundError as fnf:
@@ -112,6 +113,7 @@ def get_disease_history(limit: int = 15, db: Session = Depends(get_db)):
             "disease": r.predicted_disease,
             "confidence": r.confidence,
             "severity": r.severity,
+            "is_valid": r.is_real_ml,
             "created_at": r.created_at.strftime("%Y-%m-%d %H:%M:%S") if r.created_at else "N/A"
         }
         for r in records

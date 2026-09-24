@@ -108,9 +108,9 @@ export default function FarmInsights({ insightsData }) {
             style={{ width: 'auto', padding: '6px 14px', fontSize: '0.825rem' }}
           >
             <option value="All Seasons">All Historical Seasons</option>
-            <option value="2026 Kharif">2026 Kharif (Current)</option>
-            <option value="2025 Rabi">2025 Rabi</option>
-            <option value="2025 Kharif">2025 Kharif</option>
+            <option value="2026 Monsoon">2026 Monsoon (Current)</option>
+            <option value="2025 Winter">2025 Winter</option>
+            <option value="2025 Monsoon">2025 Monsoon</option>
           </select>
         </div>
       </div>

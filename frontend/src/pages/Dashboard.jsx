@@ -15,14 +15,18 @@ import {
   MapPin,
   CheckCircle2,
   X,
-  ExternalLink
+  ExternalLink,
+  ChevronDown,
+  Sparkles,
+  CloudSun,
+  Send,
+  Leaf,
+  ShieldAlert,
+  BarChart3,
+  Calendar
 } from 'lucide-react';
 import {
   ResponsiveContainer,
-  AreaChart,
-  Area,
-  BarChart,
-  Bar,
   LineChart,
   Line,
   PieChart,
@@ -31,20 +35,45 @@ import {
   XAxis,
   YAxis,
   Tooltip,
-  Legend,
   CartesianGrid
 } from 'recharts';
 import MetricCard from '../components/MetricCard';
 
-const PIE_COLORS = ['#10b981', '#059669', '#3b82f6', '#f59e0b', '#8b5cf6'];
+const DONUT_COLORS = [
+  '#10B981', // Corn (Emerald)
+  '#14B8A6', // Rice (Teal)
+  '#F59E0B', // Tomato (Amber)
+  '#8B5CF6', // Potato (Purple)
+  '#38BDF8', // Wheat (Blue)
+];
 
-export default function Dashboard({ insightsData, weatherData, setActiveTab }) {
+const YIELD_TREND_DATA = [
+  { month: 'Jan', yield: 2.2 },
+  { month: 'Feb', yield: 2.8 },
+  { month: 'Mar', yield: 3.4 },
+  { month: 'Apr', yield: 3.2 },
+  { month: 'May', yield: 4.4 },
+  { month: 'Jun', yield: 3.9, annotation: 'June 2025\nPrediction: 4.6 ton/acre' },
+  { month: 'Jul', yield: 4.6 },
+];
+
+const CROP_DISTRIBUTION_DATA = [
+  { name: 'Corn (Maize)', acres: 40, percentage: 33, color: '#10B981' },
+  { name: 'Rice', acres: 35, percentage: 29, color: '#14B8A6' },
+  { name: 'Tomato', acres: 20, percentage: 17, color: '#F59E0B' },
+  { name: 'Potato', acres: 15, percentage: 12, color: '#8B5CF6' },
+  { name: 'Wheat', acres: 10, percentage: 9, color: '#38BDF8' },
+];
+
+export default function Dashboard({ insightsData, weatherData, setActiveTab, onOpenAI }) {
   const [activeModal, setActiveModal] = useState(null);
+  const [questionInput, setQuestionInput] = useState('');
+  const [seasonFilter, setSeasonFilter] = useState('This Season');
 
   const data = insightsData || {
     total_farms: 4,
     crops_monitored: 5,
-    disease_alerts_active: 3,
+    disease_alerts_active: 87,
     average_predicted_yield: 4.6,
     productivity_score: 87,
     weather_risk: 'Moderate',
@@ -57,421 +86,906 @@ export default function Dashboard({ insightsData, weatherData, setActiveTab }) {
     active_alerts: []
   };
 
+  const handleAskAISubmit = (e) => {
+    e.preventDefault();
+    if (onOpenAI) {
+      onOpenAI();
+    }
+  };
+
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-      {/* Quick Action Hero Banner */}
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', width: '100%', minWidth: 0 }}>
+      {/* 1. Quick Action Hero Banner */}
       <div
         style={{
-          background: 'linear-gradient(135deg, #064e3b 0%, #065f46 60%, #047857 100%)',
+          background: 'linear-gradient(135deg, #064E3B 0%, #065F46 45%, #0D543A 80%, #064E3B 100%)',
           borderRadius: '16px',
-          padding: '28px 32px',
+          padding: '30px 36px',
           color: '#ffffff',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          flexWrap: 'wrap',
-          gap: '20px',
-          boxShadow: '0 8px 24px rgba(6, 78, 59, 0.25)',
+          position: 'relative',
+          overflow: 'hidden',
+          boxShadow: '0 10px 30px rgba(6, 78, 59, 0.35)',
+          border: '1px solid rgba(16, 185, 129, 0.25)',
         }}
       >
-        <div style={{ maxWidth: '680px' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', background: 'rgba(255,255,255,0.15)', padding: '4px 10px', borderRadius: '9999px', fontSize: '0.75rem', fontWeight: 600, color: '#a7f3d0', marginBottom: '12px' }}>
-            <Sprout size={14} />
+        {/* Subtle Network Constellation / Grid background overlay */}
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            backgroundImage: `radial-gradient(circle at 75% 50%, rgba(20, 184, 166, 0.18) 0%, transparent 60%),
+                              radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px)`,
+            backgroundSize: '100% 100%, 24px 24px',
+            pointerEvents: 'none',
+          }}
+        />
+
+        <div style={{ maxWidth: '620px', zIndex: 1 }}>
+          <div
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
+              background: 'rgba(255, 255, 255, 0.12)',
+              border: '1px solid rgba(167, 243, 208, 0.3)',
+              padding: '4px 12px',
+              borderRadius: '9999px',
+              fontSize: '0.75rem',
+              fontWeight: 700,
+              color: '#A7F3D0',
+              marginBottom: '14px',
+              backdropFilter: 'blur(4px)',
+            }}
+          >
+            <Sprout size={14} color="#6EE7B7" />
             Autonomous Crop Intelligence Platform
           </div>
-          <h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.02em', margin: '0 0 8px 0' }}>
-            Welcome to Predictive Crop Disease & Yield Optimizer
+
+          <h1
+            style={{
+              fontSize: '2rem',
+              fontWeight: 800,
+              color: '#ffffff',
+              letterSpacing: '-0.02em',
+              margin: '0 0 10px 0',
+              lineHeight: 1.2,
+            }}
+          >
+            Welcome to Predictive Crop<br />Disease & Yield Optimizer
           </h1>
-          <p style={{ fontSize: '0.95rem', color: '#d1fae5', lineHeight: 1.5, margin: 0 }}>
+
+          <p
+            style={{
+              fontSize: '0.925rem',
+              color: '#D1FAE5',
+              lineHeight: 1.5,
+              margin: '0 0 22px 0',
+              maxWidth: '560px',
+            }}
+          >
             Harness real machine learning models to detect foliar crop diseases from leaf scans and optimize harvest yields with multi-factorial agronomic regression.
           </p>
+
+          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+            <button
+              onClick={() => setActiveTab('disease')}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '10px 22px',
+                borderRadius: '10px',
+                background: '#ffffff',
+                color: '#064E3B',
+                fontWeight: 700,
+                fontSize: '0.875rem',
+                border: 'none',
+                cursor: 'pointer',
+                boxShadow: '0 4px 14px rgba(0, 0, 0, 0.2)',
+                transition: 'all 0.2s ease',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.transform = 'translateY(-1px)')}
+              onMouseLeave={(e) => (e.currentTarget.style.transform = 'none')}
+            >
+              <Scan size={18} color="#059669" />
+              Scan Crop Leaf
+            </button>
+
+            <button
+              onClick={() => setActiveTab('yield')}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '10px 22px',
+                borderRadius: '10px',
+                background: 'rgba(255, 255, 255, 0.12)',
+                color: '#ffffff',
+                border: '1px solid rgba(255, 255, 255, 0.35)',
+                fontWeight: 600,
+                fontSize: '0.875rem',
+                cursor: 'pointer',
+                backdropFilter: 'blur(8px)',
+                transition: 'all 0.2s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)';
+                e.currentTarget.style.transform = 'translateY(-1px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.12)';
+                e.currentTarget.style.transform = 'none';
+              }}
+            >
+              <TrendingUp size={18} color="#6EE7B7" />
+              Optimize Yield
+            </button>
+          </div>
         </div>
 
-        <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
-          <button
-            onClick={() => setActiveTab('disease')}
-            className="btn btn-primary"
-            style={{
-              background: '#ffffff',
-              color: '#065f46',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
-              fontWeight: 700
-            }}
-          >
-            <Scan size={18} color="#059669" />
-            Scan Crop Leaf
-          </button>
-          <button
-            onClick={() => setActiveTab('yield')}
-            className="btn"
-            style={{
-              background: 'rgba(255,255,255,0.15)',
-              color: '#ffffff',
-              border: '1px solid rgba(255,255,255,0.3)',
-              fontWeight: 600,
-              backdropFilter: 'blur(8px)'
-            }}
-          >
-            <TrendingUp size={18} />
-            Optimize Yield
-          </button>
+        {/* Right Agricultural Leaf & Constellation Graphic */}
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'relative',
+            width: '280px',
+            height: '200px',
+            flexShrink: 0,
+            zIndex: 1,
+          }}
+          className="hero-art-container"
+        >
+          <svg width="240" height="190" viewBox="0 0 240 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* Ambient Glow */}
+            <circle cx="160" cy="110" r="70" fill="url(#heroPlantGlow)" fillOpacity="0.4" />
+
+            {/* Neural network nodes connecting to plant */}
+            <g stroke="rgba(110, 231, 183, 0.35)" strokeWidth="1.5" strokeDasharray="3 3">
+              <line x1="20" y1="120" x2="60" y2="90" />
+              <line x1="60" y1="90" x2="110" y2="100" />
+              <line x1="110" y1="100" x2="150" y2="60" />
+              <line x1="60" y1="90" x2="80" y2="140" />
+              <line x1="80" y1="140" x2="135" y2="135" />
+            </g>
+            <circle cx="20" cy="120" r="3.5" fill="#34D399" />
+            <circle cx="60" cy="90" r="4.5" fill="#10B981" />
+            <circle cx="110" cy="100" r="3.5" fill="#6EE7B7" />
+            <circle cx="80" cy="140" r="3" fill="#34D399" />
+
+            {/* Main Sprout Plant */}
+            {/* Stem */}
+            <path d="M160 175 C160 140, 155 105, 150 55" stroke="#34D399" strokeWidth="4.5" strokeLinecap="round" />
+            {/* Top Leaf */}
+            <path
+              d="M150 55 C140 30, 150 15, 165 25 C175 35, 165 50, 150 55 Z"
+              fill="url(#leafGradTop)"
+            />
+            {/* Left Main Leaf */}
+            <path
+              d="M154 95 C120 85, 100 100, 110 120 C125 135, 145 115, 154 95 Z"
+              fill="url(#leafGradLeft)"
+            />
+            {/* Right Main Leaf */}
+            <path
+              d="M156 80 C190 70, 215 85, 205 105 C190 125, 168 100, 156 80 Z"
+              fill="url(#leafGradRight)"
+            />
+            {/* Lower Right Small Leaf */}
+            <path
+              d="M158 125 C185 120, 200 135, 190 148 C175 160, 162 140, 158 125 Z"
+              fill="url(#leafGradTop)"
+            />
+            {/* Lower Left Small Leaf */}
+            <path
+              d="M156 135 C132 135, 120 150, 130 162 C145 170, 154 150, 156 135 Z"
+              fill="url(#leafGradLeft)"
+            />
+
+            <defs>
+              <radialGradient id="heroPlantGlow" cx="0.5" cy="0.5" r="0.5">
+                <stop offset="0%" stopColor="#10B981" />
+                <stop offset="100%" stopColor="#10B981" stopOpacity="0" />
+              </radialGradient>
+              <linearGradient id="leafGradTop" x1="145" y1="15" x2="175" y2="55" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#6EE7B7" />
+                <stop offset="100%" stopColor="#059669" />
+              </linearGradient>
+              <linearGradient id="leafGradLeft" x1="100" y1="85" x2="154" y2="135" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#34D399" />
+                <stop offset="100%" stopColor="#047857" />
+              </linearGradient>
+              <linearGradient id="leafGradRight" x1="215" y1="70" x2="156" y2="125" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#6EE7B7" />
+                <stop offset="100%" stopColor="#065F46" />
+              </linearGradient>
+            </defs>
+          </svg>
         </div>
       </div>
 
-      {/* 8 Primary Agronomic KPIs with In-Frame Details */}
+      {/* 2. Four Main Dashboard Summary Cards */}
       <div className="grid-4">
+        {/* CARD 1: TOTAL FARMS */}
         <MetricCard
-          title="Total Farms"
-          value={data.total_farms}
+          title="TOTAL FARMS"
+          value={data.total_farms || 4}
           unit="Active Sites"
-          change="+1 site added"
-          changeType="positive"
           icon={Sprout}
-          iconBg="#ecfdf5"
-          iconColor="#059669"
-          description="120 Total Cultivated Acres"
+          iconBg="#10B981"
+          iconColor="#10B981"
           details={[
             { label: 'Cultivated Land', value: '120.0 Acres' },
             { label: 'Sectors Monitored', value: '4 Blocks (A, B, C, D)' },
             { label: 'Top Facility', value: 'Central Valley (35 ac)' }
           ]}
           onInspect={() => setActiveModal('farms')}
-          inspectLabel="Inspect"
+          inspectLabel="View All Farms →"
         />
 
+        {/* CARD 2: CROPS MONITORED */}
         <MetricCard
-          title="Crops Monitored"
-          value={data.crops_monitored}
+          title="CROPS MONITORED"
+          value={data.crops_monitored || 5}
           unit="Major Species"
-          change="Optimal Rotation"
-          changeType="neutral"
-          icon={HeartPulse}
-          iconBg="#eff6ff"
-          iconColor="#2563eb"
-          description="Corn, Rice, Wheat, Tomato, Potato"
+          icon={Leaf}
+          iconBg="#14B8A6"
+          iconColor="#14B8A6"
           details={[
-            { label: 'Corn (Maize)', value: '40 ac • Vegetative V6' },
+            { label: 'Corn (Maize)', value: '40 ac • Vegetative' },
             { label: 'Rice & Wheat', value: '45 ac • Tillering/Booting' },
-            { label: 'Tomato & Potato', value: '35 ac • Flowering/Tubers' }
+            { label: 'Tomato & Potato', value: '35 ac • Flowering' }
           ]}
           onInspect={() => setActiveModal('crops')}
-          inspectLabel="Breakdown"
+          inspectLabel="View Crop Breakdown →"
         />
 
+        {/* CARD 3: DISEASE ALERTS */}
         <MetricCard
-          title="Disease Alerts"
-          value={data.disease_alerts_active}
+          title="DISEASE ALERTS"
+          value={data.disease_alerts_active || 87}
           unit="Incidents"
-          change={data.disease_alerts_active > 0 ? "Requires Scouting" : "All Clean"}
-          changeType={data.disease_alerts_active > 0 ? "negative" : "positive"}
-          icon={AlertOctagon}
-          iconBg="#fff1f2"
-          iconColor="#e11d48"
-          description="Foliar Pathology Monitoring"
+          icon={ShieldAlert}
+          iconBg="#EF4444"
+          iconColor="#EF4444"
           details={[
-            { label: 'Tomato Early Blight', value: 'Sector A • Scouting Active' },
-            { label: 'Potato Blight Risk', value: 'Sector C • Humidity Alert' },
-            { label: 'Corn & Rice Health', value: 'Clean Foliage (0 Issues)' }
+            { label: 'Tomato Early Blight', value: 'Sector A • 12' },
+            { label: 'Potato Blight Risk', value: 'Sector C • 09' },
+            { label: 'Corn & Rice Health', value: 'Clean Foliage' }
           ]}
           onInspect={() => setActiveModal('disease')}
-          inspectLabel="Alerts"
+          inspectLabel="View All Alerts →"
         />
 
+        {/* CARD 4: AVG PREDICTED YIELD */}
         <MetricCard
-          title="Avg Predicted Yield"
-          value={data.average_predicted_yield}
+          title="AVG PREDICTED YIELD"
+          value={data.average_predicted_yield ? `${data.average_predicted_yield}` : '4.6'}
           unit="tons/acre"
-          change="+8.4% vs 2025"
-          changeType="positive"
-          icon={TrendingUp}
-          iconBg="#f0fdf4"
-          iconColor="#16a34a"
-          description="Champion ML Regressor"
+          icon={BarChart3}
+          iconBg="#8B5CF6"
+          iconColor="#8B5CF6"
           details={[
             { label: 'Gross Farm Harvest', value: '552 Total Metric Tons' },
             { label: 'High Yield Leader', value: 'Corn @ 5.4 tons/acre' },
             { label: 'ML Algorithm', value: 'Gradient Boosting (R² 0.992)' }
           ]}
           onInspect={() => setActiveModal('yield')}
-          inspectLabel="Predict"
-        />
-
-        <MetricCard
-          title="Productivity Score"
-          value={`${data.productivity_score}/100`}
-          unit="High"
-          change="+4 pts increase"
-          changeType="positive"
-          icon={Award}
-          iconBg="#fef3c7"
-          iconColor="#d97706"
-          description="Agronomic Efficiency Index"
-          details={[
-            { label: 'Canopy Density', value: '89% Chlorophyll Turgor' },
-            { label: 'Water Efficiency', value: '91% Optimal Delivery' },
-            { label: 'Nutrient Assimilation', value: '84% Balanced NPK' }
-          ]}
-          onInspect={() => setActiveModal('productivity')}
-          inspectLabel="Metrics"
-        />
-
-        <MetricCard
-          title="Weather Risk"
-          value={data.weather_risk}
-          unit="Index"
-          change="Rain Front in 48h"
-          changeType={data.weather_risk === 'Low' ? 'positive' : 'negative'}
-          icon={CloudLightning}
-          iconBg="#f5f3ff"
-          iconColor="#7c3aed"
-          description="Precipitation & Wind Risk"
-          details={[
-            { label: 'Temperature & RH', value: '26.8°C • 68% Humidity' },
-            { label: 'Precipitation', value: '14 mm Front in 48h' },
-            { label: 'Spraying Window', value: 'Favorable Today' }
-          ]}
-          onInspect={() => setActiveModal('weather')}
-          inspectLabel="Forecast"
-        />
-
-        <MetricCard
-          title="Soil Health"
-          value={`${data.soil_health_score}%`}
-          unit="Good"
-          change="pH 6.5 Balanced"
-          changeType="positive"
-          icon={HeartPulse}
-          iconBg="#ecfdf5"
-          iconColor="#059669"
-          description="NPK Organic Balance"
-          details={[
-            { label: 'Soil pH Level', value: '6.5 (Neutral Optimal)' },
-            { label: 'Organic Matter', value: '3.6% Rich Humus' },
-            { label: 'Soil Moisture', value: '28 kPa (Field Capacity)' }
-          ]}
-          onInspect={() => setActiveModal('soil')}
-          inspectLabel="Soil Data"
-        />
-
-        <MetricCard
-          title="Irrigation Status"
-          value={`${data.irrigation_efficiency}%`}
-          unit="Efficiency"
-          change="Automated Drip On"
-          changeType="positive"
-          icon={Droplets}
-          iconBg="#e0f2fe"
-          iconColor="#0284c7"
-          description="Root Zone Moisture Balanced"
-          details={[
-            { label: 'Drip Line Network', value: '8 of 8 Lines Active' },
-            { label: 'Daily Delivery', value: '42,000 Liters/day' },
-            { label: 'Power & Pumps', value: 'Solar-Assisted Online' }
-          ]}
-          onInspect={() => setActiveModal('irrigation')}
-          inspectLabel="Sensors"
+          inspectLabel="View Analytics →"
         />
       </div>
 
-      {/* Row 2: Charts (Yield Trend & Crop Distribution) */}
-      <div className="grid-2">
-        {/* Yield Prediction Trend Chart */}
-        <div className="card">
-          <div className="card-header">
-            <div>
-              <h3 className="card-title">
-                <TrendingUp size={18} color="#059669" />
-                Multi-Season Harvest Yield Trajectory
-              </h3>
-              <p className="card-subtitle">Historical actual harvest vs. Machine Learning predicted yield (tons/acre)</p>
-            </div>
-            <span className="badge badge-success">ML Regressor R² 0.92</span>
-          </div>
+      {/* 3. Three-Column Analytics Section */}
+      <div className="grid-3">
+        {/* FIRST: Yield Prediction Trend Line Chart */}
+        <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+              <div>
+                <h3 style={{ fontSize: '0.975rem', fontWeight: 700, color: 'var(--text-main)', margin: 0 }}>
+                  Yield Prediction Trend
+                </h3>
+                <span style={{ fontSize: '0.725rem', color: 'var(--text-muted)' }}>tons/acre</span>
+              </div>
 
-          <div style={{ height: '280px', width: '100%' }}>
-            <ResponsiveContainer width="100%" height="100%">
-              <AreaChart data={data.yield_trend} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-                <defs>
-                  <linearGradient id="predYieldGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#10b981" stopOpacity={0.4}/>
-                    <stop offset="95%" stopColor="#10b981" stopOpacity={0.0}/>
-                  </linearGradient>
-                  <linearGradient id="histYieldGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.3}/>
-                    <stop offset="95%" stopColor="#3b82f6" stopOpacity={0.0}/>
-                  </linearGradient>
-                </defs>
-                <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
-                <XAxis dataKey="season" tick={{ fontSize: 11, fill: '#64748b' }} />
-                <YAxis tick={{ fontSize: 11, fill: '#64748b' }} domain={[2.5, 5.5]} />
-                <Tooltip
-                  contentStyle={{ backgroundColor: '#ffffff', borderRadius: '10px', border: '1px solid #e2e8f0', boxShadow: '0 4px 12px rgba(0,0,0,0.08)' }}
-                  formatter={(val) => [`${val} tons/acre`, '']}
-                />
-                <Legend wrapperStyle={{ fontSize: '12px', paddingTop: '10px' }} />
-                <Area type="monotone" dataKey="historical" name="Historical Baseline" stroke="#3b82f6" strokeWidth={2} fillOpacity={1} fill="url(#histYieldGrad)" />
-                <Area type="monotone" dataKey="predicted" name="ML Predicted Yield" stroke="#10b981" strokeWidth={2.5} fillOpacity={1} fill="url(#predYieldGrad)" />
-                <Line type="monotone" dataKey="actual" name="Actual Harvest" stroke="#f59e0b" strokeWidth={2} strokeDasharray="4 4" dot={{ r: 4 }} />
-              </AreaChart>
-            </ResponsiveContainer>
-          </div>
-        </div>
-
-        {/* Crop Portfolio Distribution */}
-        <div className="card">
-          <div className="card-header">
-            <div>
-              <h3 className="card-title">
-                <Sprout size={18} color="#059669" />
-                Cultivated Acreage & Performance
-              </h3>
-              <p className="card-subtitle">Distribution across active farm acreage and health rating</p>
-            </div>
-            <span className="badge badge-info">120 Acres Total</span>
-          </div>
-
-          <div style={{ display: 'flex', alignItems: 'center', height: '280px' }}>
-            <div style={{ width: '45%', height: '100%' }}>
-              <ResponsiveContainer width="100%" height="100%">
-                <PieChart>
-                  <Pie
-                    data={data.crop_distribution}
-                    dataKey="acres"
-                    nameKey="crop"
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={50}
-                    outerRadius={80}
-                    paddingAngle={4}
-                  >
-                    {data.crop_distribution.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={PIE_COLORS[index % PIE_COLORS.length]} />
-                    ))}
-                  </Pie>
-                  <Tooltip formatter={(val) => [`${val} acres`, 'Acreage']} />
-                </PieChart>
-              </ResponsiveContainer>
-            </div>
-
-            <div style={{ width: '55%', display: 'flex', flexDirection: 'column', gap: '10px', paddingLeft: '10px' }}>
-              {data.crop_distribution.map((crop, idx) => (
-                <div key={crop.crop} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.825rem' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <div style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: PIE_COLORS[idx % PIE_COLORS.length] }} />
-                    <span style={{ fontWeight: 600, color: '#1e293b' }}>{crop.crop}</span>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                    <span style={{ color: '#64748b' }}>{crop.acres} ac ({crop.percentage}%)</span>
-                    <span style={{ fontWeight: 700, color: '#059669' }}>{crop.avg_yield} t/ac</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Row 3: Soil Moisture Monitoring & Active Field Alerts */}
-      <div className="grid-2">
-        {/* Soil Moisture Dynamics */}
-        <div className="card">
-          <div className="card-header">
-            <div>
-              <h3 className="card-title">
-                <Droplets size={18} color="#0284c7" />
-                7-Day Root-Zone Soil Moisture (%)
-              </h3>
-              <p className="card-subtitle">Real-time tensiometer readings with automated irrigation triggers</p>
-            </div>
-            <span className="badge badge-success">Safe Band: 28% - 40%</span>
-          </div>
-
-          <div style={{ height: '240px', width: '100%' }}>
-            <ResponsiveContainer width="100%" height="100%">
-              <LineChart data={data.soil_moisture_trend} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
-                <XAxis dataKey="day" tick={{ fontSize: 11, fill: '#64748b' }} />
-                <YAxis tick={{ fontSize: 11, fill: '#64748b' }} domain={[15, 50]} />
-                <Tooltip
-                  contentStyle={{ backgroundColor: '#ffffff', borderRadius: '10px', border: '1px solid #e2e8f0' }}
-                  formatter={(val) => [`${val}%`, 'Moisture Level']}
-                />
-                <Line type="monotone" dataKey="moisture" name="Soil Moisture" stroke="#0284c7" strokeWidth={3} dot={{ r: 5, fill: '#0284c7' }} activeDot={{ r: 7 }} />
-                <Line type="step" dataKey="optimal_min" name="Minimum Threshold" stroke="#ef4444" strokeDasharray="3 3" strokeWidth={1.5} dot={false} />
-                <Line type="step" dataKey="optimal_max" name="Saturation Limit" stroke="#f59e0b" strokeDasharray="3 3" strokeWidth={1.5} dot={false} />
-              </LineChart>
-            </ResponsiveContainer>
-          </div>
-        </div>
-
-        {/* Operational Intelligence Alerts */}
-        <div className="card">
-          <div className="card-header">
-            <div>
-              <h3 className="card-title">
-                <AlertOctagon size={18} color="#e11d48" />
-                Active Agronomic Field Alerts
-              </h3>
-              <p className="card-subtitle">Prioritized automated alerts from ML models and environmental sensors</p>
-            </div>
-            <button
-              onClick={() => setActiveTab('recommendations')}
-              className="btn btn-secondary"
-              style={{ padding: '4px 10px', fontSize: '0.75rem' }}
-            >
-              View Protocols
-              <ArrowRight size={13} />
-            </button>
-          </div>
-
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', maxHeight: '250px', overflowY: 'auto' }}>
-            {data.active_alerts.map((alert) => (
+              {/* Filter Dropdown */}
               <div
-                key={alert.id}
                 style={{
-                  padding: '12px 14px',
-                  borderRadius: '10px',
-                  border: `1px solid ${
-                    alert.level === 'warning' ? '#fde68a' : alert.level === 'alert' ? '#fecdd3' : '#bfdbfe'
-                  }`,
-                  backgroundColor:
-                    alert.level === 'warning' ? '#fffbeb' : alert.level === 'alert' ? '#fff1f2' : '#eff6ff',
                   display: 'flex',
-                  gap: '12px',
-                  alignItems: 'flex-start',
+                  alignItems: 'center',
+                  gap: '6px',
+                  background: 'var(--surface-bg)',
+                  border: '1px solid var(--border-subtle)',
+                  borderRadius: '8px',
+                  padding: '4px 10px',
+                  fontSize: '0.75rem',
+                  color: 'var(--text-main)',
+                  fontWeight: 600,
+                  cursor: 'pointer',
                 }}
               >
-                <div style={{ marginTop: '2px' }}>
-                  {alert.level === 'alert' && <AlertTriangle size={16} color="#e11d48" />}
-                  {alert.level === 'warning' && <AlertTriangle size={16} color="#d97706" />}
-                  {alert.level === 'info' && <Info size={16} color="#2563eb" />}
-                </div>
+                <span>{seasonFilter}</span>
+                <ChevronDown size={13} color="var(--text-muted)" />
+              </div>
+            </div>
 
-                <div style={{ flex: 1 }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ fontSize: '0.85rem', fontWeight: 700, color: '#0f172a' }}>
-                      {alert.title}
-                    </span>
-                    <span style={{ fontSize: '0.7rem', color: '#64748b' }}>{alert.timestamp}</span>
-                  </div>
-                  <p style={{ fontSize: '0.775rem', color: '#475569', margin: '4px 0 0 0', lineHeight: 1.4 }}>
-                    {alert.message}
-                  </p>
+            {/* Chart Canvas */}
+            <div style={{ height: '200px', width: '100%', marginTop: '12px' }}>
+              <ResponsiveContainer width="100%" height="100%">
+                <LineChart data={YIELD_TREND_DATA} margin={{ top: 15, right: 15, left: -25, bottom: 0 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="var(--border-subtle)" vertical={false} />
+                  <XAxis
+                    dataKey="month"
+                    tick={{ fontSize: 11, fill: 'var(--text-muted)' }}
+                    axisLine={{ stroke: 'var(--border-subtle)' }}
+                    tickLine={false}
+                  />
+                  <YAxis
+                    domain={[0, 6.0]}
+                    ticks={[0, 1.5, 3.0, 4.5, 6.0]}
+                    tick={{ fontSize: 11, fill: 'var(--text-muted)' }}
+                    axisLine={{ stroke: 'var(--border-subtle)' }}
+                    tickLine={false}
+                  />
+                  <Tooltip
+                    contentStyle={{
+                      backgroundColor: 'var(--surface-card)',
+                      borderRadius: '8px',
+                      border: '1px solid var(--border-subtle)',
+                      boxShadow: 'var(--shadow-md)',
+                      color: 'var(--text-main)',
+                      fontSize: '0.775rem'
+                    }}
+                    formatter={(val) => [`${val} ton/acre`, 'Predicted']}
+                  />
+                  <Line
+                    type="monotone"
+                    dataKey="yield"
+                    stroke="#10B981"
+                    strokeWidth={2.5}
+                    dot={{ r: 4, fill: '#10B981', stroke: 'var(--surface-card)', strokeWidth: 2 }}
+                    activeDot={{ r: 6, fill: '#34D399', stroke: '#ffffff', strokeWidth: 2 }}
+                  />
+                </LineChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
+
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '8px',
+              paddingTop: '10px',
+              borderTop: '1px solid var(--border-subtle)',
+              fontSize: '0.75rem',
+              color: 'var(--text-muted)'
+            }}
+          >
+            <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: '#10B981' }} />
+            <span>Predicted Yield (ton/acre)</span>
+          </div>
+        </div>
+
+        {/* SECOND: Top Performing Crops Donut Chart */}
+        <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+          <div>
+            <h3 style={{ fontSize: '0.975rem', fontWeight: 700, color: 'var(--text-main)', margin: '0 0 12px 0' }}>
+              Top Performing Crops
+            </h3>
+
+            <div style={{ display: 'flex', alignItems: 'center', height: '185px' }}>
+              {/* Donut Chart with Center Text */}
+              <div style={{ width: '50%', height: '100%', position: 'relative' }}>
+                <ResponsiveContainer width="100%" height="100%">
+                  <PieChart>
+                    <Pie
+                      data={CROP_DISTRIBUTION_DATA}
+                      dataKey="acres"
+                      nameKey="name"
+                      cx="50%"
+                      cy="50%"
+                      innerRadius={46}
+                      outerRadius={72}
+                      paddingAngle={3}
+                      stroke="transparent"
+                    >
+                      {CROP_DISTRIBUTION_DATA.map((entry, index) => (
+                        <Cell key={`donut-${index}`} fill={entry.color} />
+                      ))}
+                    </Pie>
+                    <Tooltip
+                      contentStyle={{
+                        backgroundColor: 'var(--surface-card)',
+                        borderRadius: '8px',
+                        border: '1px solid var(--border-subtle)',
+                        boxShadow: 'var(--shadow-md)',
+                        color: 'var(--text-main)',
+                        fontSize: '0.75rem'
+                      }}
+                      formatter={(val, name) => [`${val} Acres`, name]}
+                    />
+                  </PieChart>
+                </ResponsiveContainer>
+
+                {/* Center Badge in Donut */}
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    textAlign: 'center',
+                    pointerEvents: 'none',
+                  }}
+                >
+                  <div style={{ fontSize: '0.675rem', color: 'var(--text-muted)', fontWeight: 600 }}>Total</div>
+                  <div style={{ fontSize: '0.85rem', color: 'var(--text-main)', fontWeight: 800 }}>120</div>
+                  <div style={{ fontSize: '0.65rem', color: 'var(--text-muted)' }}>Acres</div>
                 </div>
               </div>
-            ))}
+
+              {/* Legend Listing */}
+              <div style={{ width: '50%', display: 'flex', flexDirection: 'column', gap: '6px', paddingLeft: '8px' }}>
+                {CROP_DISTRIBUTION_DATA.map((crop) => (
+                  <div key={crop.name} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.75rem' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', minWidth: 0 }}>
+                      <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: crop.color, flexShrink: 0 }} />
+                      <span style={{ color: 'var(--text-main)', fontWeight: 600, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                        {crop.name}
+                      </span>
+                    </div>
+                    <span style={{ color: 'var(--text-muted)', fontSize: '0.7rem', flexShrink: 0 }}>
+                      {crop.acres} ac ({crop.percentage}%)
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              paddingTop: '10px',
+              borderTop: '1px solid var(--border-subtle)',
+            }}
+          >
+            <button
+              onClick={() => setActiveModal('crops')}
+              style={{
+                background: 'transparent',
+                border: 'none',
+                color: '#10B981',
+                fontSize: '0.785rem',
+                fontWeight: 700,
+                cursor: 'pointer',
+              }}
+            >
+              View Crop Performance →
+            </button>
+          </div>
+        </div>
+
+        {/* THIRD: Weather Overview Card */}
+        <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+          <div>
+            <h3 style={{ fontSize: '0.975rem', fontWeight: 700, color: 'var(--text-main)', margin: '0 0 14px 0' }}>
+              Weather Overview
+            </h3>
+
+            {/* Sun/Cloud & Temp */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '16px' }}>
+              <div
+                style={{
+                  width: '54px',
+                  height: '54px',
+                  borderRadius: '12px',
+                  backgroundColor: 'rgba(56, 189, 248, 0.12)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                }}
+              >
+                <CloudSun size={32} color="#F59E0B" />
+              </div>
+
+              <div>
+                <div style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--text-main)', lineHeight: 1.1 }}>
+                  {weatherData?.temperature || 26.8}°C
+                </div>
+                <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '2px' }}>
+                  {weatherData?.condition || 'Partly Cloudy'}
+                </div>
+              </div>
+            </div>
+
+            {/* 4-Metric Grid */}
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(2, 1fr)',
+                gap: '10px',
+                background: 'var(--surface-bg)',
+                padding: '10px 12px',
+                borderRadius: '10px',
+                border: '1px solid var(--border-subtle)',
+              }}
+            >
+              <div>
+                <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', display: 'block' }}>Humidity</span>
+                <span style={{ fontSize: '0.825rem', fontWeight: 700, color: 'var(--text-main)' }}>
+                  {weatherData?.humidity ? `${weatherData.humidity}%` : '65%'}
+                </span>
+              </div>
+              <div>
+                <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', display: 'block' }}>Wind</span>
+                <span style={{ fontSize: '0.825rem', fontWeight: 700, color: 'var(--text-main)' }}>
+                  {weatherData?.wind_speed ? `${weatherData.wind_speed} km/h` : '12 km/h'}
+                </span>
+              </div>
+              <div>
+                <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', display: 'block' }}>Rain Chance</span>
+                <span style={{ fontSize: '0.825rem', fontWeight: 700, color: 'var(--text-main)' }}>15%</span>
+              </div>
+              <div>
+                <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)', display: 'block' }}>Feels Like</span>
+                <span style={{ fontSize: '0.825rem', fontWeight: 700, color: 'var(--text-main)' }}>
+                  {weatherData?.feels_like ? `${weatherData.feels_like}°C` : '27.3°C'}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              paddingTop: '10px',
+              borderTop: '1px solid var(--border-subtle)',
+            }}
+          >
+            <button
+              onClick={() => setActiveTab('weather')}
+              style={{
+                background: 'transparent',
+                border: 'none',
+                color: '#38BDF8',
+                fontSize: '0.785rem',
+                fontWeight: 700,
+                cursor: 'pointer',
+              }}
+            >
+              View Full Forecast →
+            </button>
           </div>
         </div>
       </div>
 
-      {/* Interactive Detail Inspection Modal */}
+      {/* 4. Bottom Operational Row (Recent Activity, AI Insights, Ask CropWise AI) */}
+      <div className="grid-3">
+        {/* RECENT ACTIVITY */}
+        <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+          <div>
+            <h3 style={{ fontSize: '0.975rem', fontWeight: 700, color: 'var(--text-main)', margin: '0 0 14px 0' }}>
+              Recent Activity
+            </h3>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {/* Activity 1 */}
+              <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '10px' }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                  <div
+                    style={{
+                      width: '28px',
+                      height: '28px',
+                      borderRadius: '50%',
+                      backgroundColor: 'rgba(16, 185, 129, 0.15)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: '#10B981',
+                      marginTop: '2px',
+                      flexShrink: 0,
+                    }}
+                  >
+                    <Scan size={14} />
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '0.775rem', fontWeight: 600, color: 'var(--text-main)' }}>
+                      Leaf scan completed - Tomato (Block A)
+                    </div>
+                    <div style={{ fontSize: '0.725rem', color: '#EF4444', marginTop: '1px' }}>
+                      Early Blight detected
+                    </div>
+                  </div>
+                </div>
+                <span style={{ fontSize: '0.7rem', color: '#EF4444', fontWeight: 600, whiteSpace: 'nowrap' }}>
+                  10 min ago
+                </span>
+              </div>
+
+              {/* Activity 2 */}
+              <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '10px' }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                  <div
+                    style={{
+                      width: '28px',
+                      height: '28px',
+                      borderRadius: '50%',
+                      backgroundColor: 'rgba(16, 185, 129, 0.15)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: '#10B981',
+                      marginTop: '2px',
+                      flexShrink: 0,
+                    }}
+                  >
+                    <TrendingUp size={14} />
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '0.775rem', fontWeight: 600, color: 'var(--text-main)' }}>
+                      Yield prediction updated - Corn (Block B)
+                    </div>
+                    <div style={{ fontSize: '0.725rem', color: '#10B981', marginTop: '1px' }}>
+                      Prediction improved by 4.8%
+                    </div>
+                  </div>
+                </div>
+                <span style={{ fontSize: '0.7rem', color: '#10B981', fontWeight: 600, whiteSpace: 'nowrap' }}>
+                  1 hour ago
+                </span>
+              </div>
+
+              {/* Activity 3 */}
+              <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '10px' }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
+                  <div
+                    style={{
+                      width: '28px',
+                      height: '28px',
+                      borderRadius: '50%',
+                      backgroundColor: 'rgba(56, 189, 248, 0.15)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: '#38BDF8',
+                      marginTop: '2px',
+                      flexShrink: 0,
+                    }}
+                  >
+                    <Droplets size={14} />
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '0.775rem', fontWeight: 600, color: 'var(--text-main)' }}>
+                      Irrigation recommendation generated
+                    </div>
+                    <div style={{ fontSize: '0.725rem', color: 'var(--text-muted)', marginTop: '1px' }}>
+                      Block C • Next irrigation in 2 days
+                    </div>
+                  </div>
+                </div>
+                <span style={{ fontSize: '0.7rem', color: '#38BDF8', fontWeight: 600, whiteSpace: 'nowrap' }}>
+                  3 hours ago
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* AI INSIGHTS */}
+        <div className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '14px' }}>
+              <div
+                style={{
+                  width: '28px',
+                  height: '28px',
+                  borderRadius: '50%',
+                  backgroundColor: 'rgba(245, 158, 11, 0.15)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#F59E0B',
+                }}
+              >
+                <Sparkles size={15} />
+              </div>
+              <h3 style={{ fontSize: '0.975rem', fontWeight: 700, color: 'var(--text-main)', margin: 0 }}>
+                AI Insights
+              </h3>
+            </div>
+
+            <p style={{ fontSize: '0.825rem', color: 'var(--text-muted)', lineHeight: 1.6, margin: 0 }}>
+              Corn crops in Block A showing excellent growth potential. Maintain current irrigation schedule and monitor for common leaf diseases.
+            </p>
+          </div>
+
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              paddingTop: '10px',
+              borderTop: '1px solid var(--border-subtle)',
+            }}
+          >
+            <button
+              onClick={() => setActiveTab('insights')}
+              style={{
+                background: 'transparent',
+                border: 'none',
+                color: '#10B981',
+                fontSize: '0.785rem',
+                fontWeight: 700,
+                cursor: 'pointer',
+              }}
+            >
+              View All Insights →
+            </button>
+          </div>
+        </div>
+
+        {/* ASK CROPWISE AI ASSISTANT CARD */}
+        <div
+          className="card"
+          style={{
+            background: 'var(--surface-card)',
+            border: '1px solid rgba(139, 92, 246, 0.35)',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'space-between',
+            position: 'relative',
+            overflow: 'hidden',
+          }}
+        >
+          <div>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '8px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <Sparkles size={16} color="#A78BFA" />
+                <h3 style={{ fontSize: '0.975rem', fontWeight: 800, color: 'var(--text-main)', margin: 0 }}>
+                  Ask CropWise AI
+                </h3>
+              </div>
+              <span
+                style={{
+                  fontSize: '0.65rem',
+                  fontWeight: 700,
+                  backgroundColor: '#8B5CF6',
+                  color: '#ffffff',
+                  padding: '2px 8px',
+                  borderRadius: '6px',
+                }}
+              >
+                AI Assistant
+              </span>
+            </div>
+
+            <p style={{ fontSize: '0.775rem', color: 'var(--text-muted)', lineHeight: 1.4, margin: '0 0 14px 0', maxWidth: '75%' }}>
+              Get intelligent insights, recommendations and solutions for your farm in real-time.
+            </p>
+
+            {/* Input Row */}
+            <form onSubmit={handleAskAISubmit} style={{ display: 'flex', gap: '6px' }}>
+              <input
+                type="text"
+                value={questionInput}
+                onChange={(e) => setQuestionInput(e.target.value)}
+                placeholder="Type your question here..."
+                style={{
+                  flex: 1,
+                  background: 'var(--surface-bg)',
+                  border: '1px solid var(--border-subtle)',
+                  borderRadius: '8px',
+                  padding: '8px 12px',
+                  color: 'var(--text-main)',
+                  fontSize: '0.775rem',
+                  outline: 'none',
+                }}
+              />
+              <button
+                type="submit"
+                style={{
+                  background: '#8B5CF6',
+                  color: '#ffffff',
+                  border: 'none',
+                  borderRadius: '8px',
+                  width: '34px',
+                  height: '34px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  cursor: 'pointer',
+                  flexShrink: 0,
+                  transition: 'opacity 0.2s ease',
+                }}
+                title="Send to CropWise AI"
+              >
+                <Send size={14} />
+              </button>
+            </form>
+          </div>
+
+          {/* Cute 3D Robot Mascot Avatar Artwork in bottom-right */}
+          <div
+            style={{
+              position: 'absolute',
+              right: '12px',
+              bottom: '8px',
+              width: '84px',
+              height: '84px',
+              pointerEvents: 'none',
+              zIndex: 0,
+            }}
+          >
+            <svg width="84" height="84" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {/* Soft purple glow under robot */}
+              <ellipse cx="50" cy="90" rx="35" ry="8" fill="#8B5CF6" fillOpacity="0.25" />
+
+              {/* Robot Body */}
+              <rect x="25" y="46" width="50" height="42" rx="16" fill="url(#botBodyGrad)" />
+              {/* Sprout on Chest */}
+              <circle cx="50" cy="65" r="9" fill="rgba(16, 185, 129, 0.2)" />
+              <path d="M50 69 C50 63, 49 61, 48 58" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" />
+              <path d="M48 58 C45 55, 43 56, 44 59 C45 61, 47 60, 48 58 Z" fill="#10B981" />
+              <path d="M49 60 C53 58, 55 60, 54 62 C53 64, 50 62, 49 60 Z" fill="#34D399" />
+
+              {/* Robot Arms */}
+              <rect x="15" y="52" width="8" height="20" rx="4" fill="#D8B4FE" />
+              <rect x="77" y="52" width="8" height="20" rx="4" fill="#D8B4FE" />
+
+              {/* Robot Neck */}
+              <rect x="42" y="38" width="16" height="8" rx="2" fill="#C084FC" />
+
+              {/* Robot Head */}
+              <rect x="20" y="10" width="60" height="34" rx="14" fill="url(#botHeadGrad)" />
+
+              {/* Visor Screen */}
+              <rect x="26" y="16" width="48" height="22" rx="9" fill="#0B1324" />
+
+              {/* Glowing Cyan Eyes */}
+              <ellipse cx="38" cy="27" rx="5" ry="4" fill="#38BDF8" />
+              <ellipse cx="62" cy="27" rx="5" ry="4" fill="#38BDF8" />
+              <circle cx="39" cy="26" r="1.5" fill="#ffffff" />
+              <circle cx="63" cy="26" r="1.5" fill="#ffffff" />
+
+              {/* Robot Ears / Antennae */}
+              <rect x="14" y="20" width="6" height="12" rx="3" fill="#A855F7" />
+              <rect x="80" y="20" width="6" height="12" rx="3" fill="#A855F7" />
+
+              <defs>
+                <linearGradient id="botHeadGrad" x1="20" y1="10" x2="80" y2="44" gradientUnits="userSpaceOnUse">
+                  <stop stopColor="#F8FAFC" />
+                  <stop offset="100%" stopColor="#E2E8F0" />
+                </linearGradient>
+                <linearGradient id="botBodyGrad" x1="25" y1="46" x2="75" y2="88" gradientUnits="userSpaceOnUse">
+                  <stop stopColor="#FFFFFF" />
+                  <stop offset="100%" stopColor="#CBD5E1" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      {/* 5. Interactive Detail Inspection Modals */}
       {activeModal && (
         <div
           style={{
             position: 'fixed',
             inset: 0,
-            backgroundColor: 'rgba(15, 23, 42, 0.65)',
-            backdropFilter: 'blur(5px)',
+            backgroundColor: 'rgba(0, 0, 0, 0.65)',
+            backdropFilter: 'blur(6px)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -491,6 +1005,7 @@ export default function Dashboard({ insightsData, weatherData, setActiveTab }) {
               maxHeight: '85vh',
               overflowY: 'auto',
               boxShadow: 'var(--shadow-lg)',
+              color: 'var(--text-main)',
             }}
             onClick={(e) => e.stopPropagation()}
           >
@@ -503,20 +1018,16 @@ export default function Dashboard({ insightsData, weatherData, setActiveTab }) {
                     height: '38px',
                     borderRadius: '10px',
                     backgroundColor:
-                      activeModal === 'disease' ? '#fff1f2' : activeModal === 'crops' ? '#eff6ff' : '#ecfdf5',
+                      activeModal === 'disease' ? 'rgba(239, 68, 68, 0.15)' : activeModal === 'crops' ? 'rgba(20, 184, 166, 0.15)' : 'rgba(16, 185, 129, 0.15)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                   }}
                 >
-                  {activeModal === 'farms' && <Sprout size={20} color="#059669" />}
-                  {activeModal === 'crops' && <HeartPulse size={20} color="#2563eb" />}
-                  {activeModal === 'disease' && <AlertOctagon size={20} color="#e11d48" />}
-                  {activeModal === 'yield' && <TrendingUp size={20} color="#16a34a" />}
-                  {activeModal === 'productivity' && <Award size={20} color="#d97706" />}
-                  {activeModal === 'weather' && <CloudLightning size={20} color="#7c3aed" />}
-                  {activeModal === 'soil' && <HeartPulse size={20} color="#059669" />}
-                  {activeModal === 'irrigation' && <Droplets size={20} color="#0284c7" />}
+                  {activeModal === 'farms' && <Sprout size={20} color="#10B981" />}
+                  {activeModal === 'crops' && <Leaf size={20} color="#14B8A6" />}
+                  {activeModal === 'disease' && <ShieldAlert size={20} color="#EF4444" />}
+                  {activeModal === 'yield' && <BarChart3 size={20} color="#8B5CF6" />}
                 </div>
                 <div>
                   <h3 style={{ margin: 0, fontSize: '1.25rem', color: 'var(--text-main)', fontWeight: 800 }}>
@@ -524,10 +1035,6 @@ export default function Dashboard({ insightsData, weatherData, setActiveTab }) {
                     {activeModal === 'crops' && 'Monitored Crops Portfolio (5 Major Species)'}
                     {activeModal === 'disease' && 'Active Disease Incidents & Pathology Alerts'}
                     {activeModal === 'yield' && 'Yield Optimizer & Production Projections'}
-                    {activeModal === 'productivity' && 'Agronomic Productivity & Biomass Index'}
-                    {activeModal === 'weather' && 'Agro-Meteorological Forecast & Spray Windows'}
-                    {activeModal === 'soil' && 'Soil Chemistry & Nutrient Composition'}
-                    {activeModal === 'irrigation' && 'Automated Drip & Soil Moisture Telemetry'}
                   </h3>
                   <p style={{ margin: '2px 0 0', fontSize: '0.8rem', color: 'var(--text-muted)' }}>
                     Detailed agronomic telemetry and machine learning diagnostic metrics
@@ -557,13 +1064,10 @@ export default function Dashboard({ insightsData, weatherData, setActiveTab }) {
                   </div>
                   <div style={{ padding: '12px', background: 'var(--surface-bg)', borderRadius: '8px', border: '1px solid var(--border-subtle)' }}>
                     <span style={{ fontSize: '0.725rem', color: 'var(--text-muted)', display: 'block' }}>Operator</span>
-                    <strong style={{ fontSize: '1.1rem', color: 'var(--text-main)' }}>Pavan Kumar</strong>
+                    <strong style={{ fontSize: '1.1rem', color: 'var(--text-main)' }}>Central Valley Farm</strong>
                   </div>
                 </div>
 
-                <h4 style={{ margin: '8px 0 4px', fontSize: '0.875rem', fontWeight: 700, color: 'var(--text-main)' }}>
-                  Registered Farm Facilities
-                </h4>
                 <div style={{ border: '1px solid var(--border-subtle)', borderRadius: '10px', overflow: 'hidden' }}>
                   <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.825rem' }}>
                     <thead>
@@ -572,7 +1076,6 @@ export default function Dashboard({ insightsData, weatherData, setActiveTab }) {
                         <th style={{ padding: '10px 14px' }}>Acreage</th>
                         <th style={{ padding: '10px 14px' }}>Soil Type</th>
                         <th style={{ padding: '10px 14px' }}>Crops Active</th>
-                        <th style={{ padding: '10px 14px' }}>Irrigation</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -581,44 +1084,27 @@ export default function Dashboard({ insightsData, weatherData, setActiveTab }) {
                         <td style={{ padding: '10px 14px' }}>35 Acres</td>
                         <td style={{ padding: '10px 14px' }}>Sandy Loam</td>
                         <td style={{ padding: '10px 14px' }}>Corn, Tomato</td>
-                        <td style={{ padding: '10px 14px' }}><span className="badge badge-success">Drip (Active)</span></td>
                       </tr>
                       <tr style={{ borderBottom: '1px solid var(--border-subtle)' }}>
                         <td style={{ padding: '10px 14px', fontWeight: 600, color: 'var(--text-main)' }}>Sector B (North Ridge)</td>
                         <td style={{ padding: '10px 14px' }}>45 Acres</td>
                         <td style={{ padding: '10px 14px' }}>Silt Loam</td>
                         <td style={{ padding: '10px 14px' }}>Rice, Corn</td>
-                        <td style={{ padding: '10px 14px' }}><span className="badge badge-success">Furrow (Optimal)</span></td>
                       </tr>
                       <tr style={{ borderBottom: '1px solid var(--border-subtle)' }}>
                         <td style={{ padding: '10px 14px', fontWeight: 600, color: 'var(--text-main)' }}>Sector C (South Meadow)</td>
                         <td style={{ padding: '10px 14px' }}>25 Acres</td>
                         <td style={{ padding: '10px 14px' }}>Clay Loam</td>
                         <td style={{ padding: '10px 14px' }}>Potato</td>
-                        <td style={{ padding: '10px 14px' }}><span className="badge badge-success">Sprinkler (Active)</span></td>
                       </tr>
                       <tr>
                         <td style={{ padding: '10px 14px', fontWeight: 600, color: 'var(--text-main)' }}>Sector D (Highland Basin)</td>
                         <td style={{ padding: '10px 14px' }}>15 Acres</td>
                         <td style={{ padding: '10px 14px' }}>Loam</td>
                         <td style={{ padding: '10px 14px' }}>Wheat</td>
-                        <td style={{ padding: '10px 14px' }}><span className="badge badge-info">Rainfed (Good)</span></td>
                       </tr>
                     </tbody>
                   </table>
-                </div>
-
-                <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px' }}>
-                  <button
-                    onClick={() => {
-                      setActiveModal(null);
-                      setActiveTab('settings');
-                    }}
-                    className="btn btn-primary"
-                    style={{ fontSize: '0.825rem' }}
-                  >
-                    Edit Farmer Profile in Settings
-                  </button>
                 </div>
               </div>
             )}
@@ -637,70 +1123,41 @@ export default function Dashboard({ insightsData, weatherData, setActiveTab }) {
                         <th style={{ padding: '10px 14px' }}>Cultivated Area</th>
                         <th style={{ padding: '10px 14px' }}>Growth Stage</th>
                         <th style={{ padding: '10px 14px' }}>Target Yield</th>
-                        <th style={{ padding: '10px 14px' }}>Health Index</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr style={{ borderBottom: '1px solid var(--border-subtle)' }}>
                         <td style={{ padding: '10px 14px', fontWeight: 600, color: 'var(--text-main)' }}>🌽 Corn (Maize)</td>
                         <td style={{ padding: '10px 14px' }}>40 Acres (33%)</td>
-                        <td style={{ padding: '10px 14px' }}>Vegetative (V6)</td>
-                        <td style={{ padding: '10px 14px' }}>5.4 tons/acre</td>
-                        <td style={{ padding: '10px 14px' }}><span className="badge badge-success">94% Robust</span></td>
+                        <td style={{ padding: '10px 14px' }}>Vegetative</td>
+                        <td style={{ padding: '10px 14px', color: '#10B981', fontWeight: 700 }}>5.4 tons/acre</td>
                       </tr>
                       <tr style={{ borderBottom: '1px solid var(--border-subtle)' }}>
                         <td style={{ padding: '10px 14px', fontWeight: 600, color: 'var(--text-main)' }}>🌾 Rice</td>
                         <td style={{ padding: '10px 14px' }}>30 Acres (25%)</td>
                         <td style={{ padding: '10px 14px' }}>Active Tillering</td>
-                        <td style={{ padding: '10px 14px' }}>4.8 tons/acre</td>
-                        <td style={{ padding: '10px 14px' }}><span className="badge badge-success">96% Excellent</span></td>
+                        <td style={{ padding: '10px 14px', color: '#10B981', fontWeight: 700 }}>4.8 tons/acre</td>
                       </tr>
                       <tr style={{ borderBottom: '1px solid var(--border-subtle)' }}>
                         <td style={{ padding: '10px 14px', fontWeight: 600, color: 'var(--text-main)' }}>🍅 Tomato</td>
                         <td style={{ padding: '10px 14px' }}>20 Acres (17%)</td>
                         <td style={{ padding: '10px 14px' }}>Early Flowering</td>
-                        <td style={{ padding: '10px 14px' }}>4.2 tons/acre</td>
-                        <td style={{ padding: '10px 14px' }}><span className="badge badge-warning">88% (Scouting)</span></td>
+                        <td style={{ padding: '10px 14px', color: '#10B981', fontWeight: 700 }}>4.2 tons/acre</td>
                       </tr>
                       <tr style={{ borderBottom: '1px solid var(--border-subtle)' }}>
                         <td style={{ padding: '10px 14px', fontWeight: 600, color: 'var(--text-main)' }}>🥔 Potato</td>
-                        <td style={{ padding: '10px 14px' }}>15 Acres (13%)</td>
+                        <td style={{ padding: '10px 14px' }}>15 Acres (12%)</td>
                         <td style={{ padding: '10px 14px' }}>Tuberization</td>
-                        <td style={{ padding: '10px 14px' }}>5.0 tons/acre</td>
-                        <td style={{ padding: '10px 14px' }}><span className="badge badge-warning">90% (Preventive)</span></td>
+                        <td style={{ padding: '10px 14px', color: '#10B981', fontWeight: 700 }}>5.0 tons/acre</td>
                       </tr>
                       <tr>
                         <td style={{ padding: '10px 14px', fontWeight: 600, color: 'var(--text-main)' }}>🌾 Wheat</td>
                         <td style={{ padding: '10px 14px' }}>15 Acres (12%)</td>
                         <td style={{ padding: '10px 14px' }}>Booting Stage</td>
-                        <td style={{ padding: '10px 14px' }}>3.6 tons/acre</td>
-                        <td style={{ padding: '10px 14px' }}><span className="badge badge-success">92% Vigorous</span></td>
+                        <td style={{ padding: '10px 14px', color: '#10B981', fontWeight: 700 }}>3.6 tons/acre</td>
                       </tr>
                     </tbody>
                   </table>
-                </div>
-
-                <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px', marginTop: '10px' }}>
-                  <button
-                    onClick={() => {
-                      setActiveModal(null);
-                      setActiveTab('disease');
-                    }}
-                    className="btn btn-primary"
-                    style={{ fontSize: '0.825rem' }}
-                  >
-                    <Scan size={16} /> Scan Leaf for Disease
-                  </button>
-                  <button
-                    onClick={() => {
-                      setActiveModal(null);
-                      setActiveTab('yield');
-                    }}
-                    className="btn btn-secondary"
-                    style={{ fontSize: '0.825rem' }}
-                  >
-                    <TrendingUp size={16} /> Optimize Crop Yield
-                  </button>
                 </div>
               </div>
             )}
@@ -708,57 +1165,43 @@ export default function Dashboard({ insightsData, weatherData, setActiveTab }) {
             {activeModal === 'disease' && (
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-muted)' }}>
-                  Active foliar pathology incidents detected by computer vision models and sensor humidity alerts:
+                  Foliar pathology incidents detected by computer vision models and sensor humidity alerts:
                 </p>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                  <div style={{ padding: '14px', borderRadius: '10px', border: '1px solid #fecdd3', background: '#fff1f2' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
-                      <strong style={{ color: '#9f1239', fontSize: '0.9rem' }}>🍅 Tomato Early Blight (Sector A - 20 Acres)</strong>
-                      <span className="badge badge-danger">Moderate Severity</span>
-                    </div>
-                    <p style={{ margin: '0 0 8px', fontSize: '0.8rem', color: '#881337', lineHeight: 1.4 }}>
-                      Target-board concentric brown spots detected on lower leaves. Chlorotic halos developing around lesions.
+                  <div style={{ padding: '14px', borderRadius: '10px', border: '1px solid rgba(239, 68, 68, 0.4)', background: 'rgba(239, 68, 68, 0.1)' }}>
+                    <strong style={{ color: '#F87171', fontSize: '0.9rem' }}>🍅 Tomato Early Blight (Sector A - 20 Acres)</strong>
+                    <p style={{ margin: '4px 0 0', fontSize: '0.8rem', color: '#FECDD3' }}>
+                      Target-board concentric brown spots detected on lower leaves. Treat with copper-based protectant.
                     </p>
-                    <div style={{ fontSize: '0.775rem', color: '#4c0519', background: '#ffe4e6', padding: '8px 10px', borderRadius: '6px' }}>
-                      <strong>Immediate Protocol:</strong> Apply copper-based protectant fungicide (copper hydroxide) or chlorothalonil. Prune lower canopy foliage to restrict spore ascent.
-                    </div>
                   </div>
 
-                  <div style={{ padding: '14px', borderRadius: '10px', border: '1px solid #fde68a', background: '#fffbeb' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
-                      <strong style={{ color: '#92400e', fontSize: '0.9rem' }}>🥔 Potato Late Blight Risk (Sector C - 15 Acres)</strong>
-                      <span className="badge badge-warning">Micro-Climate Alert</span>
-                    </div>
-                    <p style={{ margin: '0 0 8px', fontSize: '0.8rem', color: '#78350f', lineHeight: 1.4 }}>
-                      Relative humidity forecast exceeding 85% with night temperatures around 18°C creates favorable zoospore conditions.
-                    </p>
-                    <div style={{ fontSize: '0.775rem', color: '#451a03', background: '#fef3c7', padding: '8px 10px', borderRadius: '6px' }}>
-                      <strong>Recommended Protocol:</strong> Apply preventative protectant fungicide (mancozeb) before the forecasted rain front arrives.
-                    </div>
-                  </div>
-
-                  <div style={{ padding: '14px', borderRadius: '10px', border: '1px solid #bbf7d0', background: '#f0fdf4' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
-                      <strong style={{ color: '#166534', fontSize: '0.9rem' }}>🌽 Corn & 🌾 Rice Foliage (Sectors B & D - 60 Acres)</strong>
-                      <span className="badge badge-success">0 Incidents Detected</span>
-                    </div>
-                    <p style={{ margin: 0, fontSize: '0.8rem', color: '#14532d' }}>
-                      No fungal blight or sheath blight symptoms detected during recent field scouting passes. Maintain preventative bio-inoculants.
+                  <div style={{ padding: '14px', borderRadius: '10px', border: '1px solid rgba(245, 158, 11, 0.4)', background: 'rgba(245, 158, 11, 0.1)' }}>
+                    <strong style={{ color: '#FBBF24', fontSize: '0.9rem' }}>🥔 Potato Late Blight Risk (Sector C - 15 Acres)</strong>
+                    <p style={{ margin: '4px 0 0', fontSize: '0.8rem', color: '#FDE68A' }}>
+                      Relative humidity forecast exceeding 85% creates favorable zoospore conditions.
                     </p>
                   </div>
                 </div>
 
-                <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px', marginTop: '10px' }}>
+                <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px' }}>
                   <button
                     onClick={() => {
                       setActiveModal(null);
                       setActiveTab('disease');
                     }}
-                    className="btn btn-primary"
-                    style={{ fontSize: '0.825rem' }}
+                    style={{
+                      background: '#10B981',
+                      color: '#ffffff',
+                      border: 'none',
+                      borderRadius: '8px',
+                      padding: '8px 16px',
+                      fontWeight: 700,
+                      fontSize: '0.825rem',
+                      cursor: 'pointer',
+                    }}
                   >
-                    <Scan size={16} /> Open Disease Detection & Scan Leaf
+                    Open Disease Scanner →
                   </button>
                 </div>
               </div>
@@ -769,55 +1212,36 @@ export default function Dashboard({ insightsData, weatherData, setActiveTab }) {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
                   <div style={{ padding: '12px', background: 'var(--surface-bg)', borderRadius: '8px', border: '1px solid var(--border-subtle)' }}>
                     <span style={{ fontSize: '0.725rem', color: 'var(--text-muted)', display: 'block' }}>Predicted Average</span>
-                    <strong style={{ fontSize: '1.1rem', color: '#059669' }}>4.6 tons/acre</strong>
+                    <strong style={{ fontSize: '1.1rem', color: '#10B981' }}>4.6 tons/acre</strong>
                   </div>
                   <div style={{ padding: '12px', background: 'var(--surface-bg)', borderRadius: '8px', border: '1px solid var(--border-subtle)' }}>
                     <span style={{ fontSize: '0.725rem', color: 'var(--text-muted)', display: 'block' }}>Expected Production</span>
                     <strong style={{ fontSize: '1.1rem', color: 'var(--text-main)' }}>552.0 Metric Tons</strong>
                   </div>
                   <div style={{ padding: '12px', background: 'var(--surface-bg)', borderRadius: '8px', border: '1px solid var(--border-subtle)' }}>
-                    <span style={{ fontSize: '0.725rem', color: 'var(--text-muted)', display: 'block' }}>Model R² Score</span>
-                    <strong style={{ fontSize: '1.1rem', color: '#2563eb' }}>0.992 (Gradient Boosting)</strong>
+                    <span style={{ fontSize: '0.725rem', color: 'var(--text-muted)', display: 'block' }}>Champion Model</span>
+                    <strong style={{ fontSize: '1.1rem', color: '#8B5CF6' }}>Gradient Boosting</strong>
                   </div>
                 </div>
 
-                <p style={{ margin: 0, fontSize: '0.85rem', color: 'var(--text-muted)' }}>
-                  The yield prediction engine evaluates multi-factorial environmental conditions (soil pH, rainfall, temperature, irrigation, NPK values) to forecast tonnage per acre.
-                </p>
-
-                <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px', marginTop: '10px' }}>
+                <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px' }}>
                   <button
                     onClick={() => {
                       setActiveModal(null);
                       setActiveTab('yield');
                     }}
-                    className="btn btn-primary"
-                    style={{ fontSize: '0.825rem' }}
+                    style={{
+                      background: '#8B5CF6',
+                      color: '#ffffff',
+                      border: 'none',
+                      borderRadius: '8px',
+                      padding: '8px 16px',
+                      fontWeight: 700,
+                      fontSize: '0.825rem',
+                      cursor: 'pointer',
+                    }}
                   >
-                    <TrendingUp size={16} /> Open Yield Optimizer Simulator
-                  </button>
-                </div>
-              </div>
-            )}
-
-            {(activeModal === 'productivity' || activeModal === 'weather' || activeModal === 'soil' || activeModal === 'irrigation') && (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                <div style={{ padding: '16px', background: 'var(--surface-bg)', borderRadius: '10px', border: '1px solid var(--border-subtle)' }}>
-                  <h4 style={{ margin: '0 0 8px', fontSize: '0.95rem', color: 'var(--text-main)' }}>Telemetry Breakdown</h4>
-                  <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '0.825rem', color: 'var(--text-muted)', lineHeight: 1.6 }}>
-                    <li>Productivity Biomass Index: <strong>87/100 (Optimal Crop Canopy Density)</strong></li>
-                    <li>Micro-Climate Station: <strong>26.8°C, 68% Relative Humidity, 14 km/h Wind</strong></li>
-                    <li>Soil Sub-Surface Sensors: <strong>pH 6.5, Nitrogen 140 mg/kg, Organic Carbon 3.6%</strong></li>
-                    <li>Irrigation Delivery: <strong>Automated Drip Active across 8 Zones (28 kPa Soil Tension)</strong></li>
-                  </ul>
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px' }}>
-                  <button
-                    onClick={() => setActiveModal(null)}
-                    className="btn btn-primary"
-                    style={{ fontSize: '0.825rem' }}
-                  >
-                    Close Inspection
+                    Open Yield Optimizer →
                   </button>
                 </div>
               </div>
@@ -825,6 +1249,15 @@ export default function Dashboard({ insightsData, weatherData, setActiveTab }) {
           </div>
         </div>
       )}
+
+      {/* Responsive Breakpoints Styling */}
+      <style>{`
+        @media (max-width: 900px) {
+          .hero-art-container {
+            display: none !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }

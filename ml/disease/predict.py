@@ -1,7 +1,11 @@
 """
 CROPWISE AI - Crop Disease Inference Pipeline
-Provides inference execution on single leaf images with top-k probabilities,
-severity calculation, and integrated agronomic advisory protocols.
+Provides cascaded multi-stage inference:
+Stage 1: File & Image Quality Validation
+Stage 2: ML-based Leaf vs Non-Leaf Detection
+Stage 3: ML-based Crop Species Identification & OOD Rejection (Tomato, Potato, Corn, Rice, UNKNOWN)
+Stage 4: Supported-Crop Disease Classification (MobileNetV2)
+The disease model is strictly gated and NEVER executed on non-leaf or unsupported plant samples.
 """
 
 import os
@@ -18,41 +22,28 @@ CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_DIR = os.path.join(CURRENT_DIR, "model")
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-import torch.nn as nn
-import torchvision.models as models
+from ml.disease.config import (
+    SUPPORTED_CROPS,
+    CROP_CLASSES,
+    DISEASE_CLASSES,
+    CROP_TO_DISEASE_CLASSES,
+    CROP_DISPLAY_NAMES,
+    DISEASE_THRESHOLD,
+)
+from ml.disease.models_arch import build_disease_model
+from ml.disease.validator import validate_image_pipeline
+from ml.disease.preprocess import preprocess_image_for_inference, enrich_prediction
 
-prep_spec = importlib.util.spec_from_file_location("disease_preprocess", os.path.join(CURRENT_DIR, "preprocess.py"))
-disease_preprocess = importlib.util.module_from_spec(prep_spec)
-prep_spec.loader.exec_module(disease_preprocess)
-
-preprocess_image_for_inference = disease_preprocess.preprocess_image_for_inference
-enrich_prediction = disease_preprocess.enrich_prediction
-DISEASE_CLASSES = disease_preprocess.DISEASE_CLASSES
-
-
-def build_disease_model(num_classes: int, pretrained: bool = False) -> nn.Module:
-    """Constructs MobileNetV2 architecture matching trained checkpoint."""
-    model = models.mobilenet_v2(weights=None)
-    in_features = model.classifier[1].in_features
-    model.classifier = nn.Sequential(
-        nn.Dropout(p=0.3),
-        nn.Linear(in_features, 256),
-        nn.ReLU(inplace=True),
-        nn.Dropout(p=0.2),
-        nn.Linear(256, num_classes),
-    )
-    return model.to(DEVICE)
-
-_CACHED_MODEL = None
-_CACHED_CLASSES = None
+_CACHED_DISEASE_MODEL = None
+_CACHED_DISEASE_CLASSES = None
 
 
 def load_inference_model(model_path: str = None) -> tuple:
     """Loads and caches the PyTorch MobileNetV2 disease model."""
-    global _CACHED_MODEL, _CACHED_CLASSES
+    global _CACHED_DISEASE_MODEL, _CACHED_DISEASE_CLASSES
 
-    if _CACHED_MODEL is not None and _CACHED_CLASSES is not None:
-        return _CACHED_MODEL, _CACHED_CLASSES
+    if _CACHED_DISEASE_MODEL is not None and _CACHED_DISEASE_CLASSES is not None:
+        return _CACHED_DISEASE_MODEL, _CACHED_DISEASE_CLASSES
 
     if model_path is None:
         model_path = os.path.join(MODEL_DIR, "crop_disease_model.pt")
@@ -67,168 +58,245 @@ def load_inference_model(model_path: str = None) -> tuple:
     classes = checkpoint.get("classes", DISEASE_CLASSES)
     num_classes = len(classes)
 
-    model = build_disease_model(num_classes, pretrained=False)
+    model = build_disease_model(num_classes, pretrained=False).to(DEVICE)
     model.load_state_dict(checkpoint["model_state_dict"])
     model.eval()
 
-    _CACHED_MODEL = model
-    _CACHED_CLASSES = classes
-    return _CACHED_MODEL, _CACHED_CLASSES
-
-
-import numpy as np
-
-
-def extract_foliar_cues(img: Image.Image) -> Dict[str, float]:
-    """
-    Extracts botanical color and pathology cues:
-    - green_ratio: presence of vegetative leaf chlorophyll
-    - necrotic_ratio: presence of dark necrotic blight lesions
-    - yellow_ratio: presence of yellow chlorotic margins
-    """
-    sample = img.convert("RGB").resize((128, 128))
-    arr = np.array(sample, dtype=np.float32)
-    r = arr[:, :, 0]
-    g = arr[:, :, 1]
-    b = arr[:, :, 2]
-
-    # Detect leaf tissue (exclude bright blue, white or neutral backgrounds)
-    is_blue_bg = (b > g * 1.1) & (b > r * 1.1) & (b > 60)
-    is_white_bg = (r > 220) & (g > 220) & (b > 220)
-    leaf_mask = (~is_blue_bg) & (~is_white_bg) & ((r + g + b) > 30)
-
-    leaf_count = float(np.sum(leaf_mask))
-    if leaf_count < 50:
-        leaf_mask = np.ones_like(r, dtype=bool)
-        leaf_count = float(leaf_mask.size)
-
-    # Chlorophyll green on leaf:
-    green_mask = leaf_mask & (g > r * 0.85) & (g > 35)
-    green_ratio = float(np.sum(green_mask) / leaf_count)
-
-    # Yellow chlorotic margin:
-    yellow_mask = leaf_mask & (r > 90) & (g > 85) & (b < 140) & (abs(r - g) < 50)
-    yellow_ratio = float(np.sum(yellow_mask) / leaf_count)
-
-    # Dark brown/black necrotic foliar lesions:
-    necrotic_mask = leaf_mask & (r < 145) & (g < 115) & (b < 95) & (r >= b * 0.8) & ((r + g + b) > 25)
-    necrotic_ratio = float(np.sum(necrotic_mask) / leaf_count)
-
-    return {
-        "green_ratio": green_ratio,
-        "yellow_ratio": yellow_ratio,
-        "necrotic_ratio": necrotic_ratio
-    }
+    _CACHED_DISEASE_MODEL = model
+    _CACHED_DISEASE_CLASSES = classes
+    return _CACHED_DISEASE_MODEL, _CACHED_DISEASE_CLASSES
 
 
 def predict_crop_disease(
-    image_input: Union[str, bytes, Image.Image],
+    image_input: Union[str, bytes, Image.Image] = None,
     top_k: int = 3,
-    model_path: str = None
+    model_path: str = None,
+    file_bytes: bytes = None,
+    filename: str = "uploaded_leaf.jpg",
+    image: Union[str, bytes, Image.Image] = None
 ) -> Dict[str, Any]:
     """
-    Executes full disease prediction pipeline:
-    1. Validates and loads image
-    2. Extracts botanical foliar cues
-    3. Normalizes image into 4D batch tensor
-    4. Runs inference through trained MobileNetV2 with domain calibration
-    5. Computes softmax probabilities with temperature scaling
-    6. Enriches response with agronomic symptoms, treatment, and prevention
+    Master Cascaded Prediction Pipeline:
+    1. Loads and validates image format
+    2. Runs Stage 1: File & Photometric Quality Check
+    3. Runs Stage 2: ML-based Leaf vs Non-Leaf Classifier
+    4. Runs Stage 3: ML-based Crop Species Classifier (with UNKNOWN & OOD Rejection)
+    5. Checks Stage 4: Supported Crop Verification
+       -> If non-leaf or unsupported, SHORT-CIRCUITS IMMEDIATELY without calling disease model.
+    6. Runs Stage 4: Crop-Specific MobileNetV2 Disease Classification.
     """
-    # 1. Validation & loading
+    if image_input is None and image is not None:
+        image_input = image
+    if image_input is None:
+        raise ValueError("No image provided for crop disease prediction.")
+
+    # 1. Load image and raw bytes
+    raw_bytes = file_bytes
     if isinstance(image_input, str):
         if not os.path.exists(image_input):
             raise FileNotFoundError(f"Image path does not exist: {image_input}")
-        img = Image.open(image_input)
+        with open(image_input, "rb") as f:
+            raw_bytes = f.read()
+        img = Image.open(io.BytesIO(raw_bytes))
     elif isinstance(image_input, bytes):
+        raw_bytes = image_input
         img = Image.open(io.BytesIO(image_input))
     elif isinstance(image_input, Image.Image):
         img = image_input
     else:
         raise ValueError("Unsupported image input type. Expected file path, raw bytes, or PIL.Image.")
 
-    # 2. Extract foliar visual cues
-    cues = extract_foliar_cues(img)
+    # 2. Sequential Validation (Stage 1 -> Stage 2 -> Stage 3)
+    validation = validate_image_pipeline(img, file_bytes=raw_bytes, filename=filename)
 
-    # 3. Preprocessing
+    # SHORT-CIRCUIT: Gating enforcement
+    # Under NO circumstances will the disease model run if validation failed
+    if not validation["valid"]:
+        result_state = validation.get("result_state", "INVALID_IMAGE")
+        verified_crop = validation.get("crop", "None")
+        crop_conf = validation.get("crop_confidence", 0.0)
+
+        # Ensure confidence is strictly <= 100.0
+        crop_conf = min(100.0, max(0.0, float(crop_conf)))
+
+        if result_state == "UNKNOWN_LEAF":
+            crop_disp = validation.get("crop_display_name", "Undefined Leaf")
+            is_ambig = ("ambiguous" in str(validation.get("reason", "")).lower())
+            reason_msg = validation.get("reason", "Leaf detected, but the plant is not recognized as Tomato, Potato, Corn, or Rice.")
+            return {
+                "disease": crop_disp,
+                "raw_class": "UNSUPPORTED_CROP",
+                "crop": None,
+                "crop_display_name": crop_disp,
+                "confidence": 0.0,  # No disease prediction generated
+                "crop_confidence": 0.0,
+                "crop_status": "UNKNOWN",
+                "result_state": "UNKNOWN_LEAF",
+                "is_leaf": True,
+                "leaf_status": "VALID_LEAF",
+                "disease_analysis_status": "BLOCKED",
+                "severity": "None",
+                "is_valid": False,
+                "validation_stage": "crop_identification",
+                "validation_reason": reason_msg,
+                "supported_crops": SUPPORTED_CROPS,
+                "symptoms": [
+                    reason_msg,
+                    "Plant outside supported agricultural crop species domain." if not is_ambig else "Foliar features insufficient for conclusive crop species determination.",
+                ],
+                "treatment": [
+                    "Please upload a foliar photo of a supported crop (Tomato, Potato, Corn, Rice).",
+                    "Ensure the leaf is well-lit, in sharp focus, and photographed against a neutral background.",
+                ],
+                "prevention": [
+                    "Only supported agricultural crops can receive pathological diagnosis.",
+                ],
+                "top_predictions": [],
+                "model_status": "Gated Rejection: Unsupported Plant Species" if not is_ambig else "Gated Rejection: Ambiguous Leaf",
+                "is_real_ml": True,
+                "error": None,
+            }
+
+        elif result_state == "NON_LEAF":
+            return {
+                "disease": "No Crop Leaf Detected",
+                "raw_class": "NON_LEAF",
+                "crop": None,
+                "crop_display_name": None,
+                "confidence": 0.0,
+                "crop_confidence": 0.0,
+                "crop_status": "NON_LEAF",
+                "result_state": "NON_LEAF",
+                "is_leaf": False,
+                "leaf_status": "NON_LEAF",
+                "disease_analysis_status": "BLOCKED",
+                "severity": "None",
+                "is_valid": False,
+                "validation_stage": "leaf_detection",
+                "validation_reason": validation.get("reason", "The uploaded image does not appear to contain a crop leaf."),
+                "supported_crops": SUPPORTED_CROPS,
+                "symptoms": [
+                    "The uploaded image does not appear to contain living plant foliage.",
+                    "Classified as non-leaf sample (e.g. document, signature, screen, person, object, or surface).",
+                ],
+                "treatment": [
+                    "Please upload a clear, focused photograph of a genuine crop leaf.",
+                    "Avoid photographing documents, handwriting, digital displays, or non-plant objects.",
+                ],
+                "prevention": [
+                    "Capture single leaves in natural daylight with visible vein architecture.",
+                ],
+                "top_predictions": [],
+                "model_status": "Gated Rejection: Non-Leaf Sample",
+                "is_real_ml": True,
+                "error": None,
+            }
+
+        else:  # INVALID_IMAGE or POOR_QUALITY
+            return {
+                "disease": "Image Quality Insufficient" if result_state == "POOR_QUALITY" else "Image Rejected",
+                "raw_class": "INVALID_IMAGE",
+                "crop": None,
+                "crop_display_name": None,
+                "confidence": 0.0,
+                "crop_confidence": 0.0,
+                "crop_status": "NON_LEAF",
+                "result_state": result_state,
+                "is_leaf": False,
+                "leaf_status": result_state,
+                "disease_analysis_status": "BLOCKED",
+                "severity": "None",
+                "is_valid": False,
+                "validation_stage": validation.get("stage", "quality_inspection"),
+                "validation_reason": validation.get("reason", "Image quality is insufficient for foliar analysis."),
+                "supported_crops": SUPPORTED_CROPS,
+                "symptoms": [
+                    validation.get("reason", "Image quality is insufficient."),
+                ],
+                "treatment": [
+                    "Ensure proper lighting without heavy blur, dark shadows, or extreme glare.",
+                    "Minimum image resolution is 100x100 pixels.",
+                ],
+                "prevention": [],
+                "top_predictions": [],
+                "model_status": f"Gated Rejection: {result_state}",
+                "is_real_ml": True,
+                "error": None,
+            }
+
+    # 3. STAGE 4: CROP-SPECIFIC DISEASE CLASSIFICATION
+    # Reached ONLY when: is_leaf == True AND crop in SUPPORTED_CROPS!
+    verified_crop = validation.get("crop")
+    if verified_crop not in SUPPORTED_CROPS:
+        raise ValueError(f"Unexpected crop '{verified_crop}' routed to disease model. Supported: {SUPPORTED_CROPS}")
+
+    crop_conf = min(100.0, max(0.0, float(validation.get("crop_confidence", 85.0))))
+
     tensor = preprocess_image_for_inference(img).to(DEVICE)
-
-    # 4. Model Inference
     model, classes = load_inference_model(model_path)
+
+    # Identify candidate disease classes for this verified crop
+    valid_disease_classes = CROP_TO_DISEASE_CLASSES.get(verified_crop, classes)
+    valid_indices = [i for i, c in enumerate(classes) if c in valid_disease_classes]
+
     with torch.no_grad():
         logits = model(tensor).squeeze(0)  # [num_classes]
 
-        # Domain Calibration with foliar prior weights
-        calibrated_logits = logits.clone()
-        for idx, c_name in enumerate(classes):
-            if "Blight" in c_name or "Disease" in c_name:
-                if cues["necrotic_ratio"] > 0.02 or cues["yellow_ratio"] > 0.02:
-                    # Necrotic lesions / chlorosis -> Boost disease/blight classes
-                    calibrated_logits[idx] += 1.8 * (cues["necrotic_ratio"] + cues["yellow_ratio"])
-            elif "Healthy" in c_name:
-                if cues["necrotic_ratio"] < 0.02 and cues["green_ratio"] > 0.40:
-                    calibrated_logits[idx] += 1.5 * cues["green_ratio"]
-                elif cues["necrotic_ratio"] > 0.03:
-                    calibrated_logits[idx] -= 2.5
+        # Crop-Specific Logit Masking:
+        # Mask out classes belonging to other crops so predictions strictly align with the verified crop!
+        masked_logits = logits.clone()
+        for i in range(len(classes)):
+            if i not in valid_indices:
+                masked_logits[i] = -1e9  # Negative infinity mask
 
-        # Temperature scaling for sharp, decisive classification
-        temperature = 0.20
-        sharpened_logits = calibrated_logits / temperature
-        probabilities = F.softmax(sharpened_logits, dim=0)
+        probabilities = F.softmax(masked_logits, dim=0)
 
-    # 5. Top-K Class Probs
-    top_probs, top_indices = torch.topk(probabilities, k=min(top_k, len(classes)))
+    # Top-K Disease Probabilities among crop-specific candidates
+    top_k_count = min(top_k, len(valid_indices))
+    top_probs, top_indices = torch.topk(probabilities, k=top_k_count)
     top_probs = top_probs.cpu().tolist()
     top_indices = top_indices.cpu().tolist()
 
     best_idx = top_indices[0]
     best_class = classes[best_idx]
+    primary_confidence = round(top_probs[0] * 100.0, 1)
 
-    # Calibrate display confidence to realistic authoritative diagnostic confidence (88% - 96.5%)
-    # matching the initial specification example (e.g. 96.4%)
-    raw_top = top_probs[0]
-    calibrated_confidence = round(86.0 + (raw_top * 10.8), 1)
-    if calibrated_confidence > 98.2:
-        calibrated_confidence = 98.2
-    if calibrated_confidence < 85.0:
-        calibrated_confidence = 88.6
-
-    rem = round(100.0 - calibrated_confidence, 1)
-    conf_2 = round(rem * 0.72, 1)
-    conf_3 = round(rem - conf_2, 1)
-    if conf_3 < 0.5:
-        conf_3 = 0.8
-        conf_2 = round(rem - 0.8, 1)
-
-    top_conf_list = [calibrated_confidence, conf_2, conf_3]
+    # Enforce DISEASE_THRESHOLD
+    is_low_conf = (top_probs[0] < DISEASE_THRESHOLD)
+    conf_warning = (
+        f"Diagnostic confidence ({primary_confidence}%) is below clinical verification threshold ({DISEASE_THRESHOLD * 100:.0f}%). Visual inspection recommended."
+        if is_low_conf else None
+    )
 
     top_predictions: List[Dict[str, Any]] = []
-    for i, idx in enumerate(top_indices[:3]):
+    for i, idx in enumerate(top_indices):
         c_name = classes[idx]
         top_predictions.append({
             "class_name": c_name,
             "display_name": c_name.replace("_", " "),
-            "confidence": top_conf_list[i] if i < len(top_conf_list) else 0.5
+            "confidence": round(top_probs[i] * 100.0, 1)
         })
 
-    # 6. Enrichment with symptoms, treatment, prevention
-    result = enrich_prediction(best_class, calibrated_confidence)
+    # Enrich with agronomic pathology knowledge
+    result = enrich_prediction(best_class, primary_confidence)
+    result["is_valid"] = True
+    result["result_state"] = "SUPPORTED_CROP"
+    result["is_leaf"] = True
+    result["leaf_status"] = "VALID_LEAF"
+    result["crop"] = verified_crop
+    result["crop_display_name"] = validation.get("crop_display_name", CROP_DISPLAY_NAMES.get(verified_crop, verified_crop))
+    result["crop_status"] = "SUPPORTED"
+    result["crop_confidence"] = crop_conf
+    result["disease_analysis_status"] = "ALLOWED"
+    result["validation_stage"] = "passed"
+    result["validation_reason"] = None
+    result["is_low_confidence"] = is_low_conf
+    result["confidence_warning"] = conf_warning
+    result["quality_status"] = "Verified Crop Leaf"
     result["top_predictions"] = top_predictions
-    result["model_status"] = "Loaded (PyTorch MobileNetV2 Transfer Learning)"
+    result["model_status"] = "Verified Foliar Inference (MobileNetV2)"
     result["is_real_ml"] = True
+    result["supported_crops"] = SUPPORTED_CROPS
+    result["error"] = None
+
     return result
-
-
-if __name__ == "__main__":
-    sample_img_dir = os.path.join(os.path.dirname(__file__), "dataset", "test", "Tomato_Early_Blight")
-    if os.path.exists(sample_img_dir) and os.listdir(sample_img_dir):
-        test_file = os.path.join(sample_img_dir, os.listdir(sample_img_dir)[0])
-        print(f"Testing inference on: {test_file}")
-        try:
-            res = predict_crop_disease(test_file)
-            import pprint
-            pprint.pprint(res)
-        except Exception as err:
-            print(f"Prediction note: {err}")
-    else:
-        print("Please train model and populate test dataset first.")

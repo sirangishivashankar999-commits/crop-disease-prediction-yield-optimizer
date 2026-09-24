@@ -8,12 +8,17 @@ import json
 from typing import Dict, Any, List
 from sqlalchemy.orm import Session
 
-from backend.models.db_models import YieldPredictionLog
 import importlib
 
-ml_yield_predict = importlib.import_module("ml.yield.predict")
-predict_crop_yield = ml_yield_predict.predict_crop_yield
-load_yield_model = ml_yield_predict.load_yield_model
+try:
+    ml_yield_predict = importlib.import_module("ml.yield.predict")
+    predict_crop_yield = ml_yield_predict.predict_crop_yield
+    load_yield_model = ml_yield_predict.load_yield_model
+except Exception as err:
+    print(f"[Warning] Could not import ml.yield.predict: {err}")
+    ml_yield_predict = None
+    predict_crop_yield = None
+    load_yield_model = None
 
 MODEL_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "ml", "yield", "model"))
 BUNDLE_PATH = os.path.join(MODEL_DIR, "yield_best_model.joblib")
@@ -66,6 +71,15 @@ def execute_yield_prediction(
             "Crop Yield ML model is not available. Please run the training tournament "
             "using 'python ml/yield/train.py' or 'python bootstrap_models.py'."
         )
+
+    global predict_crop_yield
+    if predict_crop_yield is None:
+        try:
+            import importlib
+            mod = importlib.import_module("ml.yield.predict")
+            predict_crop_yield = mod.predict_crop_yield
+        except Exception as err:
+            raise RuntimeError(f"Crop Yield ML engine is unavailable: {err}")
 
     result = predict_crop_yield(payload, bundle_path=BUNDLE_PATH)
 

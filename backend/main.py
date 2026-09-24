@@ -9,7 +9,8 @@ import sys
 import os
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, Request, status
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, FileResponse
+from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 
 # Ensure project root in sys.path
@@ -24,6 +25,7 @@ from backend.routes.weather import router as weather_router
 from backend.routes.insights import router as insights_router
 from backend.routes.recommendations import router as recommendations_router
 from backend.routes.model_status import router as model_status_router
+from backend.routes.ai import router as ai_router
 from backend.services.disease_service import is_disease_model_ready
 from backend.services.yield_service import is_yield_model_ready
 
@@ -75,18 +77,15 @@ app.include_router(weather_router, prefix="/api")
 app.include_router(insights_router, prefix="/api")
 app.include_router(recommendations_router, prefix="/api")
 app.include_router(model_status_router, prefix="/api")
+app.include_router(ai_router, prefix="/api")
 
 
-@app.get("/", tags=["Root"])
-def root_endpoint():
-    return {
-        "app": "CROPWISE AI",
-        "tagline": "Grow Smarter. Harvest Better.",
-        "project": "Predictive Crop Disease & Yield Optimizer using Machine Learning",
-        "status": "online",
-        "docs_url": "/docs",
-        "api_prefix": "/api"
-    }
+FRONTEND_DIST = os.path.abspath(os.path.join(PROJECT_ROOT, "frontend", "dist"))
+ASSETS_DIR = os.path.join(FRONTEND_DIST, "assets")
+
+# Mount static assets if build exists
+if os.path.exists(ASSETS_DIR):
+    app.mount("/assets", StaticFiles(directory=ASSETS_DIR), name="assets")
 
 
 @app.get("/api", tags=["Root"])
@@ -105,6 +104,53 @@ def api_root_endpoint():
             "/api/model/status"
         ]
     }
+
+
+@app.get("/", tags=["Frontend"])
+def serve_frontend_root():
+    """Serves the main React web application."""
+    index_path = os.path.join(FRONTEND_DIST, "index.html")
+    if os.path.exists(index_path):
+        return FileResponse(index_path)
+    return {
+        "app": "CROPWISE AI",
+        "tagline": "Grow Smarter. Harvest Better.",
+        "project": "Predictive Crop Disease & Yield Optimizer",
+        "status": "online",
+        "docs_url": "/docs",
+        "api_prefix": "/api"
+    }
+
+
+@app.get("/{full_path:path}", tags=["Frontend"])
+def serve_frontend_spa(full_path: str):
+    """Fallback handler to support client-side React Router navigation."""
+    # Never intercept API or OpenAPI docs routes
+    if (
+        full_path.startswith("api") or
+        full_path.startswith("docs") or
+        full_path.startswith("openapi.json") or
+        full_path.startswith("redoc")
+    ):
+        return JSONResponse(
+            status_code=status.HTTP_404_NOT_FOUND,
+            content={"detail": "Not Found"}
+        )
+
+    # If an exact static file exists in dist (e.g. favicon.svg, vite.svg)
+    candidate_file = os.path.join(FRONTEND_DIST, full_path)
+    if os.path.isfile(candidate_file):
+        return FileResponse(candidate_file)
+
+    # SPA routing fallback: serve index.html for React Router (/disease, /yield, etc.)
+    index_path = os.path.join(FRONTEND_DIST, "index.html")
+    if os.path.exists(index_path):
+        return FileResponse(index_path)
+
+    return JSONResponse(
+        status_code=status.HTTP_404_NOT_FOUND,
+        content={"detail": "Not Found"}
+    )
 
 
 @app.exception_handler(Exception)

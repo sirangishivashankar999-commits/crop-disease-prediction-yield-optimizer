@@ -46,12 +46,8 @@ def build_disease_model(num_classes: int, pretrained: bool = True) -> nn.Module:
     else:
         model = models.mobilenet_v2(weights=None)
 
-    # Freeze feature backbone for transfer learning
+    # Unfreeze feature backbone for fine-tuning on foliar pathological lesions
     for param in model.features.parameters():
-        param.requires_grad = False
-
-    # Unfreeze the last convolutional block for fine-tuning
-    for param in model.features[-2:].parameters():
         param.requires_grad = True
 
     # Custom classifier head with Dropout and Linear layer
@@ -69,7 +65,7 @@ def build_disease_model(num_classes: int, pretrained: bool = True) -> nn.Module:
 def train_disease_model(
     epochs: int = 5,
     batch_size: int = 8,
-    learning_rate: float = 0.001,
+    learning_rate: float = 0.0003,
     target_dir: str = DATASET_DIR
 ) -> Dict[str, Any]:
     """

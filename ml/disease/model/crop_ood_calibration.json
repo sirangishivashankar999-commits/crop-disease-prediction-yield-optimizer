@@ -1,0 +1,8 @@
+{
+  "tau_sim": 0.35,
+  "tau_energy": -4.0,
+  "tau_prob": 0.55,
+  "tau_margin": 0.15,
+  "ind_tpr": 100.0,
+  "ood_far": 0.0
+}
