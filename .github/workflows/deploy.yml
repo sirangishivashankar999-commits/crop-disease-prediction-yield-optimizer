@@ -43,6 +43,7 @@ jobs:
         run: npm run build
         env:
           VITE_BASE_PATH: '/crop-disease-prediction-yield-optimizer/'
+          VITE_API_BASE_URL: ${{ vars.VITE_API_BASE_URL || secrets.VITE_API_BASE_URL || '' }}
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5

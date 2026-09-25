@@ -3,7 +3,8 @@
  * Connects React pages to FastAPI endpoints with structured error handling.
  */
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || '/api';
+const rawApiBase = import.meta.env.VITE_API_BASE_URL;
+const API_BASE = (rawApiBase && rawApiBase.trim()) ? rawApiBase.trim().replace(/\/+$/, '') : '/api';
 
 /**
  * Helper to handle fetch responses and parse error details gracefully
@@ -16,6 +17,9 @@ async function handleResponse(response) {
       errorDetail = errJson.detail || errJson.message || errorDetail;
     } catch {
       // Body was not JSON
+    }
+    if (response.status === 405) {
+      errorDetail = 'Request failed with status 405 (Method Not Allowed). Please verify that your live backend service is running and VITE_API_BASE_URL is correctly set.';
     }
     const error = new Error(errorDetail);
     error.status = response.status;
