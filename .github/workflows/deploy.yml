@@ -42,7 +42,7 @@ jobs:
         working-directory: frontend
         run: npm run build
         env:
-          VITE_BASE_PATH: '/'
+          VITE_BASE_PATH: '/crop-disease-prediction-yield-optimizer/'
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
